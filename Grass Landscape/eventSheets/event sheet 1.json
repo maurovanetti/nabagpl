@@ -1,5 +1,59 @@
 {
 	"name": "Event sheet 1",
-	"events": [],
+	"events": [
+		{
+			"eventType": "comment",
+			"text": "Moves all clouds rightward "
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 395121431810444
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-position",
+					"objectClass": "Cloud",
+					"sid": 570371446213646,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"x": "Cloud.X + 1000000",
+						"y": "Cloud.Y",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 478024639608188
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "Cloud",
+					"sid": 451056716106101,
+					"parameters": {
+						"comparison": 4,
+						"x-co-ordinate": "4500"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "Cloud",
+					"sid": 178172470070584,
+					"parameters": {
+						"x": "-1000"
+					}
+				}
+			],
+			"sid": 662655326999095
+		}
+	],
 	"sid": 316753084008584
 }
