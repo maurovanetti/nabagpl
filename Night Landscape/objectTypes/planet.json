@@ -1,0 +1,43 @@
+{
+	"name": "Planet",
+	"plugin-id": "Sprite",
+	"sid": 209828584791703,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 367390448459424
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 21,
+						"height": 21,
+						"originX": 0.47619047619047616,
+						"originY": 0.47619047619047616,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 820675,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 824626287996054,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

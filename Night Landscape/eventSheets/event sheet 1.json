@@ -1,5 +1,55 @@
 {
 	"name": "Event sheet 1",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 246221695433059
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-position",
+					"objectClass": "Planet",
+					"sid": 493327818285075,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"x": "Planet.X + 10000",
+						"y": "Planet.Y",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 665998403095526
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "Planet",
+					"sid": 677976254426706,
+					"parameters": {
+						"comparison": 4,
+						"x-co-ordinate": "2500"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "Planet",
+					"sid": 535898136250343,
+					"parameters": {
+						"x": "-500"
+					}
+				}
+			],
+			"sid": 344840793824133
+		}
+	],
 	"sid": 513173308844024
 }

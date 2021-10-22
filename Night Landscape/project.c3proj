@@ -5,10 +5,30 @@
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
-	"usedAddons": [],
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		}
+	],
 	"uniqueId": "jpr4lhp5ovn",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"Star",
+			"Planet"
+		],
 		"subfolders": []
 	},
 	"autosaveData": null,
@@ -173,7 +193,7 @@
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "https"
 	},
-	"viewportWidth": 3840,
-	"viewportHeight": 2160,
+	"viewportWidth": 2048,
+	"viewportHeight": 1400,
 	"firstLayout": null
 }
