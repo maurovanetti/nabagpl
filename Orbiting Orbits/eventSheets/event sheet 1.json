@@ -1,0 +1,302 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Ready",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 301459506186145
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 501681392903745,
+					"parameters": {
+						"interval-seconds": "1.0"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 628385397404996,
+					"parameters": {
+						"first-value": "Brush.Count",
+						"comparison": 2,
+						"second-value": "10"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 695372358450672,
+					"parameters": {
+						"variable": "Ready",
+						"value": "true"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Brush",
+					"sid": 823312058157940,
+					"parameters": {
+						"object": "Bifurcation",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 844307637374415
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 216901358885156
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 237981228856713,
+					"parameters": {
+						"variable": "Ready"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Brush",
+					"sid": 375984194872473,
+					"parameters": {
+						"object": "Paint",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Subbrush",
+					"sid": 924410869731183,
+					"parameters": {
+						"object": "Subpaint",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 379450750404858
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 539946429142774,
+					"parameters": {
+						"object": "Bifurcation"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Bifurcation",
+					"sid": 399217752579256,
+					"parameters": {
+						"object": "Brush",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "pin",
+					"objectClass": "Brush",
+					"sid": 502351850623918,
+					"behaviorType": "Orbit",
+					"parameters": {
+						"target": "Bifurcation"
+					}
+				},
+				{
+					"id": "set-offset-angle",
+					"objectClass": "Brush",
+					"sid": 141488664375753,
+					"behaviorType": "Orbit",
+					"parameters": {
+						"angle": "random(0, 360)"
+					}
+				},
+				{
+					"id": "set-radius",
+					"objectClass": "Brush",
+					"sid": 338862935825238,
+					"behaviorType": "Orbit",
+					"parameters": {
+						"primary": "random(0, 500)",
+						"secondary": "random(0, 500)"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Brush",
+					"sid": 984238455178753,
+					"parameters": {
+						"object": "Subbrush",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "add-child",
+					"objectClass": "Brush",
+					"sid": 788851971315287,
+					"parameters": {
+						"child": "Subbrush",
+						"transform-x": false,
+						"transform-y": false,
+						"transform-w": false,
+						"transform-h": false,
+						"transform-a": false,
+						"transform-z-elevation": false,
+						"destroy-with-parent": true
+					}
+				},
+				{
+					"id": "pin",
+					"objectClass": "Subbrush",
+					"sid": 916279541860998,
+					"behaviorType": "Orbit",
+					"parameters": {
+						"target": "Brush"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Bifurcation",
+					"sid": 167803799655758
+				}
+			],
+			"sid": 888188780586274
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "Brush",
+					"sid": 640170805200580,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Brush",
+					"sid": 889655836178672
+				}
+			],
+			"sid": 382288638392869
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-animation-finished",
+					"objectClass": "Paint",
+					"sid": 994425441911898
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Paint",
+					"sid": 615727806221172
+				}
+			],
+			"sid": 685747708781735
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-animation-finished",
+					"objectClass": "Subpaint",
+					"sid": 330241469023804
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Subpaint",
+					"sid": 835417125037389
+				}
+			],
+			"sid": 519001089172970
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "Brush",
+					"sid": 259154811267674
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 620373217829383,
+					"parameters": {
+						"seconds": "2.1"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Brush",
+					"sid": 569659454146058
+				}
+			],
+			"sid": 714316863500003
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "Subpaint",
+					"sid": 289516870137500
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "Subpaint",
+					"sid": 268060005303074,
+					"parameters": {
+						"y": "Subpaint.Y + dt * random(10, 40)"
+					}
+				}
+			],
+			"sid": 824237258465183
+		}
+	],
+	"sid": 859279615699435
+}
