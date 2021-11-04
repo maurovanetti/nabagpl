@@ -1,0 +1,19 @@
+{
+	"name": "Character",
+	"plugin-id": "Sprite",
+	"sid": 544337386951506,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 193870272582543
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"Twin",
+		"Robot",
+		"Hero"
+	]
+}

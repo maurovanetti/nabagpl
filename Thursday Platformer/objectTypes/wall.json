@@ -1,14 +1,14 @@
 {
-	"name": "Ledge",
+	"name": "Wall",
 	"plugin-id": "Sprite",
-	"sid": 314004634179322,
+	"sid": 427911899905161,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "jumpthru",
-			"name": "Jumpthru",
-			"sid": 268438380890062
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 915252435827092
 		}
 	],
 	"effectTypes": [],
@@ -24,12 +24,12 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7767111,
+						"imageSpriteId": 9217075,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 318257413262191,
+				"sid": 498536209304496,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

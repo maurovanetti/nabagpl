@@ -1,16 +1,10 @@
 {
-	"name": "Ledge",
+	"name": "Bouncer",
 	"plugin-id": "Sprite",
-	"sid": 314004634179322,
+	"sid": 498570645471763,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "jumpthru",
-			"name": "Jumpthru",
-			"sid": 268438380890062
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -24,12 +18,12 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7767111,
+						"imageSpriteId": 6695152,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 318257413262191,
+				"sid": 708650791352705,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

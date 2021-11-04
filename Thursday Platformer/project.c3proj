@@ -32,8 +32,32 @@
 		},
 		{
 			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "jumpthru",
+			"name": "Jump-thru",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Flash",
+			"name": "Flash",
 			"author": "Scirra",
 			"version": "r268",
 			"bundled": false
@@ -44,14 +68,24 @@
 		"items": [
 			"Hero",
 			"Ledge",
-			"Keyboard"
+			"Keyboard",
+			"Wall",
+			"Twin",
+			"Robot",
+			"Death",
+			"Bouncer",
+			"JumpArea"
 		],
 		"subfolders": []
 	},
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"Character",
+			"RobotBoundary",
+			"RobotJumper"
+		],
 		"subfolders": []
 	},
 	"layouts": {

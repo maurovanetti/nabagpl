@@ -1,0 +1,12 @@
+{
+	"name": "RobotBoundary",
+	"plugin-id": "Sprite",
+	"sid": 371699056195192,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Bouncer",
+		"Wall"
+	]
+}

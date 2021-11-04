@@ -1,0 +1,12 @@
+{
+	"name": "RobotJumper",
+	"plugin-id": "Sprite",
+	"sid": 794561577676862,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"JumpArea",
+		"Twin"
+	]
+}

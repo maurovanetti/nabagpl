@@ -223,6 +223,686 @@
 				}
 			],
 			"sid": 468211700678336
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Twin Animations",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 527969260883852,
+							"parameters": {
+								"key": 87
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Twin",
+							"sid": 119449979046484,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						}
+					],
+					"sid": 899320688858066
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 283999344055673,
+							"parameters": {
+								"key": 65
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Twin",
+							"sid": 820197136422209,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "left"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Twin",
+							"sid": 517198268633950,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 723483943732083
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 389526069163543,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Twin",
+							"sid": 772759888644430,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "right"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Twin",
+							"sid": 567351803163800,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 831996714863346
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-moved",
+							"objectClass": "Twin",
+							"sid": 113975817629004,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Twin",
+							"sid": 171865466765379,
+							"parameters": {
+								"animation": "\"Walk\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 274433320262010
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-stopped",
+							"objectClass": "Twin",
+							"sid": 913084566230339,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Twin",
+							"sid": 699391468653920,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 907989996772048
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-jump",
+							"objectClass": "Twin",
+							"sid": 545841709346573,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Twin",
+							"sid": 393215664385697,
+							"parameters": {
+								"animation": "\"Jump\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 479352580008859
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-landed",
+							"objectClass": "Twin",
+							"sid": 808348146561239,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Twin",
+							"sid": 116301220998887,
+							"parameters": {
+								"animation": "\"Land\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 211249318072093,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "Twin",
+									"sid": 317242875800720,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Twin",
+									"sid": 461860619406714,
+									"parameters": {
+										"animation": "\"Walk\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 824650048449495
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "Twin",
+							"sid": 781355931513342,
+							"parameters": {
+								"animation": "\"Land\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Twin",
+							"sid": 706533114590304,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 465865218201654
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-fall",
+							"objectClass": "Twin",
+							"sid": 443789221333007,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Twin",
+							"sid": 361628374270790,
+							"parameters": {
+								"animation": "\"Fall\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 289577181430516
+				}
+			],
+			"sid": 328993619348886
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Robot Animations",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-moved",
+							"objectClass": "Robot",
+							"sid": 431438342813725,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Robot",
+							"sid": 364644602309623,
+							"parameters": {
+								"animation": "\"Walk\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 395025418002966
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-stopped",
+							"objectClass": "Robot",
+							"sid": 741150655822300,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Robot",
+							"sid": 203679103353828,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 319503700730494
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-jump",
+							"objectClass": "Robot",
+							"sid": 779649813362136,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Robot",
+							"sid": 105523180170828,
+							"parameters": {
+								"animation": "\"Jump\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 593935407728388
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-landed",
+							"objectClass": "Robot",
+							"sid": 160034163226239,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Robot",
+							"sid": 176958736433639,
+							"parameters": {
+								"animation": "\"Land\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 615898362320063,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "Robot",
+									"sid": 641532477071448,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Robot",
+									"sid": 486998808461396,
+									"parameters": {
+										"animation": "\"Walk\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 676100705753726
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "Robot",
+							"sid": 618933891142981,
+							"parameters": {
+								"animation": "\"Land\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Robot",
+							"sid": 640126814836155,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 692732303859313
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-fall",
+							"objectClass": "Robot",
+							"sid": 148307358014177,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Robot",
+							"sid": 652768101755857,
+							"parameters": {
+								"animation": "\"Fall\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 615203789351227
+				}
+			],
+			"sid": 628158114003416
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Robot AI",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Robot",
+							"sid": 234125960925178,
+							"parameters": {
+								"object": "RobotBoundary"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 384411920119413,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Robot",
+									"sid": 850416979407690,
+									"parameters": {
+										"instance-variable": "State",
+										"comparison": 0,
+										"value": "\"left\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Robot",
+									"sid": 860947154512355,
+									"parameters": {
+										"instance-variable": "State",
+										"value": "\"right\""
+									}
+								}
+							],
+							"sid": 728284175849648
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 756208216371421
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Robot",
+									"sid": 671906168230027,
+									"parameters": {
+										"instance-variable": "State",
+										"comparison": 0,
+										"value": "\"right\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Robot",
+									"sid": 812443571849156,
+									"parameters": {
+										"instance-variable": "State",
+										"value": "\"left\""
+									}
+								}
+							],
+							"sid": 753232684258790
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Robot",
+							"sid": 242362877122970,
+							"parameters": {
+								"instance-variable": "State",
+								"comparison": 0,
+								"value": "\"left\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Robot",
+							"sid": 362082624997479,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "left"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Robot",
+							"sid": 929862477863531,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 442062419392231
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Robot",
+							"sid": 132026071163031,
+							"parameters": {
+								"instance-variable": "State",
+								"comparison": 0,
+								"value": "\"right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Robot",
+							"sid": 704987357063371,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "right"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Robot",
+							"sid": 122386407304069,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 801925778842792
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Robot",
+							"sid": 604729994216345,
+							"parameters": {
+								"object": "RobotJumper"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Robot",
+							"sid": 602351569342166,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						}
+					],
+					"sid": 740342618974770
+				}
+			],
+			"sid": 258135169594531
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Character",
+					"sid": 988959682816825,
+					"parameters": {
+						"object": "Death"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "flash",
+					"objectClass": "Character",
+					"sid": 997879566657739,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "0.1",
+						"off-time": "0.1",
+						"duration": "1.0"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 363323361831677,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Character",
+					"sid": 548975191790128
+				}
+			],
+			"sid": 938762777321076
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "Hero",
+					"sid": 292200079606207
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 860275034406553
+				}
+			],
+			"sid": 556032380171576
 		}
 	],
 	"sid": 613083911098765

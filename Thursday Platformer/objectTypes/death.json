@@ -1,35 +1,29 @@
 {
-	"name": "Ledge",
+	"name": "Death",
 	"plugin-id": "Sprite",
-	"sid": 314004634179322,
+	"sid": 929954144869559,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "jumpthru",
-			"name": "Jumpthru",
-			"sid": 268438380890062
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 100,
+						"height": 100,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7767111,
+						"imageSpriteId": 8125006,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 318257413262191,
+				"sid": 289703537377532,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
