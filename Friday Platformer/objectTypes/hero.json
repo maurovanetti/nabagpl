@@ -1,0 +1,63 @@
+{
+	"name": "Hero",
+	"plugin-id": "Sprite",
+	"sid": 990593296000074,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 723108852249900
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 159,
+						"height": 184,
+						"originX": 0.4528301886792453,
+						"originY": 0.31521739130434784,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1909059,
+						"collisionPoly": {
+							"points": [
+								0.006289308176100629,
+								0.005434782608695652,
+								0.5,
+								0.005434782608695652,
+								0.9874213836477987,
+								0.005434782608695652,
+								0.9874213836477987,
+								0.6739130434782611,
+								0.7547169811320755,
+								1,
+								0.5,
+								0.6820652173913043,
+								0.20754716981132076,
+								0.9619565217391305,
+								0,
+								0.654891304347826
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 939904319684544,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

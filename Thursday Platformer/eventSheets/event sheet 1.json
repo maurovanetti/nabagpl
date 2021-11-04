@@ -2,139 +2,227 @@
 	"name": "Event sheet 1",
 	"events": [
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "Hero Animations",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "on-stopped",
-					"objectClass": "Hero",
-					"sid": 351347833971538,
-					"behaviorType": "Platform"
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "Hero",
-					"sid": 405532601284015,
-					"parameters": {
-						"animation": "\"Idle\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 507079516962231
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-landed",
-					"objectClass": "Hero",
-					"sid": 220724689385901,
-					"behaviorType": "Platform"
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "Hero",
-					"sid": 879441244817088,
-					"parameters": {
-						"animation": "\"Idle\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 487518456279961
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "key-is-down",
-					"objectClass": "Keyboard",
-					"sid": 874753419614697,
-					"parameters": {
-						"key": 39
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-mirrored",
-					"objectClass": "Hero",
-					"sid": 476346959100887,
-					"parameters": {
-						"state": "not-mirrored"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 976882086227107,
+							"parameters": {
+								"key": 37
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Hero",
+							"sid": 805481492361765,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 102484613796176
 				},
 				{
-					"id": "set-animation",
-					"objectClass": "Hero",
-					"sid": 676056107774221,
-					"parameters": {
-						"animation": "\"Walk\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 556362209513436
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "key-is-down",
-					"objectClass": "Keyboard",
-					"sid": 114399251452330,
-					"parameters": {
-						"key": 37
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-mirrored",
-					"objectClass": "Hero",
-					"sid": 834013185365942,
-					"parameters": {
-						"state": "mirrored"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 668265678852777,
+							"parameters": {
+								"key": 39
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Hero",
+							"sid": 438552807598070,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 503920131734258
 				},
 				{
-					"id": "set-animation",
-					"objectClass": "Hero",
-					"sid": 948354065491502,
-					"parameters": {
-						"animation": "\"Walk\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 348652434551542
-		},
-		{
-			"eventType": "block",
-			"conditions": [
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-moved",
+							"objectClass": "Hero",
+							"sid": 232144970982777,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Hero",
+							"sid": 378774844783769,
+							"parameters": {
+								"animation": "\"Walk\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 294971630689641
+				},
 				{
-					"id": "is-jumping",
-					"objectClass": "Hero",
-					"sid": 950239397618879,
-					"behaviorType": "Platform"
-				}
-			],
-			"actions": [
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-stopped",
+							"objectClass": "Hero",
+							"sid": 301527002566105,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Hero",
+							"sid": 190859136544256,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 539294418198551
+				},
 				{
-					"id": "set-animation",
-					"objectClass": "Hero",
-					"sid": 627398172478860,
-					"parameters": {
-						"animation": "\"Jump\"",
-						"from": "beginning"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-jump",
+							"objectClass": "Hero",
+							"sid": 939252392498934,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Hero",
+							"sid": 705910366469004,
+							"parameters": {
+								"animation": "\"Jump\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 578209149893333
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-landed",
+							"objectClass": "Hero",
+							"sid": 664182124762549,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Hero",
+							"sid": 456370030351721,
+							"parameters": {
+								"animation": "\"Land\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 498213713333293,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "Hero",
+									"sid": 599147779903185,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Hero",
+									"sid": 258025910294087,
+									"parameters": {
+										"animation": "\"Walk\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 796441875545029
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "Hero",
+							"sid": 725055752993129,
+							"parameters": {
+								"animation": "\"Land\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Hero",
+							"sid": 538098634158401,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 198868891560273
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-fall",
+							"objectClass": "Hero",
+							"sid": 948831349141977,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Hero",
+							"sid": 115128282335175,
+							"parameters": {
+								"animation": "\"Fall\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 857039667303179
 				}
 			],
-			"sid": 196298317525648
+			"sid": 468211700678336
 		}
 	],
 	"sid": 613083911098765

@@ -1,14 +1,14 @@
 {
 	"name": "Ledge",
 	"plugin-id": "Sprite",
-	"sid": 314004634179322,
+	"sid": 108371820862240,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "solid",
 			"name": "Solid",
-			"sid": 415048278465014
+			"sid": 301970100528219
 		}
 	],
 	"effectTypes": [],
@@ -17,19 +17,19 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 50,
+						"height": 50,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7767111,
+						"imageSpriteId": 5117260,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 318257413262191,
+				"sid": 655337457974010,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

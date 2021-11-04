@@ -22,7 +22,7 @@
 								"max-speed": 330,
 								"acceleration": 1500,
 								"deceleration": 1500,
-								"jump-strength": 1000,
+								"jump-strength": 600,
 								"gravity": 1500,
 								"max-fall-speed": 1000,
 								"double-jump": false,
@@ -33,12 +33,12 @@
 						}
 					},
 					"world": {
-						"x": 1331,
-						"y": 823,
+						"x": 1320,
+						"y": 1000,
 						"width": 192,
 						"height": 256,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1,
 						"color": [
 							1,
 							1,
