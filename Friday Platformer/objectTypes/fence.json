@@ -1,16 +1,10 @@
 {
-	"name": "Ledge",
+	"name": "Fence",
 	"plugin-id": "Sprite",
-	"sid": 108371820862240,
+	"sid": 533380967814232,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "jumpthru",
-			"name": "Jumpthru",
-			"sid": 491546570346625
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -18,18 +12,18 @@
 				"frames": [
 					{
 						"width": 50,
-						"height": 50,
+						"height": 250,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5117260,
+						"imageSpriteId": 8821228,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 655337457974010,
+				"sid": 384130247846834,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

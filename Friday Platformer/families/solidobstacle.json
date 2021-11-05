@@ -1,0 +1,18 @@
+{
+	"name": "SolidObstacle",
+	"plugin-id": "Sprite",
+	"sid": 175631928973058,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 337682434469085
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"Wall",
+		"Fence"
+	]
+}

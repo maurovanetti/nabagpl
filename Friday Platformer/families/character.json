@@ -1,0 +1,19 @@
+{
+	"name": "Character",
+	"plugin-id": "Sprite",
+	"sid": 626751279899382,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 402386748940632
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"BabyHero",
+		"Hero",
+		"Monster"
+	]
+}

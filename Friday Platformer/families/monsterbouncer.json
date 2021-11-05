@@ -1,0 +1,13 @@
+{
+	"name": "MonsterBouncer",
+	"plugin-id": "Sprite",
+	"sid": 494731769707458,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Fence",
+		"Wall",
+		"MonsterBouncingArea"
+	]
+}

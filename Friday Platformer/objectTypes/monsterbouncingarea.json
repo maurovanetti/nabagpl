@@ -1,35 +1,29 @@
 {
-	"name": "Ledge",
+	"name": "MonsterBouncingArea",
 	"plugin-id": "Sprite",
-	"sid": 108371820862240,
+	"sid": 462651681954051,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "jumpthru",
-			"name": "Jumpthru",
-			"sid": 491546570346625
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 50,
-						"height": 50,
+						"width": 100,
+						"height": 100,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5117260,
+						"imageSpriteId": 7228410,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 655337457974010,
+				"sid": 134434329193596,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
