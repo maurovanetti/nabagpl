@@ -152,9 +152,9 @@
 						{
 							"id": "set-animation",
 							"objectClass": "Character",
-							"sid": 316023059567245,
+							"sid": 113840730873856,
 							"parameters": {
-								"animation": "\"Idle\"",
+								"animation": "\"Land\"",
 								"from": "beginning"
 							}
 						}
@@ -508,21 +508,21 @@
 								{
 									"id": "else",
 									"objectClass": "System",
-									"sid": 620794609714441
+									"sid": 663665832152298
 								}
 							],
 							"actions": [
 								{
 									"id": "set-instvar-value",
 									"objectClass": "Monster",
-									"sid": 289033545319386,
+									"sid": 277623760951888,
 									"parameters": {
 										"instance-variable": "Direction",
 										"value": "\"right\""
 									}
 								}
 							],
-							"sid": 283582073948239
+							"sid": 464798492982647
 						}
 					]
 				},
@@ -559,7 +559,7 @@
 						{
 							"id": "compare-instance-variable",
 							"objectClass": "Monster",
-							"sid": 261586987330212,
+							"sid": 889001168086908,
 							"parameters": {
 								"instance-variable": "Direction",
 								"comparison": 0,
@@ -571,14 +571,14 @@
 						{
 							"id": "simulate-control",
 							"objectClass": "Monster",
-							"sid": 978074530773984,
+							"sid": 401624408494681,
 							"behaviorType": "Platform",
 							"parameters": {
 								"control": "left"
 							}
 						}
 					],
-					"sid": 418926306109376
+					"sid": 311529828891577
 				}
 			],
 			"sid": 674112093967824

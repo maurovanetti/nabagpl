@@ -903,6 +903,74 @@
 				}
 			],
 			"sid": 556032380171576
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Hero",
+					"sid": 498557097900764,
+					"parameters": {
+						"object": "HeadThing"
+					}
+				},
+				{
+					"id": "has-parent",
+					"objectClass": "HeadThing",
+					"sid": 733265471607445,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "add-child",
+					"objectClass": "Hero",
+					"sid": 533382601615796,
+					"parameters": {
+						"child": "HeadThing",
+						"transform-x": false,
+						"transform-y": false,
+						"transform-w": false,
+						"transform-h": false,
+						"transform-a": false,
+						"transform-z-elevation": false,
+						"destroy-with-parent": true
+					}
+				}
+			],
+			"sid": 427499542087632
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-parent",
+					"objectClass": "HeadThing",
+					"sid": 644861112572569
+				},
+				{
+					"id": "pick-parent",
+					"objectClass": "HeadThing",
+					"sid": 355036985642257,
+					"parameters": {
+						"parent": "Hero",
+						"which": "own"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "HeadThing",
+					"sid": 371049412581759,
+					"parameters": {
+						"object": "Hero",
+						"image-point-optional": "\"Head\""
+					}
+				}
+			],
+			"sid": 730903496555489
 		}
 	],
 	"sid": 613083911098765
