@@ -57,7 +57,10 @@
 			"BabyHero",
 			"Wall",
 			"Fence",
-			"MonsterBouncingArea"
+			"MonsterBouncingArea",
+			"MonsterJumpingArea",
+			"Key",
+			"Plate"
 		],
 		"subfolders": []
 	},
@@ -67,7 +70,8 @@
 		"items": [
 			"Character",
 			"SolidObstacle",
-			"MonsterBouncer"
+			"MonsterBouncer",
+			"MonsterTrampoline"
 		],
 		"subfolders": []
 	},

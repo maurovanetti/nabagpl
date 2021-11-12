@@ -530,6 +530,31 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Monster",
+							"sid": 748221812818370,
+							"parameters": {
+								"object": "MonsterTrampoline"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Monster",
+							"sid": 472052274659263,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						}
+					],
+					"sid": 215540011112419
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "compare-instance-variable",
 							"objectClass": "Monster",
 							"sid": 486679274956357,
@@ -548,6 +573,14 @@
 							"behaviorType": "Platform",
 							"parameters": {
 								"control": "right"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Monster",
+							"sid": 430721898392413,
+							"parameters": {
+								"state": "not-mirrored"
 							}
 						}
 					],
@@ -576,12 +609,154 @@
 							"parameters": {
 								"control": "left"
 							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Monster",
+							"sid": 349473483401220,
+							"parameters": {
+								"state": "mirrored"
+							}
 						}
 					],
 					"sid": 311529828891577
 				}
 			],
 			"sid": 674112093967824
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Hero",
+					"sid": 569177625660997,
+					"parameters": {
+						"object": "Key"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "Key",
+					"sid": 724481169181585,
+					"parameters": {
+						"object": "Hero",
+						"image-point-optional": "0"
+					}
+				},
+				{
+					"id": "add-child",
+					"objectClass": "Hero",
+					"sid": 406220409228217,
+					"parameters": {
+						"child": "Key",
+						"transform-x": true,
+						"transform-y": true,
+						"transform-w": false,
+						"transform-h": false,
+						"transform-a": false,
+						"transform-z-elevation": false,
+						"destroy-with-parent": true
+					}
+				}
+			],
+			"sid": 973972148175454
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "pick-children",
+					"objectClass": "Hero",
+					"sid": 420490412982466,
+					"parameters": {
+						"child": "Wall",
+						"which": "all"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 479556861406742,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Hero",
+							"sid": 586842565962054,
+							"parameters": {
+								"object": "Wall"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Wall",
+							"sid": 354387603329025
+						}
+					],
+					"sid": 811430955985741
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Hero",
+					"sid": 945201977262362,
+					"parameters": {
+						"object": "Plate"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Plate",
+					"sid": 665754256312530,
+					"parameters": {
+						"animation": "\"Pressed\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 273539165236811
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "Plate",
+					"sid": 612151512760152,
+					"parameters": {
+						"animation": "\"Pressed\""
+					}
+				},
+				{
+					"id": "pick-children",
+					"objectClass": "Plate",
+					"sid": 409091748664497,
+					"parameters": {
+						"child": "Wall",
+						"which": "own"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Wall",
+					"sid": 554251036909223
+				}
+			],
+			"sid": 591301615068221
 		}
 	],
 	"sid": 560034478237492

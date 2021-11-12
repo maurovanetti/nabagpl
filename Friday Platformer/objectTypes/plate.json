@@ -1,0 +1,84 @@
+{
+	"name": "Plate",
+	"plugin-id": "Sprite",
+	"sid": 247220354477188,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 204,
+						"height": 58,
+						"originX": 0.5294117647058824,
+						"originY": 0.9310344827586207,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7561554,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 518488151931254,
+				"name": "Unpressed",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 204,
+						"height": 58,
+						"originX": 0.5294117647058824,
+						"originY": 0.9310344827586207,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3916047,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 204,
+						"height": 58,
+						"originX": 0.5294117647058824,
+						"originY": 0.9310344827586207,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4271168,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 204,
+						"height": 58,
+						"originX": 0.5294117647058824,
+						"originY": 0.9310344827586207,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8957763,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 604509797572260,
+				"name": "Pressed",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 20
+			}
+		],
+		"subfolders": []
+	}
+}
