@@ -854,7 +854,7 @@
 					"objectClass": "Character",
 					"sid": 988959682816825,
 					"parameters": {
-						"object": "Death"
+						"object": "Deadly"
 					}
 				}
 			],
@@ -884,7 +884,37 @@
 					"sid": 548975191790128
 				}
 			],
-			"sid": 938762777321076
+			"sid": 938762777321076,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-children",
+							"objectClass": "Character",
+							"sid": 896946339359421,
+							"parameters": {
+								"child": "HeadThing",
+								"which": "own"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "flash",
+							"objectClass": "HeadThing",
+							"sid": 444102375872999,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "1.0"
+							}
+						}
+					],
+					"sid": 777932190483375
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -1073,6 +1103,43 @@
 				}
 			],
 			"sid": 935193927049929
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Turret AI",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 522864170049012,
+							"parameters": {
+								"interval-seconds": "1.5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Turret",
+							"sid": 104251868814193,
+							"parameters": {
+								"object": "Bullet",
+								"layer": "\"Characters\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 539722392739138
+				}
+			],
+			"sid": 938215756493758
 		}
 	],
 	"sid": 613083911098765

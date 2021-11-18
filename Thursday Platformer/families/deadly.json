@@ -1,0 +1,12 @@
+{
+	"name": "Deadly",
+	"plugin-id": "Sprite",
+	"sid": 424369181079947,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Death",
+		"Bullet"
+	]
+}

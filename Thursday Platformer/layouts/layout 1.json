@@ -1043,9 +1043,9 @@
 					},
 					"world": {
 						"x": 832,
-						"y": 849,
+						"y": 673,
 						"width": 158,
-						"height": 401,
+						"height": 753,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1154,12 +1154,12 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 15,
+					"uid": 16,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 2005,
-						"y": 979,
+						"x": 2276,
+						"y": 1322,
 						"width": 100,
 						"height": 100,
 						"originX": 0.5,
@@ -1175,24 +1175,59 @@
 					}
 				},
 				{
-					"type": "JumpArea",
+					"type": "Ledge",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 16,
+					"uid": 39,
+					"instanceVariables": {},
+					"behaviors": {
+						"Jumpthru": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 2975,
+						"y": 731,
+						"width": 1484,
+						"height": 97,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Turret",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 15,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 2276,
-						"y": 1322,
-						"width": 100,
-						"height": 100,
-						"originX": 0.5,
-						"originY": 0.5,
+						"x": 972,
+						"y": 530,
+						"width": 150,
+						"height": 110,
+						"originX": 0.5777777777777777,
+						"originY": 0.5151515151515151,
 						"color": [
 							1,
 							1,
@@ -1366,7 +1401,11 @@
 					},
 					"uid": 17,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Flash": {
+							"properties": {}
+						}
+					},
 					"sceneGraphData": {
 						"uid": 17,
 						"flags": {
@@ -1419,7 +1458,11 @@
 					},
 					"uid": 18,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Flash": {
+							"properties": {}
+						}
+					},
 					"sceneGraphData": {
 						"uid": 18,
 						"flags": {
@@ -1640,6 +1683,47 @@
 							1
 						],
 						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Bullet",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 48,
+					"instanceVariables": {},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": 2000,
+								"acceleration": -50,
+								"gravity": 50,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 1227,
+						"y": -129,
+						"width": 50,
+						"height": 45,
+						"originX": 0.6,
+						"originY": 0.5555555555555556,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 3.156531927990409,
 						"zElevation": 0
 					}
 				}

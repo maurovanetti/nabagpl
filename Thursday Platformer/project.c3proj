@@ -69,6 +69,14 @@
 			"author": "Scirra",
 			"version": "r268",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
 		}
 	],
 	"uniqueId": "vlmo1yfdp0c",
@@ -86,7 +94,9 @@
 			"HeadThing",
 			"Fence",
 			"Countdown",
-			"Cloud"
+			"Cloud",
+			"Turret",
+			"Bullet"
 		],
 		"subfolders": []
 	},
@@ -96,7 +106,8 @@
 		"items": [
 			"Character",
 			"RobotBoundary",
-			"RobotJumper"
+			"RobotJumper",
+			"Deadly"
 		],
 		"subfolders": []
 	},

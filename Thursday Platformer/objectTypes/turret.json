@@ -1,0 +1,49 @@
+{
+	"name": "Turret",
+	"plugin-id": "Sprite",
+	"sid": 546431646978060,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 150,
+						"height": 110,
+						"originX": 0.5777777777777777,
+						"originY": 0.5151515151515151,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1796949,
+						"collisionPoly": {
+							"points": [
+								0.022222222222222223,
+								0,
+								1,
+								0,
+								1,
+								1,
+								0.022222222222222223,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 230150151019600,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
