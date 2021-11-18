@@ -971,6 +971,108 @@
 				}
 			],
 			"sid": 730903496555489
+		},
+		{
+			"eventType": "variable",
+			"name": "SecondsToEnd",
+			"type": "number",
+			"initialValue": "10",
+			"comment": "A numeric value to be turned into the Countdown's string value",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 602727306976627
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Countdown",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 882594807891557
+						}
+					],
+					"actions": [
+						{
+							"id": "reset-global-variables",
+							"objectClass": "System",
+							"sid": 826840511638208
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Countdown",
+							"sid": 120709710135042,
+							"parameters": {
+								"text": "SecondsToEnd"
+							}
+						}
+					],
+					"sid": 251564436319494
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 573033559453461,
+							"parameters": {
+								"interval-seconds": "0.1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 733118685976304,
+							"parameters": {
+								"variable": "SecondsToEnd",
+								"value": "0.1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Countdown",
+							"sid": 612284647641975,
+							"parameters": {
+								"text": "SecondsToEnd"
+							}
+						}
+					],
+					"sid": 117696518159382
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 169248489283372,
+							"parameters": {
+								"variable": "SecondsToEnd",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 296450803437458
+						}
+					],
+					"sid": 131721270632988
+				}
+			],
+			"sid": 935193927049929
 		}
 	],
 	"sid": 613083911098765
