@@ -1255,7 +1255,150 @@
 					}
 				}
 			],
-			"sid": 573460338634486
+			"sid": 573460338634486,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 263705816452897,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Hero",
+					"sid": 143821087562439,
+					"parameters": {
+						"object": "Ball",
+						"layer": "\"Characters\"",
+						"image-point": "\"Ball Spawn\"",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 419355523542005,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-mirrored",
+							"objectClass": "Hero",
+							"sid": 386887903964946
+						}
+					],
+					"actions": [
+						{
+							"id": "set-velocity",
+							"objectClass": "Ball",
+							"sid": 395641658117143,
+							"behaviorType": "Physics",
+							"parameters": {
+								"x-component": "Hero.Platform.VectorX - 500",
+								"y-component": "Hero.Platform.VectorY - 500"
+							}
+						}
+					],
+					"sid": 106453961547430
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 964914130490600
+						}
+					],
+					"actions": [
+						{
+							"id": "set-velocity",
+							"objectClass": "Ball",
+							"sid": 197887578144219,
+							"behaviorType": "Physics",
+							"parameters": {
+								"x-component": "Hero.Platform.VectorX + 500",
+								"y-component": "Hero.Platform.VectorY - 500"
+							}
+						}
+					],
+					"sid": 561561677864076
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-sleeping",
+					"objectClass": "Ball",
+					"sid": 494280566745763,
+					"behaviorType": "Physics"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "Ball",
+					"sid": 120392882973807,
+					"behaviorType": "Jumpthru",
+					"parameters": {
+						"state": "enabled"
+					}
+				}
+			],
+			"sid": 153385845275635
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 529542333806631
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "Ball",
+					"sid": 617820601198990,
+					"behaviorType": "Jumpthru",
+					"parameters": {
+						"state": "disabled"
+					}
+				}
+			],
+			"sid": 740680647821824
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "Ball",
+					"sid": 603694364072136
+				}
+			],
+			"actions": [
+				{
+					"id": "set-size",
+					"objectClass": "Ball",
+					"sid": 396774660602513,
+					"parameters": {
+						"width": "Ball.Width + 1",
+						"height": "Ball.Height + 1"
+					}
+				}
+			],
+			"sid": 652154762023677
 		}
 	],
 	"sid": 613083911098765
