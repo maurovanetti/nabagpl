@@ -1004,9 +1004,9 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "SecondsToEnd",
+			"name": "DecisecondsToEnd",
 			"type": "number",
-			"initialValue": "10",
+			"initialValue": "600",
 			"comment": "A numeric value to be turned into the Countdown's string value",
 			"isStatic": false,
 			"isConstant": false,
@@ -1039,7 +1039,7 @@
 							"objectClass": "Countdown",
 							"sid": 120709710135042,
 							"parameters": {
-								"text": "SecondsToEnd"
+								"text": "DecisecondsToEnd"
 							}
 						}
 					],
@@ -1061,18 +1061,18 @@
 						{
 							"id": "subtract-from-eventvar",
 							"objectClass": "System",
-							"sid": 733118685976304,
+							"sid": 463530955007879,
 							"parameters": {
-								"variable": "SecondsToEnd",
-								"value": "0.1"
+								"variable": "DecisecondsToEnd",
+								"value": "1"
 							}
 						},
 						{
 							"id": "set-text",
 							"objectClass": "Countdown",
-							"sid": 612284647641975,
+							"sid": 258742560488890,
 							"parameters": {
-								"text": "SecondsToEnd"
+								"text": "DecisecondsToEnd / 10"
 							}
 						}
 					],
@@ -1086,7 +1086,7 @@
 							"objectClass": "System",
 							"sid": 169248489283372,
 							"parameters": {
-								"variable": "SecondsToEnd",
+								"variable": "DecisecondsToEnd",
 								"comparison": 3,
 								"value": "0"
 							}
@@ -1117,9 +1117,9 @@
 						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 522864170049012,
+							"sid": 100872873610762,
 							"parameters": {
-								"interval-seconds": "1.5"
+								"interval-seconds": "10"
 							}
 						}
 					],
@@ -1140,6 +1140,122 @@
 				}
 			],
 			"sid": 938215756493758
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Crumbling Ledge",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Character",
+							"sid": 607687753797126,
+							"parameters": {
+								"object": "CrumblingLedge"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 754792124938097,
+							"parameters": {
+								"seconds": "0.5"
+							}
+						},
+						{
+							"id": "set-immovable",
+							"objectClass": "CrumblingLedge",
+							"sid": 126469045998603,
+							"behaviorType": "Physics",
+							"parameters": {
+								"setting": "movable"
+							}
+						}
+					],
+					"sid": 708758331485826
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "CrumblingLedge",
+							"sid": 338444994006551,
+							"parameters": {
+								"object": "Ledge"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CrumblingLedge",
+							"sid": 570545911944576,
+							"parameters": {
+								"animation": "\"Crack\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 465568082162648
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "CrumblingLedge",
+							"sid": 746258321577301,
+							"parameters": {
+								"animation": "\"Crack\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "CrumblingLedge",
+							"sid": 266377847609310
+						}
+					],
+					"sid": 408643328471847
+				}
+			],
+			"sid": 376980470829516
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Hero",
+					"sid": 631022553952338,
+					"parameters": {
+						"object": "Ball"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "apply-impulse-at-angle",
+					"objectClass": "Ball",
+					"sid": 414058734079339,
+					"behaviorType": "Physics",
+					"parameters": {
+						"impulse": "Hero.Platform.Speed / 2",
+						"angle": "Hero.Platform.MovingAngle",
+						"image-point": "0"
+					}
+				}
+			],
+			"sid": 573460338634486
 		}
 	],
 	"sid": 613083911098765

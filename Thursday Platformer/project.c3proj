@@ -56,6 +56,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Physics",
+			"name": "Physics",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
 			"author": "Scirra",
@@ -96,7 +104,10 @@
 			"Countdown",
 			"Cloud",
 			"Turret",
-			"Bullet"
+			"Bullet",
+			"Ball",
+			"CrumblingLedge",
+			"Rock"
 		],
 		"subfolders": []
 	},
