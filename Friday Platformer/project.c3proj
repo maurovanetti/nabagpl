@@ -24,6 +24,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "jumpthru",
 			"name": "Jump-thru",
 			"author": "Scirra",
@@ -34,6 +42,14 @@
 			"type": "behavior",
 			"id": "Platform",
 			"name": "Platform",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Flash",
+			"name": "Flash",
 			"author": "Scirra",
 			"version": "r268",
 			"bundled": false
@@ -60,7 +76,9 @@
 			"MonsterBouncingArea",
 			"MonsterJumpingArea",
 			"Key",
-			"Plate"
+			"Plate",
+			"Abyss",
+			"Spikes"
 		],
 		"subfolders": []
 	},
@@ -71,7 +89,8 @@
 			"Character",
 			"SolidObstacle",
 			"MonsterBouncer",
-			"MonsterTrampoline"
+			"MonsterTrampoline",
+			"Danger"
 		],
 		"subfolders": []
 	},

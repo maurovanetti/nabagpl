@@ -1,0 +1,12 @@
+{
+	"name": "Danger",
+	"plugin-id": "Sprite",
+	"sid": 825938674527330,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Abyss",
+		"Spikes"
+	]
+}

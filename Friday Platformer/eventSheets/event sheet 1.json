@@ -625,60 +625,11 @@
 			"sid": 674112093967824
 		},
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "Hero",
-					"sid": 569177625660997,
-					"parameters": {
-						"object": "Key"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-position-to-another-object",
-					"objectClass": "Key",
-					"sid": 724481169181585,
-					"parameters": {
-						"object": "Hero",
-						"image-point-optional": "0"
-					}
-				},
-				{
-					"id": "add-child",
-					"objectClass": "Hero",
-					"sid": 406220409228217,
-					"parameters": {
-						"child": "Key",
-						"transform-x": true,
-						"transform-y": true,
-						"transform-w": false,
-						"transform-h": false,
-						"transform-a": false,
-						"transform-z-elevation": false,
-						"destroy-with-parent": true
-					}
-				}
-			],
-			"sid": 973972148175454
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "pick-children",
-					"objectClass": "Hero",
-					"sid": 420490412982466,
-					"parameters": {
-						"child": "Wall",
-						"which": "all"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 479556861406742,
+			"eventType": "group",
+			"disabled": false,
+			"title": "Locks and Keys",
+			"description": "",
+			"isActiveOnStart": true,
 			"children": [
 				{
 					"eventType": "block",
@@ -686,9 +637,122 @@
 						{
 							"id": "on-collision-with-another-object",
 							"objectClass": "Hero",
-							"sid": 586842565962054,
+							"sid": 697655490564120,
 							"parameters": {
-								"object": "Wall"
+								"object": "Key"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "Key",
+							"sid": 489920461255849,
+							"parameters": {
+								"object": "Hero",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "Hero",
+							"sid": 645684881614388,
+							"parameters": {
+								"child": "Key",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-a": false,
+								"transform-z-elevation": false,
+								"destroy-with-parent": true
+							}
+						}
+					],
+					"sid": 966640927562275
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-children",
+							"objectClass": "Hero",
+							"sid": 350984502957250,
+							"parameters": {
+								"child": "Wall",
+								"which": "all"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 256169397756274,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Hero",
+									"sid": 405177965346180,
+									"parameters": {
+										"object": "Wall"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Wall",
+									"sid": 767489389965416
+								}
+							],
+							"sid": 176118864407191
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Hero",
+							"sid": 322364178842917,
+							"parameters": {
+								"object": "Plate"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Plate",
+							"sid": 280882454741814,
+							"parameters": {
+								"animation": "\"Pressed\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 292331396380616
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "Plate",
+							"sid": 354231443842852,
+							"parameters": {
+								"animation": "\"Pressed\""
+							}
+						},
+						{
+							"id": "pick-children",
+							"objectClass": "Plate",
+							"sid": 326619338915923,
+							"parameters": {
+								"child": "Wall",
+								"which": "own"
 							}
 						}
 					],
@@ -696,67 +760,81 @@
 						{
 							"id": "destroy",
 							"objectClass": "Wall",
-							"sid": 354387603329025
+							"sid": 414450569329873
 						}
 					],
-					"sid": 811430955985741
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "Hero",
-					"sid": 945201977262362,
-					"parameters": {
-						"object": "Plate"
-					}
+					"sid": 981163917516224
 				}
 			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "Plate",
-					"sid": 665754256312530,
-					"parameters": {
-						"animation": "\"Pressed\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 273539165236811
+			"sid": 738091627793887
 		},
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "Death",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "on-animation-finished",
-					"objectClass": "Plate",
-					"sid": 612151512760152,
-					"parameters": {
-						"animation": "\"Pressed\""
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Character",
+							"sid": 188685813988897,
+							"parameters": {
+								"object": "Danger"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "flash",
+							"objectClass": "Character",
+							"sid": 867456981946411,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "1.0"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 983338130025055,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Character",
+							"sid": 224700812277610
+						}
+					],
+					"sid": 388964808372606
 				},
 				{
-					"id": "pick-children",
-					"objectClass": "Plate",
-					"sid": 409091748664497,
-					"parameters": {
-						"child": "Wall",
-						"which": "own"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-destroyed",
+							"objectClass": "Hero",
+							"sid": 753921219789990
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 660541879434689
+						}
+					],
+					"sid": 768922284267298
 				}
 			],
-			"actions": [
-				{
-					"id": "destroy",
-					"objectClass": "Wall",
-					"sid": 554251036909223
-				}
-			],
-			"sid": 591301615068221
+			"sid": 418679123560004
 		}
 	],
 	"sid": 560034478237492

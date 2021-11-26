@@ -4,7 +4,13 @@
 	"sid": 990593296000074,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 369130068343339
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
