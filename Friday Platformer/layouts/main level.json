@@ -1,5 +1,5 @@
 {
-	"name": "Layout 1",
+	"name": "Main Level",
 	"layers": [
 		{
 			"name": "Background",
@@ -108,8 +108,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1407,
-						"y": 1209,
+						"x": 1412,
+						"y": 1251,
 						"width": 238,
 						"height": 227,
 						"originX": 0.47058823529411764,
@@ -1029,6 +1029,80 @@
 			"blendMode": "normal",
 			"zElevation": 0,
 			"global": false
+		},
+		{
+			"name": "HUD",
+			"overriden": 0,
+			"instances": [
+				{
+					"type": "Lives",
+					"properties": {
+						"text": "...",
+						"enable-bbcode": true,
+						"font": "KGHAPPY",
+						"size": 76,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 26,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 71,
+						"y": 41,
+						"width": 1556,
+						"height": 160,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 412125355777327,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 0,
+			"parallaxY": 0,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
 		}
 	],
 	"sid": 279526685224228,
@@ -1040,5 +1114,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "Event sheet 1"
+	"eventSheet": "Main Level"
 }

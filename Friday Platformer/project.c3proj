@@ -23,6 +23,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "scrollto",
 			"name": "Scroll To",
@@ -78,7 +86,10 @@
 			"Key",
 			"Plate",
 			"Abyss",
-			"Spikes"
+			"Spikes",
+			"Lives",
+			"GameOverMessage",
+			"RestartMessage"
 		],
 		"subfolders": []
 	},
@@ -96,13 +107,15 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Main Level",
+			"Game Over"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"Main Level",
+			"Game Over"
 		],
 		"subfolders": []
 	},
@@ -124,7 +137,23 @@
 			"subfolders": []
 		},
 		"font": {
-			"items": [],
+			"items": [
+				{
+					"name": "KGHAPPY.ttf",
+					"type": "application/font-sfnt",
+					"sid": 341839681636911
+				},
+				{
+					"name": "KGHAPPYShadows.ttf",
+					"type": "application/font-sfnt",
+					"sid": 872754400306359
+				},
+				{
+					"name": "KGHAPPYSolid.ttf",
+					"type": "application/font-sfnt",
+					"sid": 814485466521064
+				}
+			],
 			"subfolders": []
 		},
 		"icon": {

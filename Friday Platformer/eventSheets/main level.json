@@ -1,5 +1,5 @@
 {
-	"name": "Event sheet 1",
+	"name": "Main Level",
 	"events": [
 		{
 			"eventType": "group",
@@ -769,12 +769,75 @@
 			"sid": 738091627793887
 		},
 		{
+			"eventType": "variable",
+			"name": "Lives",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "One is lost at each death event",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 976580093976064
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Death",
+			"title": "Life and Death",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 724523643130901
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 474607288535220,
+							"parameters": {
+								"variable": "Lives",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 930557840149799,
+							"parameters": {
+								"variable": "Lives",
+								"value": "2"
+							}
+						}
+					],
+					"sid": 945623107855281
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 865486706954433
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Lives",
+							"sid": 233670229201557,
+							"parameters": {
+								"text": "Lives"
+							}
+						}
+					],
+					"sid": 368143575531978
+				},
 				{
 					"eventType": "block",
 					"conditions": [
@@ -826,12 +889,62 @@
 					],
 					"actions": [
 						{
-							"id": "restart-layout",
+							"id": "subtract-from-eventvar",
 							"objectClass": "System",
-							"sid": 660541879434689
+							"sid": 103254360038759,
+							"parameters": {
+								"variable": "Lives",
+								"value": "1"
+							}
 						}
 					],
-					"sid": 768922284267298
+					"sid": 768922284267298,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 397008930119580,
+									"parameters": {
+										"variable": "Lives",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "restart-layout",
+									"objectClass": "System",
+									"sid": 584499625898842
+								}
+							],
+							"sid": 715023091218041
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 171597413785768
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 672615261218023,
+									"parameters": {
+										"layout": "Game Over"
+									}
+								}
+							],
+							"sid": 196116952625754
+						}
+					]
 				}
 			],
 			"sid": 418679123560004
