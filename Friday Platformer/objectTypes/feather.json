@@ -1,0 +1,63 @@
+{
+	"name": "Feather",
+	"plugin-id": "Sprite",
+	"sid": 675868499368143,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 699238714766585
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 218,
+						"height": 87,
+						"originX": 0.5229357798165137,
+						"originY": 0.21839080459770116,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9094237,
+						"collisionPoly": {
+							"points": [
+								0.2018348623853211,
+								0.5057471264367817,
+								0.3348623853211009,
+								0.2931034482758621,
+								0.9862385321100917,
+								0.022988505747126436,
+								0.8715596330275229,
+								0.5,
+								0.6743119266055043,
+								0.9482758620689659,
+								0.26605504587155976,
+								1,
+								0.1559633027522936,
+								0.5977011494252874,
+								0.013761467889908258,
+								0.2643678160919542
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 491697016987592,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

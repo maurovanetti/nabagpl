@@ -48,6 +48,22 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Physics",
+			"name": "Physics",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Platform",
 			"name": "Platform",
 			"author": "Scirra",
@@ -58,14 +74,6 @@
 			"type": "behavior",
 			"id": "Flash",
 			"name": "Flash",
-			"author": "Scirra",
-			"version": "r268",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "solid",
-			"name": "Solid",
 			"author": "Scirra",
 			"version": "r268",
 			"bundled": false
@@ -89,7 +97,10 @@
 			"Spikes",
 			"Lives",
 			"GameOverMessage",
-			"RestartMessage"
+			"RestartMessage",
+			"Wedge",
+			"Feather",
+			"Ball"
 		],
 		"subfolders": []
 	},
