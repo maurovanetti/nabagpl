@@ -5,10 +5,16 @@
 	"isGlobal": false,
 	"instanceVariables": [
 		{
-			"name": "Direction",
+			"name": "WantedDirection",
 			"type": "string",
 			"desc": "\"right\" or \"left\"",
 			"sid": 207408887792242
+		},
+		{
+			"name": "Turning",
+			"type": "boolean",
+			"desc": "",
+			"sid": 455202544975428
 		}
 	],
 	"behaviorTypes": [],

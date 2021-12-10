@@ -470,6 +470,15 @@
 							"parameters": {
 								"object": "MonsterBouncer"
 							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Monster",
+							"sid": 500526130692755,
+							"parameters": {
+								"instance-variable": "Turning"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [],
@@ -481,11 +490,21 @@
 								{
 									"id": "compare-instance-variable",
 									"objectClass": "Monster",
-									"sid": 798513870192628,
+									"sid": 476809200970515,
 									"parameters": {
-										"instance-variable": "Direction",
+										"instance-variable": "WantedDirection",
 										"comparison": 0,
 										"value": "\"right\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 632515216192778,
+									"parameters": {
+										"first-value": "Monster.Platform.VectorX",
+										"comparison": 4,
+										"second-value": "0"
 									}
 								}
 							],
@@ -495,8 +514,17 @@
 									"objectClass": "Monster",
 									"sid": 139750269507857,
 									"parameters": {
-										"instance-variable": "Direction",
+										"instance-variable": "WantedDirection",
 										"value": "\"left\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Monster",
+									"sid": 439141903776294,
+									"parameters": {
+										"instance-variable": "Turning",
+										"value": "true"
 									}
 								}
 							],
@@ -509,6 +537,26 @@
 									"id": "else",
 									"objectClass": "System",
 									"sid": 663665832152298
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 907749884632068,
+									"parameters": {
+										"first-value": "Monster.Platform.VectorX",
+										"comparison": 2,
+										"second-value": "0"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Monster",
+									"sid": 232576752981730,
+									"parameters": {
+										"instance-variable": "WantedDirection",
+										"comparison": 0,
+										"value": "\"left\""
+									}
 								}
 							],
 							"actions": [
@@ -517,8 +565,17 @@
 									"objectClass": "Monster",
 									"sid": 277623760951888,
 									"parameters": {
-										"instance-variable": "Direction",
+										"instance-variable": "WantedDirection",
 										"value": "\"right\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Monster",
+									"sid": 767052764189850,
+									"parameters": {
+										"instance-variable": "Turning",
+										"value": "true"
 									}
 								}
 							],
@@ -559,7 +616,7 @@
 							"objectClass": "Monster",
 							"sid": 486679274956357,
 							"parameters": {
-								"instance-variable": "Direction",
+								"instance-variable": "WantedDirection",
 								"comparison": 0,
 								"value": "\"right\""
 							}
@@ -594,7 +651,7 @@
 							"objectClass": "Monster",
 							"sid": 889001168086908,
 							"parameters": {
-								"instance-variable": "Direction",
+								"instance-variable": "WantedDirection",
 								"comparison": 0,
 								"value": "\"left\""
 							}
@@ -645,22 +702,13 @@
 					],
 					"actions": [
 						{
-							"id": "set-position-to-another-object",
-							"objectClass": "Key",
-							"sid": 489920461255849,
-							"parameters": {
-								"object": "Hero",
-								"image-point-optional": "0"
-							}
-						},
-						{
 							"id": "add-child",
 							"objectClass": "Hero",
-							"sid": 645684881614388,
+							"sid": 462285313272914,
 							"parameters": {
 								"child": "Key",
-								"transform-x": true,
-								"transform-y": true,
+								"transform-x": false,
+								"transform-y": false,
 								"transform-w": false,
 								"transform-h": false,
 								"transform-a": false,
@@ -720,6 +768,14 @@
 							"parameters": {
 								"object": "Plate"
 							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Plate",
+							"sid": 444392637367633,
+							"parameters": {
+								"animation": "\"Unpressed\""
+							}
 						}
 					],
 					"actions": [
@@ -764,6 +820,112 @@
 						}
 					],
 					"sid": 981163917516224
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-at-offset",
+							"objectClass": "Hero",
+							"sid": 720935162495582,
+							"parameters": {
+								"object": "Plate",
+								"offset-x": "0",
+								"offset-y": "50"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Plate",
+							"sid": 109225277502395,
+							"parameters": {
+								"animation": "\"Unpressed\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 741015763425262
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-children",
+							"objectClass": "Hero",
+							"sid": 610397775765809,
+							"parameters": {
+								"child": "Key",
+								"which": "own"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 920732997882556,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-mirrored",
+									"objectClass": "Hero",
+									"sid": 504969625169781
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "Key",
+									"sid": 227485000262408,
+									"parameters": {
+										"state": "mirrored"
+									}
+								},
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "Key",
+									"sid": 500019250985400,
+									"parameters": {
+										"object": "Hero",
+										"image-point-optional": "\"Back Hand\""
+									}
+								}
+							],
+							"sid": 359921987733464
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 620881852136644
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "Key",
+									"sid": 269111896409914,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								},
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "Key",
+									"sid": 344605049046263,
+									"parameters": {
+										"object": "Hero",
+										"image-point-optional": "\"Front Hand\""
+									}
+								}
+							],
+							"sid": 303007434863475
+						}
+					]
 				}
 			],
 			"sid": 738091627793887

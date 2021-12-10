@@ -137,7 +137,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 3270,
+						"x": 3362,
 						"y": 671,
 						"width": 238,
 						"height": 227,
@@ -164,7 +164,14 @@
 					},
 					"uid": 21,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
 					"sceneGraphData": {
 						"uid": 21,
 						"children": [
@@ -898,8 +905,8 @@
 						}
 					},
 					"world": {
-						"x": 1236,
-						"y": 361,
+						"x": 1020,
+						"y": 1162,
 						"width": 134.39999999999998,
 						"height": 179.2,
 						"originX": 0.5,
@@ -925,14 +932,15 @@
 					},
 					"uid": 9,
 					"instanceVariables": {
-						"Direction": "left"
+						"WantedDirection": "left",
+						"Turning": false
 					},
 					"behaviors": {
 						"Platform": {
 							"properties": {
 								"max-speed": 500,
-								"acceleration": 1500,
-								"deceleration": 1500,
+								"acceleration": 100,
+								"deceleration": 100,
 								"jump-strength": 650,
 								"gravity": 1500,
 								"max-fall-speed": 1000,
@@ -974,14 +982,15 @@
 					},
 					"uid": 11,
 					"instanceVariables": {
-						"Direction": "right"
+						"WantedDirection": "right",
+						"Turning": false
 					},
 					"behaviors": {
 						"Platform": {
 							"properties": {
 								"max-speed": 500,
-								"acceleration": 1500,
-								"deceleration": 1500,
+								"acceleration": 100,
+								"deceleration": 100,
 								"jump-strength": 650,
 								"gravity": 1500,
 								"max-fall-speed": 1000,
@@ -996,7 +1005,7 @@
 						}
 					},
 					"world": {
-						"x": 1106,
+						"x": 1759,
 						"y": 755,
 						"width": 192,
 						"height": 256,
@@ -1025,10 +1034,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 933,
-						"y": 643,
-						"width": 100,
-						"height": 303,
+						"x": 1263,
+						"y": 674,
+						"width": 620,
+						"height": 153,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1054,9 +1063,9 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 4009,
+						"x": 4015.5,
 						"y": 623,
-						"width": 100,
+						"width": 87,
 						"height": 303,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -1083,10 +1092,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1766,
-						"y": 342,
-						"width": 100,
-						"height": 303,
+						"x": 1772.5,
+						"y": 338,
+						"width": 87,
+						"height": 159,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1112,10 +1121,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 399,
-						"y": 318,
-						"width": 100,
-						"height": 303,
+						"x": 405.5,
+						"y": 319,
+						"width": 87,
+						"height": 137,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1184,8 +1193,37 @@
 						"y": 1162,
 						"width": 50,
 						"height": 26,
+						"originX": 0.16,
+						"originY": 0.38461538461538464,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MonsterBouncingArea",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 29,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2429.5,
+						"y": 670.5,
+						"width": 889,
+						"height": 143,
 						"originX": 0.5,
-						"originY": -0.9230769230769231,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
