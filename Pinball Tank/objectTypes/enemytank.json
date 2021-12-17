@@ -1,0 +1,70 @@
+{
+	"name": "EnemyTank",
+	"plugin-id": "Sprite",
+	"sid": 812332959762433,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "direction",
+			"type": "string",
+			"desc": "",
+			"sid": 930311969035778
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 935380041806261
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 52,
+						"height": 52,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5468900,
+						"collisionPoly": {
+							"points": [
+								0.07692307692307693,
+								0.9230769230769231,
+								0.07692307692307693,
+								0.5,
+								0.07692307692307693,
+								0.09615384615384615,
+								0.5,
+								0.05769230769230771,
+								0.8846153846153846,
+								0.11538461538461542,
+								0.9807692307692307,
+								0.5,
+								0.8846153846153846,
+								0.9038461538461539,
+								0.5,
+								0.9615384615384616
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 498780256701751,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

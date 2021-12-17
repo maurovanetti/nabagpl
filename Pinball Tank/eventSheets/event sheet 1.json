@@ -1,0 +1,672 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Tank Controls",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 267434335400040,
+							"parameters": {
+								"key": 39
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Avatar",
+							"sid": 827355889177891,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 925032222032871
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 500562602620902,
+							"parameters": {
+								"key": 37
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Avatar",
+							"sid": 491035402264475,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "left"
+							}
+						}
+					],
+					"sid": 976880930493341
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 590263638798505,
+							"parameters": {
+								"key": 38
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Avatar",
+							"sid": 287072968872661,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "up"
+							}
+						}
+					],
+					"sid": 428878577654586
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 297778288984048,
+							"parameters": {
+								"key": 40
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Avatar",
+							"sid": 398478094815667,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "down"
+							}
+						}
+					],
+					"sid": 501222775078033
+				}
+			],
+			"sid": 934396739158734
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enemy-Tank Controls",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "EnemyTank",
+							"sid": 987007488058565,
+							"parameters": {
+								"instance-variable": "direction",
+								"comparison": 0,
+								"value": "\"right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "EnemyTank",
+							"sid": 247210392686714,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 152409244753226
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "EnemyTank",
+							"sid": 502446122988390,
+							"parameters": {
+								"instance-variable": "direction",
+								"comparison": 0,
+								"value": "\"left\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "EnemyTank",
+							"sid": 760906150550487,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "left"
+							}
+						}
+					],
+					"sid": 321790874654106
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "EnemyTank",
+							"sid": 427594612702707,
+							"parameters": {
+								"instance-variable": "direction",
+								"comparison": 0,
+								"value": "\"up\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "EnemyTank",
+							"sid": 571140759108328,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "up"
+							}
+						}
+					],
+					"sid": 112089624743182
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "EnemyTank",
+							"sid": 571696749785528,
+							"parameters": {
+								"instance-variable": "direction",
+								"comparison": 0,
+								"value": "\"down\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "EnemyTank",
+							"sid": 265819572260279,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "down"
+							}
+						}
+					],
+					"sid": 877864391964949
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 559267797757589,
+							"parameters": {
+								"interval-seconds": "2"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 527645720894124,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "EnemyTank",
+									"sid": 539486612589171,
+									"parameters": {
+										"instance-variable": "direction",
+										"comparison": 0,
+										"value": "\"right\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "EnemyTank",
+									"sid": 677995162009037,
+									"parameters": {
+										"instance-variable": "direction",
+										"value": "\"down\""
+									}
+								}
+							],
+							"sid": 340285153900035
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 340881234306983
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "EnemyTank",
+									"sid": 949582219778082,
+									"parameters": {
+										"instance-variable": "direction",
+										"comparison": 0,
+										"value": "\"down\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "EnemyTank",
+									"sid": 509780044212994,
+									"parameters": {
+										"instance-variable": "direction",
+										"value": "\"left\""
+									}
+								}
+							],
+							"sid": 218169356022273
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 271776932224445
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "EnemyTank",
+									"sid": 444183983965723,
+									"parameters": {
+										"instance-variable": "direction",
+										"comparison": 0,
+										"value": "\"left\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "EnemyTank",
+									"sid": 289452431978733,
+									"parameters": {
+										"instance-variable": "direction",
+										"value": "\"up\""
+									}
+								}
+							],
+							"sid": 741890267044478
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 354052200638443
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "EnemyTank",
+									"sid": 834381320748415,
+									"parameters": {
+										"instance-variable": "direction",
+										"comparison": 0,
+										"value": "\"up\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "EnemyTank",
+									"sid": 697496341965723,
+									"parameters": {
+										"instance-variable": "direction",
+										"value": "\"right\""
+									}
+								}
+							],
+							"sid": 313375397765947
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "EnemyTank",
+							"sid": 320135140207542,
+							"parameters": {
+								"object": "Obstacle"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 639398886007476,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "EnemyTank",
+									"sid": 521915606551020,
+									"parameters": {
+										"instance-variable": "direction",
+										"comparison": 0,
+										"value": "\"right\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "EnemyTank",
+									"sid": 878595480435696,
+									"parameters": {
+										"instance-variable": "direction",
+										"value": "\"left\""
+									}
+								}
+							],
+							"sid": 414117021141930
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 114418422689887
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "EnemyTank",
+									"sid": 885754578088378,
+									"parameters": {
+										"instance-variable": "direction",
+										"comparison": 0,
+										"value": "\"down\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "EnemyTank",
+									"sid": 108472179753222,
+									"parameters": {
+										"instance-variable": "direction",
+										"value": "\"up\""
+									}
+								}
+							],
+							"sid": 129339056400296
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 540003618948674
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "EnemyTank",
+									"sid": 382601325208526,
+									"parameters": {
+										"instance-variable": "direction",
+										"comparison": 0,
+										"value": "\"left\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "EnemyTank",
+									"sid": 751688516017469,
+									"parameters": {
+										"instance-variable": "direction",
+										"value": "\"right\""
+									}
+								}
+							],
+							"sid": 207904637030490
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 125599721607095
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "EnemyTank",
+									"sid": 548991738912773,
+									"parameters": {
+										"instance-variable": "direction",
+										"comparison": 0,
+										"value": "\"up\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "EnemyTank",
+									"sid": 449160950478288,
+									"parameters": {
+										"instance-variable": "direction",
+										"value": "\"down\""
+									}
+								}
+							],
+							"sid": 211216303117162
+						}
+					]
+				}
+			],
+			"sid": 780525655604880
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enemy Fire",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 246478828438669,
+							"parameters": {
+								"interval-seconds": "0.3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "EnemyTank",
+							"sid": 306674015605299,
+							"parameters": {
+								"object": "Bullet",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 336850496495104
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Bullet",
+							"sid": 653761759127583,
+							"parameters": {
+								"object": "Avatar"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Avatar",
+							"sid": 871624813999963
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 555924197351311,
+							"parameters": {
+								"seconds": "2"
+							}
+						},
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 880196256172930
+						}
+					],
+					"sid": 310879073024990
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 642377603766987
+						}
+					],
+					"actions": [
+						{
+							"id": "add-object-to-target",
+							"objectClass": "EnemyTurret",
+							"sid": 131368825451627,
+							"behaviorType": "Turret",
+							"parameters": {
+								"target": "Avatar"
+							}
+						}
+					],
+					"sid": 421393010957709
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-shoot",
+							"objectClass": "EnemyTurret",
+							"sid": 243084394433144,
+							"behaviorType": "Turret"
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "EnemyTurret",
+							"sid": 904263986098535,
+							"parameters": {
+								"object": "Bullet",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 807469245956345
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Bullet",
+							"sid": 987869411251794,
+							"parameters": {
+								"object": "Obstacle"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-scale",
+							"objectClass": "Obstacle",
+							"sid": 125130442464653,
+							"parameters": {
+								"scale": "1.1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 608125221368018,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "Obstacle",
+							"sid": 895449376961725,
+							"parameters": {
+								"scale": "1"
+							}
+						}
+					],
+					"sid": 639094058672887
+				}
+			],
+			"sid": 720159127793322
+		}
+	],
+	"sid": 351804470821456
+}
