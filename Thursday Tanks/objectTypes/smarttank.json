@@ -1,0 +1,63 @@
+{
+	"name": "SmartTank",
+	"plugin-id": "Sprite",
+	"sid": 614345155460342,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pathfinding",
+			"name": "Pathfinding",
+			"sid": 760310297524840
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 70,
+						"height": 75,
+						"originX": 0.5142857142857142,
+						"originY": 0.5066666666666667,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4966445,
+						"collisionPoly": {
+							"points": [
+								0.014285714285714285,
+								0.9866666666666667,
+								0,
+								0.5,
+								0.014285714285714285,
+								0.026666666666666616,
+								0.5,
+								0.026666666666666616,
+								0.9714285714285714,
+								0.026666666666666616,
+								0.9857142857142858,
+								0.5,
+								0.9714285714285714,
+								0.9866666666666667,
+								0.5,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 370536834099087,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

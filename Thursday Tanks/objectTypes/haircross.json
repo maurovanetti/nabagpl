@@ -1,0 +1,37 @@
+{
+	"name": "Haircross",
+	"plugin-id": "Sprite",
+	"sid": 955207731070989,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 40,
+						"height": 42,
+						"originX": 0.4768211920529801,
+						"originY": 0.5157232704402515,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5663994,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 476732159673157,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

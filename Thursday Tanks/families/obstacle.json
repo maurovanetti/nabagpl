@@ -1,0 +1,19 @@
+{
+	"name": "Obstacle",
+	"plugin-id": "Sprite",
+	"sid": 177563232301158,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 450047788545816
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"LargeTree",
+		"SmallTree",
+		"Sandbag"
+	]
+}

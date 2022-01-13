@@ -1,0 +1,37 @@
+{
+	"name": "SmallHaircross",
+	"plugin-id": "Sprite",
+	"sid": 843316359873049,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 25,
+						"height": 26,
+						"originX": 0.4768211920529801,
+						"originY": 0.5157232704402515,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8222334,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 826414327286975,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

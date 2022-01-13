@@ -1,0 +1,57 @@
+{
+	"name": "LargeTree",
+	"plugin-id": "Sprite",
+	"sid": 713235023718236,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 98,
+						"height": 107,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2144029,
+						"collisionPoly": {
+							"points": [
+								0.14285714285714285,
+								0.1308411214953271,
+								0.5,
+								0.009345794392523364,
+								0.8061224489795918,
+								0.16822429906542055,
+								0.9795918367346939,
+								0.5,
+								0.8061224489795918,
+								0.822429906542056,
+								0.5,
+								0.9532710280373832,
+								0.11224489795918367,
+								0.8878504672897196,
+								0.01020408163265306,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 101926233503232,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
