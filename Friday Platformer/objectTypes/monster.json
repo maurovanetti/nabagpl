@@ -5,10 +5,16 @@
 	"isGlobal": false,
 	"instanceVariables": [
 		{
-			"name": "Direction",
+			"name": "WantedDirection",
 			"type": "string",
 			"desc": "\"right\" or \"left\"",
 			"sid": 207408887792242
+		},
+		{
+			"name": "Turning",
+			"type": "boolean",
+			"desc": "",
+			"sid": 455202544975428
 		}
 	],
 	"behaviorTypes": [],
@@ -256,6 +262,41 @@
 				],
 				"sid": 998267523368941,
 				"name": "Fall",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 157,
+						"height": 182,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2597758,
+						"collisionPoly": {
+							"points": [
+								0.7515923566878981,
+								0,
+								0.8781847133757962,
+								0.9979395604395603,
+								0.18789808917197454,
+								0.9993131868131867,
+								0.2898089171974523,
+								0
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 175093775489547,
+				"name": "Land",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

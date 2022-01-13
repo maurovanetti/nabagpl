@@ -43,6 +43,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -78,6 +90,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -102,6 +126,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5260416666666666,
+								"y": 0.43359375
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -126,6 +162,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -150,6 +198,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.37890625
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -174,6 +234,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5104166666666666,
+								"y": 0.40625
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -198,6 +270,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.53125,
+								"y": 0.43359375
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -222,6 +306,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -246,6 +342,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.515625,
+								"y": 0.359375
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -255,7 +363,7 @@
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 5
+				"speed": 10
 			},
 			{
 				"frames": [
@@ -281,6 +389,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.453125,
+								"y": 0.44921875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -316,6 +436,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.51953125
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -351,6 +483,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.515625,
+								"y": 0.2890625
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -386,6 +530,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -410,6 +566,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -434,6 +602,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -458,6 +638,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -482,6 +674,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -506,6 +710,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -530,6 +746,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -554,6 +782,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -578,6 +818,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -602,6 +854,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -626,6 +890,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -650,6 +926,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -674,6 +962,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -698,6 +998,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -722,6 +1034,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -746,6 +1070,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -770,6 +1106,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -794,6 +1142,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -818,6 +1178,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -842,6 +1214,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -866,6 +1250,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -890,6 +1286,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -914,6 +1322,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -938,6 +1358,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -962,6 +1394,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -986,6 +1430,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1010,6 +1466,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1034,6 +1502,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1058,6 +1538,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1082,6 +1574,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1106,6 +1610,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1130,6 +1646,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1154,6 +1682,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1178,6 +1718,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1202,6 +1754,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1226,6 +1790,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1250,6 +1826,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1274,6 +1862,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1298,6 +1898,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1322,6 +1934,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1346,6 +1970,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1370,6 +2006,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1394,6 +2042,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1418,6 +2078,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1442,6 +2114,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Head",
+								"x": 0.5052083333333334,
+								"y": 0.38671875
+							},
+							{
+								"name": "Ball Spawn",
+								"x": 0.890625,
+								"y": 0.46484375
+							}
+						],
 						"duration": 1
 					}
 				],

@@ -1,0 +1,20 @@
+{
+	"name": "Grass",
+	"plugin-id": "TiledBg",
+	"sid": 936799337305021,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 128,
+		"height": 128,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 2118628,
+		"useCollisionPoly": true
+	}
+}

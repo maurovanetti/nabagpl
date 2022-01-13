@@ -854,7 +854,7 @@
 					"objectClass": "Character",
 					"sid": 988959682816825,
 					"parameters": {
-						"object": "Death"
+						"object": "Deadly"
 					}
 				}
 			],
@@ -884,7 +884,37 @@
 					"sid": 548975191790128
 				}
 			],
-			"sid": 938762777321076
+			"sid": 938762777321076,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-children",
+							"objectClass": "Character",
+							"sid": 896946339359421,
+							"parameters": {
+								"child": "HeadThing",
+								"which": "own"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "flash",
+							"objectClass": "HeadThing",
+							"sid": 444102375872999,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "1.0"
+							}
+						}
+					],
+					"sid": 777932190483375
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -903,6 +933,472 @@
 				}
 			],
 			"sid": 556032380171576
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Hero",
+					"sid": 498557097900764,
+					"parameters": {
+						"object": "HeadThing"
+					}
+				},
+				{
+					"id": "has-parent",
+					"objectClass": "HeadThing",
+					"sid": 733265471607445,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "add-child",
+					"objectClass": "Hero",
+					"sid": 533382601615796,
+					"parameters": {
+						"child": "HeadThing",
+						"transform-x": false,
+						"transform-y": false,
+						"transform-w": false,
+						"transform-h": false,
+						"transform-a": false,
+						"transform-z-elevation": false,
+						"destroy-with-parent": true
+					}
+				}
+			],
+			"sid": 427499542087632
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-parent",
+					"objectClass": "HeadThing",
+					"sid": 644861112572569
+				},
+				{
+					"id": "pick-parent",
+					"objectClass": "HeadThing",
+					"sid": 355036985642257,
+					"parameters": {
+						"parent": "Hero",
+						"which": "own"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "HeadThing",
+					"sid": 371049412581759,
+					"parameters": {
+						"object": "Hero",
+						"image-point-optional": "\"Head\""
+					}
+				}
+			],
+			"sid": 730903496555489
+		},
+		{
+			"eventType": "variable",
+			"name": "DecisecondsToEnd",
+			"type": "number",
+			"initialValue": "600",
+			"comment": "A numeric value to be turned into the Countdown's string value",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 602727306976627
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Countdown",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 882594807891557
+						}
+					],
+					"actions": [
+						{
+							"id": "reset-global-variables",
+							"objectClass": "System",
+							"sid": 826840511638208
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Countdown",
+							"sid": 120709710135042,
+							"parameters": {
+								"text": "DecisecondsToEnd"
+							}
+						}
+					],
+					"sid": 251564436319494
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 573033559453461,
+							"parameters": {
+								"interval-seconds": "0.1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 463530955007879,
+							"parameters": {
+								"variable": "DecisecondsToEnd",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Countdown",
+							"sid": 258742560488890,
+							"parameters": {
+								"text": "DecisecondsToEnd / 10"
+							}
+						}
+					],
+					"sid": 117696518159382
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 169248489283372,
+							"parameters": {
+								"variable": "DecisecondsToEnd",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 296450803437458
+						}
+					],
+					"sid": 131721270632988
+				}
+			],
+			"sid": 935193927049929
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Turret AI",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 100872873610762,
+							"parameters": {
+								"interval-seconds": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Turret",
+							"sid": 104251868814193,
+							"parameters": {
+								"object": "Bullet",
+								"layer": "\"Characters\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 539722392739138
+				}
+			],
+			"sid": 938215756493758
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Crumbling Ledge",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Character",
+							"sid": 607687753797126,
+							"parameters": {
+								"object": "CrumblingLedge"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 754792124938097,
+							"parameters": {
+								"seconds": "0.5"
+							}
+						},
+						{
+							"id": "set-immovable",
+							"objectClass": "CrumblingLedge",
+							"sid": 126469045998603,
+							"behaviorType": "Physics",
+							"parameters": {
+								"setting": "movable"
+							}
+						}
+					],
+					"sid": 708758331485826
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "CrumblingLedge",
+							"sid": 338444994006551,
+							"parameters": {
+								"object": "Ledge"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CrumblingLedge",
+							"sid": 570545911944576,
+							"parameters": {
+								"animation": "\"Crack\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 465568082162648
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "CrumblingLedge",
+							"sid": 746258321577301,
+							"parameters": {
+								"animation": "\"Crack\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "CrumblingLedge",
+							"sid": 266377847609310
+						}
+					],
+					"sid": 408643328471847
+				}
+			],
+			"sid": 376980470829516
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Hero",
+					"sid": 631022553952338,
+					"parameters": {
+						"object": "Ball"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "apply-impulse-at-angle",
+					"objectClass": "Ball",
+					"sid": 414058734079339,
+					"behaviorType": "Physics",
+					"parameters": {
+						"impulse": "Hero.Platform.Speed / 2",
+						"angle": "Hero.Platform.MovingAngle",
+						"image-point": "0"
+					}
+				}
+			],
+			"sid": 573460338634486,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 263705816452897,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Hero",
+					"sid": 143821087562439,
+					"parameters": {
+						"object": "Ball",
+						"layer": "\"Characters\"",
+						"image-point": "\"Ball Spawn\"",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 419355523542005,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-mirrored",
+							"objectClass": "Hero",
+							"sid": 386887903964946
+						}
+					],
+					"actions": [
+						{
+							"id": "set-velocity",
+							"objectClass": "Ball",
+							"sid": 395641658117143,
+							"behaviorType": "Physics",
+							"parameters": {
+								"x-component": "Hero.Platform.VectorX - 500",
+								"y-component": "Hero.Platform.VectorY - 500"
+							}
+						}
+					],
+					"sid": 106453961547430
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 964914130490600
+						}
+					],
+					"actions": [
+						{
+							"id": "set-velocity",
+							"objectClass": "Ball",
+							"sid": 197887578144219,
+							"behaviorType": "Physics",
+							"parameters": {
+								"x-component": "Hero.Platform.VectorX + 500",
+								"y-component": "Hero.Platform.VectorY - 500"
+							}
+						}
+					],
+					"sid": 561561677864076
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-sleeping",
+					"objectClass": "Ball",
+					"sid": 494280566745763,
+					"behaviorType": "Physics"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "Ball",
+					"sid": 120392882973807,
+					"behaviorType": "Jumpthru",
+					"parameters": {
+						"state": "enabled"
+					}
+				}
+			],
+			"sid": 153385845275635
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 529542333806631
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "Ball",
+					"sid": 617820601198990,
+					"behaviorType": "Jumpthru",
+					"parameters": {
+						"state": "disabled"
+					}
+				}
+			],
+			"sid": 740680647821824
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "Ball",
+					"sid": 603694364072136
+				}
+			],
+			"actions": [
+				{
+					"id": "set-size",
+					"objectClass": "Ball",
+					"sid": 396774660602513,
+					"parameters": {
+						"width": "Ball.Width + 1",
+						"height": "Ball.Height + 1"
+					}
+				}
+			],
+			"sid": 652154762023677
 		}
 	],
 	"sid": 613083911098765

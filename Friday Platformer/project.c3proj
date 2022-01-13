@@ -23,9 +23,41 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "jumpthru",
 			"name": "Jump-thru",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Physics",
+			"name": "Physics",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
 			"author": "Scirra",
 			"version": "r268",
 			"bundled": false
@@ -40,8 +72,8 @@
 		},
 		{
 			"type": "behavior",
-			"id": "solid",
-			"name": "Solid",
+			"id": "Flash",
+			"name": "Flash",
 			"author": "Scirra",
 			"version": "r268",
 			"bundled": false
@@ -57,7 +89,18 @@
 			"BabyHero",
 			"Wall",
 			"Fence",
-			"MonsterBouncingArea"
+			"MonsterBouncingArea",
+			"MonsterJumpingArea",
+			"Key",
+			"Plate",
+			"Abyss",
+			"Spikes",
+			"Lives",
+			"GameOverMessage",
+			"RestartMessage",
+			"Wedge",
+			"Feather",
+			"Ball"
 		],
 		"subfolders": []
 	},
@@ -67,19 +110,23 @@
 		"items": [
 			"Character",
 			"SolidObstacle",
-			"MonsterBouncer"
+			"MonsterBouncer",
+			"MonsterTrampoline",
+			"Danger"
 		],
 		"subfolders": []
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Main Level",
+			"Game Over"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"Main Level",
+			"Game Over"
 		],
 		"subfolders": []
 	},
@@ -101,7 +148,23 @@
 			"subfolders": []
 		},
 		"font": {
-			"items": [],
+			"items": [
+				{
+					"name": "KGHAPPY.ttf",
+					"type": "application/font-sfnt",
+					"sid": 341839681636911
+				},
+				{
+					"name": "KGHAPPYShadows.ttf",
+					"type": "application/font-sfnt",
+					"sid": 872754400306359
+				},
+				{
+					"name": "KGHAPPYSolid.ttf",
+					"type": "application/font-sfnt",
+					"sid": 814485466521064
+				}
+			],
 			"subfolders": []
 		},
 		"icon": {

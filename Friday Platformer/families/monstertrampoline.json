@@ -1,0 +1,12 @@
+{
+	"name": "MonsterTrampoline",
+	"plugin-id": "Sprite",
+	"sid": 615474303985058,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"MonsterJumpingArea",
+		"BabyHero"
+	]
+}

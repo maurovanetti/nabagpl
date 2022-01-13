@@ -9,6 +9,11 @@
 			"behaviorId": "jumpthru",
 			"name": "Jumpthru",
 			"sid": 491546570346625
+		},
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 512881981240722
 		}
 	],
 	"effectTypes": [],

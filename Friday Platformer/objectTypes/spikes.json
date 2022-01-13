@@ -1,0 +1,59 @@
+{
+	"name": "Spikes",
+	"plugin-id": "Sprite",
+	"sid": 688872300615008,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 238,
+						"height": 227,
+						"originX": 0.47058823529411764,
+						"originY": 0.44493392070484583,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5976886,
+						"collisionPoly": {
+							"points": [
+								0.26260504201680684,
+								0.7422907488986786,
+								0.4327731092436976,
+								0,
+								0.6218487394957981,
+								0.7422907488986784,
+								0.7436974789915968,
+								0.44493392070484583,
+								0.7836134453781516,
+								0.7114537444933923,
+								0.9317226890756303,
+								0.6894273127753303,
+								0.9957983193277311,
+								0.8325991189427312,
+								0.025210084033613446,
+								0.8237885462555062,
+								0.11974789915966394,
+								0.30837004405286356
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 699685570097170,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"name": "Game Over",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 823566606467546
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 493225549834322,
+					"parameters": {
+						"layout": "Main Level"
+					}
+				}
+			],
+			"sid": 472311812628290
+		}
+	],
+	"sid": 537338061602972
+}

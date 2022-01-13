@@ -1,0 +1,68 @@
+{
+	"name": "Ball",
+	"plugin-id": "Sprite",
+	"sid": 219106227079454,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 336065228252971
+		},
+		{
+			"behaviorId": "jumpthru",
+			"name": "Jumpthru",
+			"sid": 437144645210947
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 164,
+						"height": 166,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 60999,
+						"collisionPoly": {
+							"points": [
+								0.1524390243902439,
+								0.15060240963855423,
+								0.5,
+								0.006024096385542169,
+								0.8414634146341463,
+								0.15060240963855423,
+								0.9878048780487805,
+								0.5,
+								0.8414634146341463,
+								0.8433734939759037,
+								0.5,
+								0.9879518072289156,
+								0.1524390243902439,
+								0.8433734939759037,
+								0.006097560975609756,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 178299678155925,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
