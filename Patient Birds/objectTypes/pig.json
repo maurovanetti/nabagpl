@@ -1,0 +1,63 @@
+{
+	"name": "Pig",
+	"plugin-id": "Sprite",
+	"sid": 609299278598786,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 375718459218829
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 142,
+						"height": 138,
+						"originX": 0.2746478873239437,
+						"originY": 0.2971014492753623,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7555280,
+						"collisionPoly": {
+							"points": [
+								0.14788732394366197,
+								0.15217391304347827,
+								0.5,
+								0.007246376811594203,
+								0.8450704225352113,
+								0.15217391304347827,
+								0.9859154929577465,
+								0.5,
+								0.8450704225352113,
+								0.8405797101449275,
+								0.5,
+								0.9855072463768116,
+								0.14788732394366197,
+								0.8405797101449275,
+								0.007042253521126761,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 262950213458253,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

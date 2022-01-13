@@ -1,0 +1,63 @@
+{
+	"name": "Bird",
+	"plugin-id": "Sprite",
+	"sid": 975132711321211,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 887931206629525
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 136,
+						"height": 121,
+						"originX": 0.27205882352941174,
+						"originY": 0.4214876033057851,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1213316,
+						"collisionPoly": {
+							"points": [
+								0.15441176470588236,
+								0.17355371900826447,
+								0.5,
+								0.05785123966942149,
+								0.9852941176470589,
+								0.008264462809917356,
+								0.9191176470588235,
+								0.5,
+								0.8235294117647058,
+								0.8016528925619835,
+								0.5,
+								0.9834710743801653,
+								0.1323529411764706,
+								0.8429752066115702,
+								0.007352941176470588,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 712804037524251,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
