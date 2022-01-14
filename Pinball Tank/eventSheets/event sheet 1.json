@@ -123,10 +123,10 @@
 					"conditions": [
 						{
 							"id": "compare-instance-variable",
-							"objectClass": "EnemyTank",
-							"sid": 987007488058565,
+							"objectClass": "SimpleEnemyTank",
+							"sid": 864926513422469,
 							"parameters": {
-								"instance-variable": "direction",
+								"instance-variable": "Direction",
 								"comparison": 0,
 								"value": "\"right\""
 							}
@@ -135,8 +135,8 @@
 					"actions": [
 						{
 							"id": "simulate-control",
-							"objectClass": "EnemyTank",
-							"sid": 247210392686714,
+							"objectClass": "SimpleEnemyTank",
+							"sid": 851140121700090,
 							"behaviorType": "8Direction",
 							"parameters": {
 								"control": "right"
@@ -150,10 +150,10 @@
 					"conditions": [
 						{
 							"id": "compare-instance-variable",
-							"objectClass": "EnemyTank",
-							"sid": 502446122988390,
+							"objectClass": "SimpleEnemyTank",
+							"sid": 541406828286703,
 							"parameters": {
-								"instance-variable": "direction",
+								"instance-variable": "Direction",
 								"comparison": 0,
 								"value": "\"left\""
 							}
@@ -162,8 +162,8 @@
 					"actions": [
 						{
 							"id": "simulate-control",
-							"objectClass": "EnemyTank",
-							"sid": 760906150550487,
+							"objectClass": "SimpleEnemyTank",
+							"sid": 757578029679785,
 							"behaviorType": "8Direction",
 							"parameters": {
 								"control": "left"
@@ -177,10 +177,10 @@
 					"conditions": [
 						{
 							"id": "compare-instance-variable",
-							"objectClass": "EnemyTank",
-							"sid": 427594612702707,
+							"objectClass": "SimpleEnemyTank",
+							"sid": 137728289569321,
 							"parameters": {
-								"instance-variable": "direction",
+								"instance-variable": "Direction",
 								"comparison": 0,
 								"value": "\"up\""
 							}
@@ -189,8 +189,8 @@
 					"actions": [
 						{
 							"id": "simulate-control",
-							"objectClass": "EnemyTank",
-							"sid": 571140759108328,
+							"objectClass": "SimpleEnemyTank",
+							"sid": 685034314978429,
 							"behaviorType": "8Direction",
 							"parameters": {
 								"control": "up"
@@ -204,10 +204,10 @@
 					"conditions": [
 						{
 							"id": "compare-instance-variable",
-							"objectClass": "EnemyTank",
-							"sid": 571696749785528,
+							"objectClass": "SimpleEnemyTank",
+							"sid": 260345709843897,
 							"parameters": {
-								"instance-variable": "direction",
+								"instance-variable": "Direction",
 								"comparison": 0,
 								"value": "\"down\""
 							}
@@ -216,8 +216,8 @@
 					"actions": [
 						{
 							"id": "simulate-control",
-							"objectClass": "EnemyTank",
-							"sid": 265819572260279,
+							"objectClass": "SimpleEnemyTank",
+							"sid": 624933117742464,
 							"behaviorType": "8Direction",
 							"parameters": {
 								"control": "down"
@@ -236,6 +236,14 @@
 							"parameters": {
 								"interval-seconds": "2"
 							}
+						},
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 158568984502477,
+							"parameters": {
+								"object": "DeterministicTank"
+							}
 						}
 					],
 					"actions": [],
@@ -246,10 +254,10 @@
 							"conditions": [
 								{
 									"id": "compare-instance-variable",
-									"objectClass": "EnemyTank",
-									"sid": 539486612589171,
+									"objectClass": "DeterministicTank",
+									"sid": 599771559096896,
 									"parameters": {
-										"instance-variable": "direction",
+										"instance-variable": "Direction",
 										"comparison": 0,
 										"value": "\"right\""
 									}
@@ -258,10 +266,10 @@
 							"actions": [
 								{
 									"id": "set-instvar-value",
-									"objectClass": "EnemyTank",
-									"sid": 677995162009037,
+									"objectClass": "DeterministicTank",
+									"sid": 760450820561973,
 									"parameters": {
-										"instance-variable": "direction",
+										"instance-variable": "Direction",
 										"value": "\"down\""
 									}
 								}
@@ -278,10 +286,10 @@
 								},
 								{
 									"id": "compare-instance-variable",
-									"objectClass": "EnemyTank",
-									"sid": 949582219778082,
+									"objectClass": "DeterministicTank",
+									"sid": 569269930421416,
 									"parameters": {
-										"instance-variable": "direction",
+										"instance-variable": "Direction",
 										"comparison": 0,
 										"value": "\"down\""
 									}
@@ -290,10 +298,10 @@
 							"actions": [
 								{
 									"id": "set-instvar-value",
-									"objectClass": "EnemyTank",
-									"sid": 509780044212994,
+									"objectClass": "DeterministicTank",
+									"sid": 688590709750953,
 									"parameters": {
-										"instance-variable": "direction",
+										"instance-variable": "Direction",
 										"value": "\"left\""
 									}
 								}
@@ -310,10 +318,10 @@
 								},
 								{
 									"id": "compare-instance-variable",
-									"objectClass": "EnemyTank",
-									"sid": 444183983965723,
+									"objectClass": "DeterministicTank",
+									"sid": 675168075386115,
 									"parameters": {
-										"instance-variable": "direction",
+										"instance-variable": "Direction",
 										"comparison": 0,
 										"value": "\"left\""
 									}
@@ -322,10 +330,10 @@
 							"actions": [
 								{
 									"id": "set-instvar-value",
-									"objectClass": "EnemyTank",
-									"sid": 289452431978733,
+									"objectClass": "DeterministicTank",
+									"sid": 924625235381350,
 									"parameters": {
-										"instance-variable": "direction",
+										"instance-variable": "Direction",
 										"value": "\"up\""
 									}
 								}
@@ -342,10 +350,10 @@
 								},
 								{
 									"id": "compare-instance-variable",
-									"objectClass": "EnemyTank",
-									"sid": 834381320748415,
+									"objectClass": "DeterministicTank",
+									"sid": 383151676578639,
 									"parameters": {
-										"instance-variable": "direction",
+										"instance-variable": "Direction",
 										"comparison": 0,
 										"value": "\"up\""
 									}
@@ -354,10 +362,10 @@
 							"actions": [
 								{
 									"id": "set-instvar-value",
-									"objectClass": "EnemyTank",
-									"sid": 697496341965723,
+									"objectClass": "DeterministicTank",
+									"sid": 583709952802369,
 									"parameters": {
-										"instance-variable": "direction",
+										"instance-variable": "Direction",
 										"value": "\"right\""
 									}
 								}
@@ -371,7 +379,7 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "EnemyTank",
+							"objectClass": "DeterministicTank",
 							"sid": 320135140207542,
 							"parameters": {
 								"object": "Obstacle"
@@ -386,10 +394,10 @@
 							"conditions": [
 								{
 									"id": "compare-instance-variable",
-									"objectClass": "EnemyTank",
-									"sid": 521915606551020,
+									"objectClass": "DeterministicTank",
+									"sid": 114131970168825,
 									"parameters": {
-										"instance-variable": "direction",
+										"instance-variable": "Direction",
 										"comparison": 0,
 										"value": "\"right\""
 									}
@@ -398,10 +406,10 @@
 							"actions": [
 								{
 									"id": "set-instvar-value",
-									"objectClass": "EnemyTank",
-									"sid": 878595480435696,
+									"objectClass": "DeterministicTank",
+									"sid": 174688616413663,
 									"parameters": {
-										"instance-variable": "direction",
+										"instance-variable": "Direction",
 										"value": "\"left\""
 									}
 								}
@@ -418,10 +426,10 @@
 								},
 								{
 									"id": "compare-instance-variable",
-									"objectClass": "EnemyTank",
-									"sid": 885754578088378,
+									"objectClass": "DeterministicTank",
+									"sid": 285413837019948,
 									"parameters": {
-										"instance-variable": "direction",
+										"instance-variable": "Direction",
 										"comparison": 0,
 										"value": "\"down\""
 									}
@@ -430,10 +438,10 @@
 							"actions": [
 								{
 									"id": "set-instvar-value",
-									"objectClass": "EnemyTank",
-									"sid": 108472179753222,
+									"objectClass": "DeterministicTank",
+									"sid": 157387083380506,
 									"parameters": {
-										"instance-variable": "direction",
+										"instance-variable": "Direction",
 										"value": "\"up\""
 									}
 								}
@@ -450,10 +458,10 @@
 								},
 								{
 									"id": "compare-instance-variable",
-									"objectClass": "EnemyTank",
-									"sid": 382601325208526,
+									"objectClass": "DeterministicTank",
+									"sid": 360185218569191,
 									"parameters": {
-										"instance-variable": "direction",
+										"instance-variable": "Direction",
 										"comparison": 0,
 										"value": "\"left\""
 									}
@@ -462,10 +470,10 @@
 							"actions": [
 								{
 									"id": "set-instvar-value",
-									"objectClass": "EnemyTank",
-									"sid": 751688516017469,
+									"objectClass": "DeterministicTank",
+									"sid": 884486001877945,
 									"parameters": {
-										"instance-variable": "direction",
+										"instance-variable": "Direction",
 										"value": "\"right\""
 									}
 								}
@@ -482,10 +490,10 @@
 								},
 								{
 									"id": "compare-instance-variable",
-									"objectClass": "EnemyTank",
-									"sid": 548991738912773,
+									"objectClass": "DeterministicTank",
+									"sid": 346784638371991,
 									"parameters": {
-										"instance-variable": "direction",
+										"instance-variable": "Direction",
 										"comparison": 0,
 										"value": "\"up\""
 									}
@@ -494,15 +502,283 @@
 							"actions": [
 								{
 									"id": "set-instvar-value",
-									"objectClass": "EnemyTank",
-									"sid": 449160950478288,
+									"objectClass": "DeterministicTank",
+									"sid": 775959289018592,
 									"parameters": {
-										"instance-variable": "direction",
+										"instance-variable": "Direction",
 										"value": "\"down\""
 									}
 								}
 							],
 							"sid": 211216303117162
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 155459326218541,
+							"parameters": {
+								"interval-seconds": "1"
+							}
+						},
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 750831798102441,
+							"parameters": {
+								"object": "RandomTank"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "RandomTank",
+							"sid": 623659619988219,
+							"parameters": {
+								"instance-variable": "RandomValue",
+								"value": "floor(random(4))"
+							}
+						}
+					],
+					"sid": 121734672775410,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "RandomTank",
+									"sid": 746865103687630,
+									"parameters": {
+										"instance-variable": "RandomValue",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "RandomTank",
+									"sid": 282943177398853,
+									"parameters": {
+										"instance-variable": "Direction",
+										"value": "\"right\""
+									}
+								}
+							],
+							"sid": 638117683398689
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "RandomTank",
+									"sid": 977726629485884,
+									"parameters": {
+										"instance-variable": "RandomValue",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "RandomTank",
+									"sid": 945030468776417,
+									"parameters": {
+										"instance-variable": "Direction",
+										"value": "\"left\""
+									}
+								}
+							],
+							"sid": 280516400579541
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "RandomTank",
+									"sid": 532454072094724,
+									"parameters": {
+										"instance-variable": "RandomValue",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "RandomTank",
+									"sid": 831528339557392,
+									"parameters": {
+										"instance-variable": "Direction",
+										"value": "\"up\""
+									}
+								}
+							],
+							"sid": 713811464288403
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "RandomTank",
+									"sid": 574084818349800,
+									"parameters": {
+										"instance-variable": "RandomValue",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "RandomTank",
+									"sid": 452496661046007,
+									"parameters": {
+										"instance-variable": "Direction",
+										"value": "\"down\""
+									}
+								}
+							],
+							"sid": 246514892451850
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "RandomTank",
+							"sid": 986562389917482,
+							"parameters": {
+								"object": "Obstacle"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 289010829680385,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "RandomTank",
+									"sid": 747803619464127,
+									"parameters": {
+										"instance-variable": "RandomValue",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "RandomTank",
+									"sid": 388411467172575,
+									"parameters": {
+										"instance-variable": "Direction",
+										"value": "\"right\""
+									}
+								}
+							],
+							"sid": 800215580178427
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "RandomTank",
+									"sid": 761964823848256,
+									"parameters": {
+										"instance-variable": "RandomValue",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "RandomTank",
+									"sid": 789164196025191,
+									"parameters": {
+										"instance-variable": "Direction",
+										"value": "\"left\""
+									}
+								}
+							],
+							"sid": 540437526106268
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "RandomTank",
+									"sid": 443666409872722,
+									"parameters": {
+										"instance-variable": "RandomValue",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "RandomTank",
+									"sid": 846390824168566,
+									"parameters": {
+										"instance-variable": "Direction",
+										"value": "\"up\""
+									}
+								}
+							],
+							"sid": 583423011625654
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "RandomTank",
+									"sid": 949688038708381,
+									"parameters": {
+										"instance-variable": "RandomValue",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "RandomTank",
+									"sid": 369675869922069,
+									"parameters": {
+										"instance-variable": "Direction",
+										"value": "\"down\""
+									}
+								}
+							],
+							"sid": 418251321764148
 						}
 					]
 				}
@@ -522,16 +798,16 @@
 						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 246478828438669,
+							"sid": 352271620576123,
 							"parameters": {
-								"interval-seconds": "0.3"
+								"interval-seconds": "2.5"
 							}
 						}
 					],
 					"actions": [
 						{
 							"id": "spawn-another-object",
-							"objectClass": "EnemyTank",
+							"objectClass": "SimpleEnemyTank",
 							"sid": 306674015605299,
 							"parameters": {
 								"object": "Bullet",
@@ -541,7 +817,8 @@
 							}
 						}
 					],
-					"sid": 336850496495104
+					"sid": 336850496495104,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -638,34 +915,264 @@
 					],
 					"actions": [
 						{
-							"id": "set-scale",
-							"objectClass": "Obstacle",
-							"sid": 125130442464653,
+							"id": "add-to-instvar",
+							"objectClass": "Bullet",
+							"sid": 905964252868472,
 							"parameters": {
-								"scale": "1.1"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 608125221368018,
-							"parameters": {
-								"seconds": "0.3"
+								"instance-variable": "BouncesCount",
+								"value": "1"
 							}
 						},
 						{
 							"id": "set-scale",
-							"objectClass": "Obstacle",
-							"sid": 895449376961725,
+							"objectClass": "Bullet",
+							"sid": 873293284972810,
 							"parameters": {
-								"scale": "1"
+								"scale": "1 -  (Bullet.BouncesCount * 0.2)"
 							}
 						}
 					],
-					"sid": 639094058672887
+					"sid": 639094058672887,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Bullet",
+									"sid": 104758689616561,
+									"parameters": {
+										"instance-variable": "BouncesCount",
+										"comparison": 5,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Bullet",
+									"sid": 919547414138459
+								}
+							],
+							"sid": 495965015678099
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-scale",
+									"objectClass": "Obstacle",
+									"sid": 234871978989766,
+									"parameters": {
+										"scale": "1.1"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 932455131933978,
+									"parameters": {
+										"seconds": "0.15"
+									}
+								},
+								{
+									"id": "set-scale",
+									"objectClass": "Obstacle",
+									"sid": 907161508588326,
+									"parameters": {
+										"scale": "1"
+									}
+								}
+							],
+							"sid": 944611042540330
+						}
+					]
 				}
 			],
 			"sid": 720159127793322
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enemy-Tank Stalking",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 606859938667105
+						}
+					],
+					"actions": [
+						{
+							"id": "find-path",
+							"objectClass": "SmartTank",
+							"sid": 823448616071621,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"x": "Avatar.X",
+								"y": "Avatar.Y"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 181687047739093,
+							"parameters": {
+								"object-to-create": "Spot",
+								"layer": "\"Text\"",
+								"x": "Avatar.X",
+								"y": "Avatar.Y",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Spot",
+							"sid": 275767750449453,
+							"parameters": {
+								"text": "\"X\""
+							}
+						}
+					],
+					"sid": 118453559305077
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-path-found",
+							"objectClass": "SmartTank",
+							"sid": 562978414390359,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"actions": [
+						{
+							"id": "move-along-path",
+							"objectClass": "SmartTank",
+							"sid": 553285347381923,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"sid": 159751206872706,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 240240241158401,
+									"parameters": {
+										"name": "\"All nodes in path\"",
+										"start-index": "0",
+										"end-index": "SmartTank.Pathfinding.NodeCount"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 942534393678555,
+									"parameters": {
+										"object-to-create": "Spot",
+										"layer": "\"Text\"",
+										"x": "SmartTank.Pathfinding.NodeXAt(loopindex)",
+										"y": "SmartTank.Pathfinding.NodeYAt(loopindex)",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Spot",
+									"sid": 418088505566329,
+									"parameters": {
+										"text": "loopindex"
+									}
+								}
+							],
+							"sid": 854151506346278
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-arrived",
+							"objectClass": "SmartTank",
+							"sid": 285719210650286,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"actions": [
+						{
+							"id": "find-path",
+							"objectClass": "SmartTank",
+							"sid": 428690900575588,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"x": "Avatar.X",
+								"y": "Avatar.Y"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 316532979744876,
+							"parameters": {
+								"object-to-create": "Spot",
+								"layer": "\"Text\"",
+								"x": "Avatar.X",
+								"y": "Avatar.Y",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Spot",
+							"sid": 332652861176517,
+							"parameters": {
+								"text": "\"X\""
+							}
+						}
+					],
+					"sid": 178267951686907
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 724814991118671,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "Spot",
+							"sid": 209580131513240,
+							"parameters": {
+								"opacity": "Spot.Opacity  - 10"
+							}
+						}
+					],
+					"sid": 961647576765958
+				}
+			],
+			"sid": 230171143025385
 		}
 	],
 	"sid": 351804470821456

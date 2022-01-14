@@ -1,21 +1,14 @@
 {
-	"name": "Bullet",
+	"name": "SmartTank",
 	"plugin-id": "Sprite",
-	"sid": 441372958469514,
+	"sid": 513401741635516,
 	"isGlobal": false,
-	"instanceVariables": [
-		{
-			"name": "BouncesCount",
-			"type": "number",
-			"desc": "",
-			"sid": 430643113832218
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "Bullet",
-			"name": "Bullet",
-			"sid": 767923100109978
+			"behaviorId": "Pathfinding",
+			"name": "Pathfinding",
+			"sid": 624379620523690
 		}
 	],
 	"effectTypes": [],
@@ -24,39 +17,39 @@
 			{
 				"frames": [
 					{
-						"width": 14,
-						"height": 8,
+						"width": 76,
+						"height": 62,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 8862076,
+						"imageSpriteId": 137451,
 						"collisionPoly": {
 							"points": [
-								0.9285714285714286,
-								0.125,
-								1,
+								0.07894736842105265,
+								0.9032258064516129,
+								0.02631578947368418,
 								0.5,
-								0.9330357142857143,
-								0.8203125,
-								0.4955357142857143,
-								1,
-								0.06696428571428568,
-								1,
-								0.0714285714285714,
+								0.07894736842105265,
+								0.11290322580645162,
 								0.5,
-								0.0714285714285714,
-								0,
+								0.016129032258064502,
+								0.8552631578947368,
+								0.17741935483870963,
+								0.9342105263157895,
 								0.5,
-								0
+								0.8552631578947368,
+								0.8387096774193549,
+								0.5,
+								1
 							]
 						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 731043079759705,
+				"sid": 128964843924214,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

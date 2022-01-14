@@ -31,6 +31,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "EightDir",
 			"name": "8 Direction",
@@ -64,6 +72,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Pathfinding",
+			"name": "Pathfinding",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
 			"author": "Scirra",
@@ -78,10 +94,13 @@
 			"Sand",
 			"Avatar",
 			"Keyboard",
-			"EnemyTank",
+			"DeterministicTank",
 			"Tree",
 			"Bullet",
-			"EnemyTurret"
+			"EnemyTurret",
+			"RandomTank",
+			"SmartTank",
+			"Spot"
 		],
 		"subfolders": []
 	},
@@ -89,7 +108,8 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"Obstacle"
+			"Obstacle",
+			"SimpleEnemyTank"
 		],
 		"subfolders": []
 	},

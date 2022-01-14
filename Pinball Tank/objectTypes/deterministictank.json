@@ -1,23 +1,10 @@
 {
-	"name": "EnemyTank",
+	"name": "DeterministicTank",
 	"plugin-id": "Sprite",
 	"sid": 812332959762433,
 	"isGlobal": false,
-	"instanceVariables": [
-		{
-			"name": "direction",
-			"type": "string",
-			"desc": "",
-			"sid": 930311969035778
-		}
-	],
-	"behaviorTypes": [
-		{
-			"behaviorId": "EightDir",
-			"name": "8Direction",
-			"sid": 935380041806261
-		}
-	],
+	"instanceVariables": [],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [

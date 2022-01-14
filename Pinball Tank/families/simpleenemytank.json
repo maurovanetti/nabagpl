@@ -1,0 +1,25 @@
+{
+	"name": "SimpleEnemyTank",
+	"plugin-id": "Sprite",
+	"sid": 682819954826644,
+	"instanceVariables": [
+		{
+			"name": "Direction",
+			"type": "string",
+			"desc": "",
+			"sid": 651179618019432
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 420732014547069
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"DeterministicTank",
+		"RandomTank"
+	]
+}
