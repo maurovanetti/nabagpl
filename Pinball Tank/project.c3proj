@@ -80,6 +80,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "LOS",
+			"name": "Line of sight",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
 			"author": "Scirra",
@@ -100,7 +108,9 @@
 			"EnemyTurret",
 			"RandomTank",
 			"SmartTank",
-			"Spot"
+			"Spot",
+			"EnemySniper",
+			"IrritableTank"
 		],
 		"subfolders": []
 	},

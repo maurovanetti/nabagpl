@@ -239,7 +239,7 @@
 								"directions": "dir-4",
 								"set-angle": "smooth",
 								"default-controls": false,
-								"enabled": true
+								"enabled": false
 							}
 						}
 					},
@@ -1434,7 +1434,7 @@
 						"Turret": {
 							"properties": {
 								"range": 600,
-								"rate-of-fire": 1,
+								"rate-of-fire": 5,
 								"rotate": true,
 								"rotate-speed": 180,
 								"target-mode": "first-in-range",
@@ -5336,7 +5336,7 @@
 								"directions": "dir-4",
 								"set-angle": "smooth",
 								"default-controls": false,
-								"enabled": true
+								"enabled": false
 							}
 						}
 					},
@@ -5380,7 +5380,7 @@
 								"directions": "dir-4",
 								"set-angle": "smooth",
 								"default-controls": false,
-								"enabled": true
+								"enabled": false
 							}
 						}
 					},
@@ -5424,7 +5424,7 @@
 								"directions": "dir-4",
 								"set-angle": "smooth",
 								"default-controls": false,
-								"enabled": true
+								"enabled": false
 							}
 						}
 					},
@@ -5460,7 +5460,7 @@
 						"Pathfinding": {
 							"properties": {
 								"cell-size": 32,
-								"cell-border": -1,
+								"cell-border": 5,
 								"obstacles": "solids",
 								"max-speed": 200,
 								"acceleration": 600,
@@ -5468,7 +5468,7 @@
 								"rotate-speed": 135,
 								"rotate-object": true,
 								"diagonals": false,
-								"enabled": true
+								"enabled": false
 							}
 						}
 					},
@@ -5696,6 +5696,265 @@
 						"y": -104,
 						"width": 17,
 						"height": 22,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "EnemySniper",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 158,
+					"instanceVariables": {},
+					"behaviors": {
+						"Turret": {
+							"properties": {
+								"range": 600,
+								"rate-of-fire": 5,
+								"rotate": true,
+								"rotate-speed": 180,
+								"target-mode": "first-in-range",
+								"predictive-aim": true,
+								"projectile-speed": 400,
+								"use-collision-cells": true,
+								"enabled": false
+							}
+						},
+						"LineOfSight": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 10000,
+								"cone-of-view": 360,
+								"use-collision-cells": true
+							}
+						}
+					},
+					"world": {
+						"x": 822,
+						"y": 123,
+						"width": 32,
+						"height": 10,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "IrritableTank",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Calm",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 159,
+					"instanceVariables": {
+						"Direction": "right",
+						"RandomValue": 0
+					},
+					"behaviors": {
+						"8Direction": {
+							"properties": {
+								"max-speed": 50,
+								"acceleration": 600,
+								"deceleration": 500,
+								"directions": "dir-4",
+								"set-angle": "smooth",
+								"default-controls": false,
+								"enabled": true
+							}
+						},
+						"LineOfSight": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 10000,
+								"cone-of-view": 90,
+								"use-collision-cells": true
+							}
+						}
+					},
+					"world": {
+						"x": 382,
+						"y": 27,
+						"width": 51.99999999999999,
+						"height": 52,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "IrritableTank",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Calm",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 160,
+					"instanceVariables": {
+						"Direction": "right",
+						"RandomValue": 0
+					},
+					"behaviors": {
+						"8Direction": {
+							"properties": {
+								"max-speed": 50,
+								"acceleration": 600,
+								"deceleration": 500,
+								"directions": "dir-4",
+								"set-angle": "smooth",
+								"default-controls": false,
+								"enabled": true
+							}
+						},
+						"LineOfSight": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 10000,
+								"cone-of-view": 90,
+								"use-collision-cells": true
+							}
+						}
+					},
+					"world": {
+						"x": 276,
+						"y": 209,
+						"width": 51.99999999999999,
+						"height": 52,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "IrritableTank",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Calm",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 161,
+					"instanceVariables": {
+						"Direction": "right",
+						"RandomValue": 0
+					},
+					"behaviors": {
+						"8Direction": {
+							"properties": {
+								"max-speed": 50,
+								"acceleration": 600,
+								"deceleration": 500,
+								"directions": "dir-4",
+								"set-angle": "smooth",
+								"default-controls": false,
+								"enabled": true
+							}
+						},
+						"LineOfSight": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 10000,
+								"cone-of-view": 90,
+								"use-collision-cells": true
+							}
+						}
+					},
+					"world": {
+						"x": 398,
+						"y": 494,
+						"width": 51.99999999999999,
+						"height": 52,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "IrritableTank",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Calm",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 162,
+					"instanceVariables": {
+						"Direction": "right",
+						"RandomValue": 0
+					},
+					"behaviors": {
+						"8Direction": {
+							"properties": {
+								"max-speed": 50,
+								"acceleration": 600,
+								"deceleration": 500,
+								"directions": "dir-4",
+								"set-angle": "smooth",
+								"default-controls": false,
+								"enabled": true
+							}
+						},
+						"LineOfSight": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 10000,
+								"cone-of-view": 90,
+								"use-collision-cells": true
+							}
+						}
+					},
+					"world": {
+						"x": 218,
+						"y": 464,
+						"width": 51.99999999999999,
+						"height": 52,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
