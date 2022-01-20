@@ -2,6 +2,16 @@
 	"name": "Event sheet 1",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "Mute",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 598500468500335
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -53,14 +63,18 @@
 					],
 					"actions": [
 						{
-							"id": "play",
+							"id": "play-at-object",
 							"objectClass": "Audio",
-							"sid": 814236573159336,
+							"sid": 918062885279710,
 							"parameters": {
 								"audio-file": "bang",
 								"loop": "not-looping",
 								"volume": "0",
-								"tag-optional": "\"bang\""
+								"object": "EnemyBarrel",
+								"inner-angle": "360",
+								"outer-angle": "360",
+								"outer-gain": "0",
+								"tag-optional": "\"\""
 							}
 						},
 						{
@@ -161,13 +175,19 @@
 							],
 							"actions": [
 								{
-									"id": "play",
+									"id": "play-at-position",
 									"objectClass": "Audio",
-									"sid": 565097125554188,
+									"sid": 127525762455905,
 									"parameters": {
 										"audio-file": "bounce",
 										"loop": "not-looping",
 										"volume": "-5 * (Bullet.Bounces - 1)",
+										"x": "0",
+										"y": "0",
+										"angle": "0",
+										"inner-angle": "360",
+										"outer-angle": "360",
+										"outer-gain": "0",
 										"tag-optional": "\"bounce\""
 									}
 								}
@@ -913,7 +933,7 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Soundtrack",
+			"title": "Audio",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -937,9 +957,117 @@
 								"volume": "-10",
 								"tag-optional": "\"music\""
 							}
+						},
+						{
+							"id": "set-listener-object",
+							"objectClass": "Audio",
+							"sid": 360690323955616,
+							"parameters": {
+								"object": "Avatar"
+							}
 						}
 					],
 					"sid": 430841110849759
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 156165375629070,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "AudioIcon"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 563049575349533,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 675502051038581,
+									"parameters": {
+										"variable": "Mute"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 128725646617330,
+									"parameters": {
+										"variable": "Mute",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-silent",
+									"objectClass": "Audio",
+									"sid": 327410689418806,
+									"parameters": {
+										"mode": "not-silent"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "AudioIcon",
+									"sid": 626924546060241,
+									"parameters": {
+										"animation": "\"On\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 719789366449005
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 917098879543527
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 346159852029391,
+									"parameters": {
+										"variable": "Mute",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-silent",
+									"objectClass": "Audio",
+									"sid": 914402860190727,
+									"parameters": {
+										"mode": "silent"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "AudioIcon",
+									"sid": 166206012664515,
+									"parameters": {
+										"animation": "\"Off\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 742169670376752
+						}
+					]
 				}
 			],
 			"sid": 184162783729740

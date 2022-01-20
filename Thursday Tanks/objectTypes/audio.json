@@ -11,7 +11,7 @@
 			"latency-hint": "interactive",
 			"panning-model": "hrtf",
 			"distance-model": "inverse",
-			"listener-z-height": 600,
+			"listener-z-height": 0,
 			"reference-distance": 600,
 			"maximum-distance": 10000,
 			"roll-off-factor": 1
