@@ -4,7 +4,13 @@
 	"sid": 477849369518157,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "LOS",
+			"name": "LineOfSight",
+			"sid": 467375175053527
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [

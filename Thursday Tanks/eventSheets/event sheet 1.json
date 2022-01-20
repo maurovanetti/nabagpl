@@ -39,6 +39,16 @@
 							"parameters": {
 								"interval-seconds": "0.5"
 							}
+						},
+						{
+							"id": "has-los-to-object",
+							"objectClass": "EnemyBarrel",
+							"sid": 792397138029370,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "Avatar",
+								"image-point": "0"
+							}
 						}
 					],
 					"actions": [
@@ -76,6 +86,30 @@
 							"parameters": {
 								"instance-variable": "Bounces",
 								"value": "1"
+							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "Obstacle",
+							"sid": 155709072958850,
+							"parameters": {
+								"scale": "1.1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 883799091209756,
+							"parameters": {
+								"seconds": "0.15"
+							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "Obstacle",
+							"sid": 368847682892897,
+							"parameters": {
+								"scale": "1"
 							}
 						}
 					],
@@ -699,18 +733,120 @@
 							"objectClass": "SmartTank",
 							"sid": 828774776033400,
 							"behaviorType": "Pathfinding"
-						},
+						}
+					],
+					"sid": 708498909346829,
+					"children": [
 						{
-							"id": "set-position",
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 683803369689000,
+									"parameters": {
+										"name": "\"each node in path\"",
+										"start-index": "0",
+										"end-index": "SmartTank.Pathfinding.NodeCount - 1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 902353260067972,
+									"parameters": {
+										"object-to-create": "SmallHaircross",
+										"layer": "\"Characters\"",
+										"x": "SmartTank.Pathfinding.NodeXAt(loopindex)",
+										"y": "SmartTank.Pathfinding.NodeYAt(loopindex)",
+										"create-hierarchy": false
+									}
+								}
+							],
+							"sid": 454666461351139
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 385211700684590
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
 							"objectClass": "SmallHaircross",
-							"sid": 852720482778341,
+							"sid": 965059305489390,
 							"parameters": {
-								"x": "SmartTank.Pathfinding.NodeXAt(0)",
-								"y": "SmartTank.Pathfinding.NodeYAt(0)"
+								"opacity": "SmallHaircross.Opacity - 0.1"
 							}
 						}
 					],
-					"sid": 708498909346829
+					"sid": 760449591634656
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-children",
+							"objectClass": "SmartTank",
+							"sid": 936561968689406,
+							"parameters": {
+								"child": "EnemyBarrel",
+								"which": "own"
+							}
+						},
+						{
+							"id": "has-los-to-object",
+							"objectClass": "EnemyBarrel",
+							"sid": 643897301288616,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "Avatar",
+								"image-point": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-max-speed",
+							"objectClass": "SmartTank",
+							"sid": 586432430873135,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"speed": "100"
+							}
+						}
+					],
+					"sid": 436380098787963
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 480940333462477
+						}
+					],
+					"actions": [
+						{
+							"id": "set-max-speed",
+							"objectClass": "SmartTank",
+							"sid": 597994369502852,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"speed": "500"
+							}
+						}
+					],
+					"sid": 199560802859554
 				}
 			],
 			"sid": 946685752563212
