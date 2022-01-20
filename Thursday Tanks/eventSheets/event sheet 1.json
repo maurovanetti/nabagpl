@@ -53,14 +53,49 @@
 					],
 					"actions": [
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 814236573159336,
+							"parameters": {
+								"audio-file": "bang",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"bang\""
+							}
+						},
+						{
+							"id": "move-forward",
+							"objectClass": "EnemyBarrel",
+							"sid": 212328762675612,
+							"parameters": {
+								"distance": "-10"
+							}
+						},
+						{
 							"id": "spawn-another-object",
 							"objectClass": "EnemyBarrel",
-							"sid": 847220208446620,
+							"sid": 846785907255328,
 							"parameters": {
 								"object": "Bullet",
 								"layer": "\"Characters\"",
 								"image-point": "\"Mouth\"",
 								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 456744950411188,
+							"parameters": {
+								"seconds": "0.15"
+							}
+						},
+						{
+							"id": "move-forward",
+							"objectClass": "EnemyBarrel",
+							"sid": 499554043220885,
+							"parameters": {
+								"distance": "10"
 							}
 						}
 					],
@@ -115,6 +150,30 @@
 					],
 					"sid": 263882938475532,
 					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-on-screen",
+									"objectClass": "Bullet",
+									"sid": 959385875921643
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 565097125554188,
+									"parameters": {
+										"audio-file": "bounce",
+										"loop": "not-looping",
+										"volume": "-5 * (Bullet.Bounces - 1)",
+										"tag-optional": "\"bounce\""
+									}
+								}
+							],
+							"sid": 485857647993098
+						},
 						{
 							"eventType": "block",
 							"conditions": [
@@ -850,6 +909,40 @@
 				}
 			],
 			"sid": 946685752563212
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Soundtrack",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 249832164699732
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 422106941533713,
+							"parameters": {
+								"audio-file": "Marcia Inquietante",
+								"loop": "looping",
+								"volume": "-10",
+								"tag-optional": "\"music\""
+							}
+						}
+					],
+					"sid": 430841110849759
+				}
+			],
+			"sid": 184162783729740
 		}
 	],
 	"sid": 941995368024818

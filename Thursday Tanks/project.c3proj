@@ -23,6 +23,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "EightDir",
 			"name": "8 Direction",
@@ -85,7 +93,8 @@
 			"Sandbag",
 			"SmartTank",
 			"Haircross",
-			"SmallHaircross"
+			"SmallHaircross",
+			"Audio"
 		],
 		"subfolders": []
 	},
@@ -115,11 +124,28 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "bounce.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 307130066850687
+				},
+				{
+					"name": "bang.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 514955500091160
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "Marcia Inquietante.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 129333974206784
+				}
+			],
 			"subfolders": []
 		},
 		"video": {
