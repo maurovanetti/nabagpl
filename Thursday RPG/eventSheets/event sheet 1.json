@@ -1,0 +1,99 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-moving",
+					"objectClass": "Avatar",
+					"sid": 471790605273856,
+					"behaviorType": "TileMovement"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Avatar",
+					"sid": 199465251568292,
+					"parameters": {
+						"animation": "\"Walk\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 511017784997093
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 385368115896834
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Avatar",
+					"sid": 638598781147069,
+					"parameters": {
+						"animation": "\"Idle\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 865788914589090
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 117960024954526,
+					"parameters": {
+						"key": 39
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Avatar",
+					"sid": 172927257243155,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 468127708147378
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 375274703980171,
+					"parameters": {
+						"key": 37
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Avatar",
+					"sid": 212902499970148,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 294800801339569
+		}
+	],
+	"sid": 525634171535676
+}
