@@ -1,0 +1,60 @@
+{
+	"name": "AudioIcon",
+	"plugin-id": "Sprite",
+	"sid": 925576290659692,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 100,
+						"height": 78,
+						"originX": 0.5193965517241379,
+						"originY": 0.56353591160221,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3910684,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 677566033185046,
+				"name": "On",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 100,
+						"height": 78,
+						"originX": 0.5193965517241379,
+						"originY": 0.56353591160221,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9454299,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 596099629327498,
+				"name": "Off",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

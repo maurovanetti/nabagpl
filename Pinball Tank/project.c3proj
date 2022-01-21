@@ -39,6 +39,22 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "EightDir",
 			"name": "8 Direction",
@@ -110,7 +126,11 @@
 			"SmartTank",
 			"Spot",
 			"EnemySniper",
-			"IrritableTank"
+			"IrritableTank",
+			"Audio",
+			"AudioIcon",
+			"Mouse",
+			"MusicIcon"
 		],
 		"subfolders": []
 	},
@@ -141,11 +161,33 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "bounce1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 771156722128930
+				},
+				{
+					"name": "bounce3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 466614327705719
+				},
+				{
+					"name": "bounce2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 221178291947506
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "PapersPlease-Theme.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 380983095933476
+				}
+			],
 			"subfolders": []
 		},
 		"video": {

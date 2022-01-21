@@ -1,0 +1,60 @@
+{
+	"name": "MusicIcon",
+	"plugin-id": "Sprite",
+	"sid": 636145258148957,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 78,
+						"height": 78,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7353288,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 547445075026974,
+				"name": "On",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 78,
+						"height": 78,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4861854,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 213764444175789,
+				"name": "Off",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1342,7 +1342,13 @@
 						},
 						{
 							"eventType": "block",
-							"conditions": [],
+							"conditions": [
+								{
+									"id": "is-on-screen",
+									"objectClass": "Obstacle",
+									"sid": 759086764265903
+								}
+							],
 							"actions": [
 								{
 									"id": "set-scale",
@@ -1369,7 +1375,108 @@
 									}
 								}
 							],
-							"sid": 944611042540330
+							"sid": 944611042540330,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Bullet",
+											"sid": 438627074271216,
+											"parameters": {
+												"instance-variable": "BouncesCount",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play-at-object",
+											"objectClass": "Audio",
+											"sid": 186752984427412,
+											"parameters": {
+												"audio-file": "bounce1",
+												"loop": "not-looping",
+												"volume": "0",
+												"object": "Obstacle",
+												"inner-angle": "360",
+												"outer-angle": "360",
+												"outer-gain": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 569589352366690
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Bullet",
+											"sid": 726234171732016,
+											"parameters": {
+												"instance-variable": "BouncesCount",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play-at-object",
+											"objectClass": "Audio",
+											"sid": 193372728700801,
+											"parameters": {
+												"audio-file": "bounce2",
+												"loop": "not-looping",
+												"volume": "-10",
+												"object": "Obstacle",
+												"inner-angle": "360",
+												"outer-angle": "360",
+												"outer-gain": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 301066924321349
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Bullet",
+											"sid": 390683967488451,
+											"parameters": {
+												"instance-variable": "BouncesCount",
+												"comparison": 0,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play-at-object",
+											"objectClass": "Audio",
+											"sid": 750897069020603,
+											"parameters": {
+												"audio-file": "bounce3",
+												"loop": "not-looping",
+												"volume": "-20",
+												"object": "Obstacle",
+												"inner-angle": "360",
+												"outer-angle": "360",
+												"outer-gain": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 204410606053703
+								}
+							]
 						}
 					]
 				},
@@ -1702,6 +1809,204 @@
 				}
 			],
 			"sid": 230171143025385
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Audio",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 600444859430361
+						}
+					],
+					"actions": [
+						{
+							"id": "set-listener-object",
+							"objectClass": "Audio",
+							"sid": 555998985978982,
+							"parameters": {
+								"object": "Avatar"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 974473995825612,
+							"parameters": {
+								"audio-file": "PapersPlease-Theme",
+								"loop": "looping",
+								"volume": "-5",
+								"tag-optional": "\"music\""
+							}
+						}
+					],
+					"sid": 639378008981720
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 991423269700236,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "AudioIcon"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-silent",
+							"objectClass": "Audio",
+							"sid": 149152893178797,
+							"parameters": {
+								"mode": "toggle-silent"
+							}
+						}
+					],
+					"sid": 449839002256900,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-silent",
+									"objectClass": "Audio",
+									"sid": 369629873886505
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "AudioIcon",
+									"sid": 587860235268735,
+									"parameters": {
+										"animation": "\"Off\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 784964430034365
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 661073034193469
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "AudioIcon",
+									"sid": 471269856459144,
+									"parameters": {
+										"animation": "\"On\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 945646125072912
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 958604452709239,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "MusicIcon"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 887075377533435,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "MusicIcon",
+									"sid": 150953722973249,
+									"parameters": {
+										"animation": "\"On\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "MusicIcon",
+									"sid": 719818460810554,
+									"parameters": {
+										"animation": "\"Off\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-muted",
+									"objectClass": "Audio",
+									"sid": 615371551909323,
+									"parameters": {
+										"tag": "\"music\"",
+										"state": "muted"
+									}
+								}
+							],
+							"sid": 154321762966102
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 486545706664554
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "MusicIcon",
+									"sid": 783415362711019,
+									"parameters": {
+										"animation": "\"On\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-muted",
+									"objectClass": "Audio",
+									"sid": 911187755142122,
+									"parameters": {
+										"tag": "\"music\"",
+										"state": "unmuted"
+									}
+								}
+							],
+							"sid": 375371718234560
+						}
+					]
+				}
+			],
+			"sid": 692491013334670
 		}
 	],
 	"sid": 351804470821456
