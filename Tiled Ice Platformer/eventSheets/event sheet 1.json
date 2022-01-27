@@ -1,0 +1,28 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 445632813209120
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Gem",
+					"sid": 302645141336732,
+					"parameters": {
+						"x": "Platforms.SnapX(Gem.X)",
+						"y": "Platforms.SnapY(Gem.Y)"
+					}
+				}
+			],
+			"sid": 658331695839857
+		}
+	],
+	"sid": 623021758298218
+}

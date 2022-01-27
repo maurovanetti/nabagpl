@@ -145,6 +145,150 @@
 				}
 			],
 			"sid": 685914609882880
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 533893706149596,
+					"parameters": {
+						"interval-seconds": "1.0"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 259143016620008,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "People",
+							"sid": 916375456631489,
+							"parameters": {
+								"instance-variable": "Direction",
+								"comparison": 0,
+								"value": "\"left\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "People",
+							"sid": 426282793848097,
+							"behaviorType": "TileMovement",
+							"parameters": {
+								"control": "left"
+							}
+						}
+					],
+					"sid": 317956730702752
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "People",
+							"sid": 787367137262962,
+							"parameters": {
+								"instance-variable": "Direction",
+								"comparison": 0,
+								"value": "\"right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "People",
+							"sid": 127521440708383,
+							"behaviorType": "TileMovement",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 930590685254332
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "People",
+					"sid": 900313476292324,
+					"parameters": {
+						"object": "Arrows"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 415660890231123,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-tile-at",
+							"objectClass": "Arrows",
+							"sid": 881578109788812,
+							"parameters": {
+								"tile-x": "Arrows.PositionToTileX(People.TileMovement.TargetX)",
+								"tile-y": "Arrows.PositionToTileY(People.TileMovement.TargetY)",
+								"comparison": 0,
+								"tile": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "People",
+							"sid": 454390999733941,
+							"parameters": {
+								"instance-variable": "Direction",
+								"value": "\"left\""
+							}
+						}
+					],
+					"sid": 759658339158808
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-tile-at",
+							"objectClass": "Arrows",
+							"sid": 937123480639474,
+							"parameters": {
+								"tile-x": "Arrows.PositionToTileX(People.TileMovement.TargetX)",
+								"tile-y": "Arrows.PositionToTileY(People.TileMovement.TargetY)",
+								"comparison": 0,
+								"tile": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "People",
+							"sid": 152773281355530,
+							"parameters": {
+								"instance-variable": "Direction",
+								"value": "\"right\""
+							}
+						}
+					],
+					"sid": 176479619615249
+				}
+			]
 		}
 	],
 	"sid": 525634171535676

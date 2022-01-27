@@ -1,15 +1,15 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 27602,
-	"name": "Thursday RPG",
+	"name": "Tiled Platformer",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
 	"usedAddons": [
 		{
 			"type": "plugin",
-			"id": "TiledBg",
-			"name": "Tiled Background",
+			"id": "Tilemap",
+			"name": "Tilemap",
 			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
@@ -23,67 +23,35 @@
 			"bundled": false
 		},
 		{
-			"type": "plugin",
-			"id": "Keyboard",
-			"name": "Keyboard",
-			"author": "Scirra",
-			"version": "r276.2",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
-			"id": "Tilemap",
-			"name": "Tilemap",
-			"author": "Scirra",
-			"version": "r276.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "TileMovement",
-			"name": "Tile movement",
-			"author": "Scirra",
-			"version": "r276.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "scrollto",
-			"name": "Scroll To",
-			"author": "Scirra",
-			"version": "r276.2",
-			"bundled": false
-		},
-		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
 			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Platform",
+			"name": "Platform",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
 		}
 	],
-	"uniqueId": "xi6w3654c3x",
+	"uniqueId": "dzvi2nekd98",
 	"objectTypes": {
 		"items": [
-			"TiledBackground",
+			"Platforms",
 			"Avatar",
-			"Keyboard",
-			"Bush",
-			"People",
-			"Pine",
-			"Terrain",
-			"Arrows"
+			"Gem"
 		],
 		"subfolders": []
 	},
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [
-			"MovingObject",
-			"StaticObject"
-		],
+		"items": [],
 		"subfolders": []
 	},
 	"layouts": {
@@ -122,41 +90,9 @@
 		"icon": {
 			"items": [
 				{
-					"name": "icon-512.png",
-					"type": "image/png",
-					"sid": 926954334841651,
-					"icon-info": {
-						"purpose": "app-icon"
-					}
-				},
-				{
-					"name": "icon-128.png",
-					"type": "image/png",
-					"sid": 421488666583505,
-					"icon-info": {
-						"purpose": "app-icon"
-					}
-				},
-				{
-					"name": "loading-logo.png",
-					"type": "image/png",
-					"sid": 262813378672207,
-					"icon-info": {
-						"purpose": "loading-logo"
-					}
-				},
-				{
-					"name": "icon-64.png",
-					"type": "image/png",
-					"sid": 187840205428016,
-					"icon-info": {
-						"purpose": "app-icon"
-					}
-				},
-				{
 					"name": "icon-16.png",
 					"type": "image/png",
-					"sid": 240957612994813,
+					"sid": 682457171128538,
 					"icon-info": {
 						"purpose": "app-icon"
 					}
@@ -164,7 +100,23 @@
 				{
 					"name": "icon-32.png",
 					"type": "image/png",
-					"sid": 184380682003884,
+					"sid": 376452323631779,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 991321664403705,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 118596297096137,
 					"icon-info": {
 						"purpose": "app-icon"
 					}
@@ -172,9 +124,25 @@
 				{
 					"name": "icon-256.png",
 					"type": "image/png",
-					"sid": 927841190088040,
+					"sid": 181577050191930,
 					"icon-info": {
 						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 523087448731375,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 987628032717793,
+					"icon-info": {
+						"purpose": "loading-logo"
 					}
 				}
 			],

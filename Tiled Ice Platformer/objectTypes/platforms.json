@@ -1,0 +1,148 @@
+{
+	"name": "Platforms",
+	"plugin-id": "Tilemap",
+	"sid": 663433321682744,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 615341533782003
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 980,
+		"height": 490,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 8857387,
+		"useCollisionPoly": true
+	},
+	"tile-collision-polys": {
+		"19": {
+			"collisionPoly": {
+				"points": [
+					0,
+					0,
+					1,
+					0,
+					1,
+					0.5595238095238103,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": true
+		},
+		"60": {
+			"collisionPoly": {
+				"points": [
+					0,
+					0,
+					1,
+					0,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": false
+		},
+		"61": {
+			"collisionPoly": {
+				"points": [
+					0,
+					0,
+					1,
+					0,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": false
+		},
+		"62": {
+			"collisionPoly": {
+				"points": [
+					0,
+					0,
+					1,
+					0,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": false
+		},
+		"63": {
+			"collisionPoly": {
+				"points": [
+					0,
+					0,
+					1,
+					0,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": false
+		},
+		"64": {
+			"collisionPoly": {
+				"points": [
+					0,
+					0,
+					1,
+					0,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": false
+		},
+		"65": {
+			"collisionPoly": {
+				"points": [
+					0,
+					0,
+					1,
+					0,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": false
+		},
+		"69": {
+			"collisionPoly": {
+				"points": [
+					0.3249999999999998,
+					0.873809523809524,
+					0.696428571428572,
+					0.8654761904761903,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": true
+		}
+	}
+}

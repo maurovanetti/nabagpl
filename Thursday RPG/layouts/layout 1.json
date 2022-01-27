@@ -7,35 +7,105 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "TiledBackground",
+					"type": "Terrain",
 					"properties": {
 						"initially-visible": true,
-						"origin": "top-left",
-						"wrap-horizontal": "repeat",
-						"wrap-vertical": "repeat",
-						"image-offset-x": 0,
-						"image-offset-y": 0,
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"image-angle": 0
+						"tile-width": 64,
+						"tile-height": 64,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0,
+						"tile-x-drawing-offset": 0,
+						"tile-y-drawing-offset": 0,
+						"drawing-mode": "top-to-right"
 					},
 					"uid": 2,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"ownData": {
+						"tilemapData": {
+							"width": 68,
+							"height": 38,
+							"max-width": 248,
+							"max-height": 140,
+							"data": "8x11,3,126x11,5x0,8x11,3,126x11,5x0,8x11,3,126x11,5x0,8x11,3,126x11,5x0,8x11,3,126x11,5x0,3x11,14,4x2,17,126x11,5x0,2x11,14,17,131x11,5x0,2x11,3,132x11,5x0,2x11,3,132x11,5x0,2x11,3,132x11,5x0,2x11,3,132x11,5x0,2x11,3,132x11,5x0,2x11,3,132x11,5x0,2x11,3,132x11,5x0,2x11,3,132x11,5x0,2x11,3,132x11,5x0,2x11,3,132x11,5x0,2x11,3,132x11,5x0,2x11,3,132x11,5x0,2x11,3,132x11,5x0,2x11,3,132x11,5x0,2x11,3,132x11,5x0,2x11,3,132x11,5x0,2x11,3,132x11,5x0,2x11,3,132x11,5x0,2x11,3,132x11,5x0,2x11,3,132x11,5x0,2x11,3,132x11,5x0,2x11,3,132x11,5x0,2x11,3,132x11,5x0,2x11,3,132x11,5x0,2x2,17,132x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,5x0,135x11,1125x0"
+						},
+						"tile-width": 64,
+						"tile-height": 64,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0
+					},
 					"world": {
-						"x": -57,
-						"y": -74,
-						"width": 4194,
-						"height": 2537,
+						"x": 0,
+						"y": 0,
+						"width": 4393,
+						"height": 2489,
 						"originX": 0,
 						"originY": 0,
 						"color": [
-							0.48627450980392156,
-							0.6627450980392157,
-							0.33725490196078434,
+							1,
+							1,
+							1,
 							1
 						],
-						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Arrows",
+					"properties": {
+						"initially-visible": true,
+						"tile-width": 64,
+						"tile-height": 64,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0,
+						"tile-x-drawing-offset": 0,
+						"tile-y-drawing-offset": 0,
+						"drawing-mode": "top-to-right"
+					},
+					"uid": 42,
+					"instanceVariables": {},
+					"behaviors": {},
+					"ownData": {
+						"tilemapData": {
+							"width": 68,
+							"height": 39,
+							"max-width": 137,
+							"max-height": 82,
+							"data": "501x0,2,158x0,2,167x0,2,159x0,2x2,164x0,2,166x0,1,80x0,1,650x0,4x1,0,1,9175x0"
+						},
+						"tile-width": 64,
+						"tile-height": 64,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0
+					},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 4391,
+						"height": 2530,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
 						"zElevation": 0
 					}
 				}
@@ -256,7 +326,9 @@
 						"live-preview": false
 					},
 					"uid": 12,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Direction": "left"
+					},
 					"behaviors": {
 						"TileMovement": {
 							"properties": {
@@ -299,7 +371,9 @@
 						"live-preview": false
 					},
 					"uid": 13,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Direction": "left"
+					},
 					"behaviors": {
 						"TileMovement": {
 							"properties": {
@@ -342,7 +416,9 @@
 						"live-preview": false
 					},
 					"uid": 15,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Direction": "left"
+					},
 					"behaviors": {
 						"TileMovement": {
 							"properties": {
@@ -385,7 +461,9 @@
 						"live-preview": false
 					},
 					"uid": 16,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Direction": "left"
+					},
 					"behaviors": {
 						"TileMovement": {
 							"properties": {
@@ -1008,7 +1086,9 @@
 						"live-preview": false
 					},
 					"uid": 37,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Direction": "left"
+					},
 					"behaviors": {
 						"TileMovement": {
 							"properties": {
@@ -1051,7 +1131,9 @@
 						"live-preview": false
 					},
 					"uid": 38,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Direction": "left"
+					},
 					"behaviors": {
 						"TileMovement": {
 							"properties": {
@@ -1094,7 +1176,9 @@
 						"live-preview": false
 					},
 					"uid": 14,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Direction": "left"
+					},
 					"behaviors": {
 						"TileMovement": {
 							"properties": {
@@ -1141,8 +1225,8 @@
 					"behaviors": {
 						"TileMovement": {
 							"properties": {
-								"grid-width": 64,
-								"grid-height": 64,
+								"grid-width": 16,
+								"grid-height": 16,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
 								"speed-x": 300,
@@ -1328,6 +1412,6 @@
 	"unboundedScrolling": false,
 	"vpX": 0.5,
 	"vpY": 0,
-	"projection": "perspective",
+	"projection": "orthographic",
 	"eventSheet": "Event sheet 1"
 }

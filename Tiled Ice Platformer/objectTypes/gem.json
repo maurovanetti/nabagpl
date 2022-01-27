@@ -1,0 +1,57 @@
+{
+	"name": "Gem",
+	"plugin-id": "Sprite",
+	"sid": 319426445997848,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 70,
+						"height": 70,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2078947,
+						"collisionPoly": {
+							"points": [
+								0.28125,
+								0.28125,
+								0.5,
+								0.2578125,
+								0.7109375,
+								0.28125,
+								0.8515625,
+								0.5,
+								0.6875,
+								0.6875,
+								0.5,
+								0.796875,
+								0.3046875,
+								0.6875,
+								0.140625,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 818358787230125,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
