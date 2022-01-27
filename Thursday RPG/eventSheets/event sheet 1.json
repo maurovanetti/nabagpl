@@ -2,6 +2,16 @@
 	"name": "Event sheet 1",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "PerspectiveFactor",
+			"type": "number",
+			"initialValue": "25",
+			"comment": "> screen height / 100",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 856819302402788
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -93,6 +103,48 @@
 				}
 			],
 			"sid": 294800801339569
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-visible",
+					"objectClass": "MovingObject",
+					"sid": 896150403044227
+				}
+			],
+			"actions": [
+				{
+					"id": "set-z-elevation",
+					"objectClass": "MovingObject",
+					"sid": 778089529896923,
+					"parameters": {
+						"z": "(MovingObject.Y - scrolly) / PerspectiveFactor"
+					}
+				}
+			],
+			"sid": 903480566274554
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-visible",
+					"objectClass": "StaticObject",
+					"sid": 905770146853236
+				}
+			],
+			"actions": [
+				{
+					"id": "set-z-elevation",
+					"objectClass": "StaticObject",
+					"sid": 993004493331669,
+					"parameters": {
+						"z": "(StaticObject.Y - scrolly) / PerspectiveFactor"
+					}
+				}
+			],
+			"sid": 685914609882880
 		}
 	],
 	"sid": 525634171535676

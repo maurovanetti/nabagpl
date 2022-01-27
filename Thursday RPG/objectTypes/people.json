@@ -1,19 +1,14 @@
 {
-	"name": "Avatar",
+	"name": "People",
 	"plugin-id": "Sprite",
-	"sid": 171758966952853,
+	"sid": 935043467188831,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "TileMovement",
 			"name": "TileMovement",
-			"sid": 171137836732507
-		},
-		{
-			"behaviorId": "scrollto",
-			"name": "ScrollTo",
-			"sid": 341459091357863
+			"sid": 256277063112414
 		}
 	],
 	"effectTypes": [],
@@ -29,7 +24,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 8969791,
+						"imageSpriteId": 7669294,
 						"collisionPoly": {
 							"points": [
 								0.18055555555555555,
@@ -54,7 +49,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 443452953621198,
+				"sid": 149025583216977,
 				"name": "Idle",
 				"isLooping": true,
 				"isPingPong": false,
@@ -72,7 +67,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 1202636,
+						"imageSpriteId": 4810878,
 						"collisionPoly": {
 							"points": [
 								0.18055555555555555,
@@ -104,7 +99,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 1676346,
+						"imageSpriteId": 479230,
 						"collisionPoly": {
 							"points": [
 								0.18055555555555555,
@@ -136,7 +131,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 9721218,
+						"imageSpriteId": 7052117,
 						"collisionPoly": {
 							"points": [
 								0.18055555555555555,
@@ -168,7 +163,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2483175,
+						"imageSpriteId": 1863983,
 						"collisionPoly": {
 							"points": [
 								0.19444444444444445,
@@ -200,7 +195,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 8381259,
+						"imageSpriteId": 7013596,
 						"collisionPoly": {
 							"points": [
 								0.19444444444444445,
@@ -225,7 +220,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 294057577859721,
+				"sid": 374730976774801,
 				"name": "Walk",
 				"isLooping": true,
 				"isPingPong": true,

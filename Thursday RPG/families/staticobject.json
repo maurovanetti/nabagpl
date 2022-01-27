@@ -1,0 +1,12 @@
+{
+	"name": "StaticObject",
+	"plugin-id": "Sprite",
+	"sid": 370708412857475,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Bush",
+		"Pine"
+	]
+}

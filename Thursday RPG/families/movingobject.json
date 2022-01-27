@@ -1,0 +1,12 @@
+{
+	"name": "MovingObject",
+	"plugin-id": "Sprite",
+	"sid": 748849441239351,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Avatar",
+		"People"
+	]
+}

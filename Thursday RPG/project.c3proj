@@ -37,6 +37,14 @@
 			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "xi6w3654c3x",
@@ -45,14 +53,19 @@
 			"TiledBackground",
 			"Avatar",
 			"Keyboard",
-			"Bush"
+			"Bush",
+			"People",
+			"Pine"
 		],
 		"subfolders": []
 	},
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"MovingObject",
+			"StaticObject"
+		],
 		"subfolders": []
 	},
 	"layouts": {
