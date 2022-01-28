@@ -1,0 +1,427 @@
+{
+	"name": "Avatar",
+	"plugin-id": "Sprite",
+	"sid": 468575974211879,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "TileMovement",
+			"name": "TileMovement",
+			"sid": 234466516928408
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1917056,
+						"collisionPoly": {
+							"points": [
+								0.1875,
+								0.1875,
+								0.5,
+								0.109375,
+								0.703125,
+								0.28125,
+								0.734375,
+								0.5,
+								0.703125,
+								0.703125,
+								0.5,
+								0.859375,
+								0.203125,
+								0.78125,
+								0.171875,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 479906967810996,
+				"name": "Idle",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 10
+			},
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5446115,
+						"collisionPoly": {
+							"points": [
+								0.1875,
+								0.1875,
+								0.5,
+								0.109375,
+								0.703125,
+								0.28125,
+								0.734375,
+								0.5,
+								0.703125,
+								0.703125,
+								0.5,
+								0.859375,
+								0.203125,
+								0.78125,
+								0.171875,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9892809,
+						"collisionPoly": {
+							"points": [
+								0.1953125,
+								0.1953125,
+								0.5,
+								0.109375,
+								0.7109375,
+								0.28125,
+								0.734375,
+								0.5,
+								0.703125,
+								0.703125,
+								0.5,
+								0.8203125,
+								0.1640625,
+								0.828125,
+								0.171875,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 220315,
+						"collisionPoly": {
+							"points": [
+								0.1953125,
+								0.1953125,
+								0.5,
+								0.109375,
+								0.7109375,
+								0.28125,
+								0.734375,
+								0.5,
+								0.703125,
+								0.703125,
+								0.5,
+								0.8203125,
+								0.1640625,
+								0.828125,
+								0.171875,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 248071056900165,
+				"name": "Walk Right",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 10
+			},
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7330221,
+						"collisionPoly": {
+							"points": [
+								0.1875,
+								0.1875,
+								0.5,
+								0.109375,
+								0.703125,
+								0.28125,
+								0.734375,
+								0.5,
+								0.703125,
+								0.703125,
+								0.5,
+								0.859375,
+								0.203125,
+								0.78125,
+								0.171875,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3663458,
+						"collisionPoly": {
+							"points": [
+								0.28125,
+								0.28125,
+								0.5,
+								0.109375,
+								0.796875,
+								0.1953125,
+								0.8203125,
+								0.5,
+								0.828125,
+								0.828125,
+								0.5,
+								0.8203125,
+								0.2890625,
+								0.703125,
+								0.2578125,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 483364,
+						"collisionPoly": {
+							"points": [
+								0.28125,
+								0.28125,
+								0.5,
+								0.109375,
+								0.796875,
+								0.1953125,
+								0.8203125,
+								0.5,
+								0.828125,
+								0.828125,
+								0.5,
+								0.8203125,
+								0.2890625,
+								0.703125,
+								0.2578125,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 465604259029017,
+				"name": "Walk Left",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 10
+			},
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4864759,
+						"collisionPoly": {
+							"points": [
+								0.21875,
+								0.21875,
+								0.5,
+								0.109375,
+								0.7734375,
+								0.21875,
+								0.8203125,
+								0.5,
+								0.7890625,
+								0.7890625,
+								0.5,
+								0.796875,
+								0.203125,
+								0.7890625,
+								0.171875,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3281519,
+						"collisionPoly": {
+							"points": [
+								0.21875,
+								0.21875,
+								0.5,
+								0.109375,
+								0.7734375,
+								0.21875,
+								0.8203125,
+								0.5,
+								0.7890625,
+								0.7890625,
+								0.5,
+								0.796875,
+								0.203125,
+								0.7890625,
+								0.171875,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 384734570223205,
+				"name": "Walk Up",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 10
+			},
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3995590,
+						"collisionPoly": {
+							"points": [
+								0.21875,
+								0.21875,
+								0.5,
+								0.109375,
+								0.7734375,
+								0.21875,
+								0.8203125,
+								0.5,
+								0.7890625,
+								0.7890625,
+								0.5,
+								0.796875,
+								0.203125,
+								0.7890625,
+								0.171875,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 788304,
+						"collisionPoly": {
+							"points": [
+								0.21875,
+								0.21875,
+								0.5,
+								0.109375,
+								0.7734375,
+								0.21875,
+								0.8203125,
+								0.5,
+								0.7890625,
+								0.7890625,
+								0.5,
+								0.796875,
+								0.203125,
+								0.7890625,
+								0.171875,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 198818048146895,
+				"name": "Walk Down",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 10
+			}
+		],
+		"subfolders": []
+	}
+}
