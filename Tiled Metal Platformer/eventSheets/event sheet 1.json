@@ -1,0 +1,33 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Avatar",
+					"sid": 382827715475732,
+					"parameters": {
+						"object": "InvisibleCollider"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-tile",
+					"objectClass": "Tilemap",
+					"sid": 412328339158948,
+					"parameters": {
+						"tile-x": "InvisibleCollider.TileX",
+						"tile-y": "InvisibleCollider.TileY",
+						"tile": "InvisibleCollider.TileID",
+						"state": "normal"
+					}
+				}
+			],
+			"sid": 676262431618430
+		}
+	],
+	"sid": 258857238747431
+}

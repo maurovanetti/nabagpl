@@ -1,0 +1,68 @@
+{
+	"name": "InvisibleCollider",
+	"plugin-id": "Sprite",
+	"sid": 629414193983212,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "TileX",
+			"type": "number",
+			"desc": "",
+			"sid": 190576412009255
+		},
+		{
+			"name": "TileY",
+			"type": "number",
+			"desc": "",
+			"sid": 985783105055440
+		},
+		{
+			"name": "TileID",
+			"type": "number",
+			"desc": "",
+			"sid": 226605929544431
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5898728,
+						"collisionPoly": {
+							"points": [
+								0.2187495231628418,
+								0.17187505960464478,
+								0.8203120231628418,
+								0.15625011920928955,
+								0.8046879768371582,
+								0.8359375,
+								0.2421870231628418,
+								0.8125
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 712676699082416,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

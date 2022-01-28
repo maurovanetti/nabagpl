@@ -1,0 +1,63 @@
+{
+	"name": "Avatar",
+	"plugin-id": "Sprite",
+	"sid": 750912077243594,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 722458287096125
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 40,
+						"height": 42,
+						"originX": 0.480225988700565,
+						"originY": 0.48663101604278075,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5874253,
+						"collisionPoly": {
+							"points": [
+								0.15,
+								0.14285714285714285,
+								0.5,
+								0,
+								0.825,
+								0.14285714285714285,
+								0.975,
+								0.5,
+								0.825,
+								0.8333333333333334,
+								0.5,
+								0.9761904761904762,
+								0.15,
+								0.8333333333333334,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 863365777258453,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
