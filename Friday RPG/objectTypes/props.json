@@ -1,0 +1,27 @@
+{
+	"name": "Props",
+	"plugin-id": "Tilemap",
+	"sid": 324496282329972,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 397337167268259
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 1152,
+		"height": 448,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 3348766,
+		"useCollisionPoly": true
+	},
+	"tile-collision-polys": {}
+}

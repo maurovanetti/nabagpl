@@ -1,0 +1,37 @@
+{
+	"name": "Terrain",
+	"plugin-id": "Tilemap",
+	"sid": 270389103992582,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 1152,
+		"height": 448,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 6538492,
+		"useCollisionPoly": true
+	},
+	"tile-collision-polys": {
+		"65": {
+			"collisionPoly": {
+				"points": [
+					0.33333349227905273,
+					0.2942708134651184,
+					0.6770834922790527,
+					0.296875,
+					0.6875,
+					0.7421875,
+					0.34635424613952637,
+					0.7369792461395264
+				]
+			},
+			"useCollisionPoly": true
+		}
+	}
+}

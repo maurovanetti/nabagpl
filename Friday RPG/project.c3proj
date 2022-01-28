@@ -15,6 +15,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Tilemap",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "TileMovement",
 			"name": "Tile movement",
@@ -44,7 +52,9 @@
 		"items": [
 			"Avatar",
 			"Crate",
-			"Grass"
+			"Grass",
+			"Terrain",
+			"Props"
 		],
 		"subfolders": []
 	},
@@ -58,7 +68,8 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Layout 1",
+			"Layout 2"
 		],
 		"subfolders": []
 	},
