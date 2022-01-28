@@ -1,0 +1,13 @@
+{
+	"name": "ZObject",
+	"plugin-id": "Sprite",
+	"sid": 291871281423830,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Avatar",
+		"Crate",
+		"Grass"
+	]
+}

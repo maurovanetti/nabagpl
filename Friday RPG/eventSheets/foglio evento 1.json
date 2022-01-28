@@ -2,147 +2,198 @@
 	"name": "Foglio evento 1",
 	"events": [
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-moving",
-					"objectClass": "Avatar",
-					"sid": 215574445271789,
-					"behaviorType": "TileMovement",
-					"isInverted": true
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "Avatar",
-					"sid": 176570600936428,
-					"parameters": {
-						"animation": "\"Idle\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 127581607151806
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-moving",
-					"objectClass": "Avatar",
-					"sid": 938955822005793,
-					"behaviorType": "TileMovement"
-				}
-			],
-			"actions": [],
-			"sid": 438439177316231,
+			"eventType": "group",
+			"disabled": false,
+			"title": "Avatar Movement",
+			"description": "",
+			"isActiveOnStart": true,
 			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "is-moving-direction",
+							"id": "is-moving",
 							"objectClass": "Avatar",
-							"sid": 797032812550165,
+							"sid": 877338795337089,
 							"behaviorType": "TileMovement",
-							"parameters": {
-								"direction": "left"
-							}
+							"isInverted": true
 						}
 					],
 					"actions": [
 						{
 							"id": "set-animation",
 							"objectClass": "Avatar",
-							"sid": 153576148862580,
+							"sid": 645292694608020,
 							"parameters": {
-								"animation": "\"Walk Left\"",
+								"animation": "\"Idle\"",
 								"from": "beginning"
 							}
 						}
 					],
-					"sid": 475787686760118
+					"sid": 271309699917266
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "is-moving-direction",
+							"id": "is-moving",
 							"objectClass": "Avatar",
-							"sid": 965318369568562,
-							"behaviorType": "TileMovement",
-							"parameters": {
-								"direction": "right"
-							}
+							"sid": 429795464749976,
+							"behaviorType": "TileMovement"
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 728129715914323,
+					"children": [
 						{
-							"id": "set-animation",
-							"objectClass": "Avatar",
-							"sid": 719175169603481,
-							"parameters": {
-								"animation": "\"Walk Right\"",
-								"from": "beginning"
-							}
-						}
-					],
-					"sid": 275745091270361
-				},
-				{
-					"eventType": "block",
-					"conditions": [
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving-direction",
+									"objectClass": "Avatar",
+									"sid": 845137374100485,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"direction": "left"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Avatar",
+									"sid": 507694052042027,
+									"parameters": {
+										"animation": "\"Walk Left\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 161622850344010
+						},
 						{
-							"id": "is-moving-direction",
-							"objectClass": "Avatar",
-							"sid": 575459859902412,
-							"behaviorType": "TileMovement",
-							"parameters": {
-								"direction": "up"
-							}
-						}
-					],
-					"actions": [
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving-direction",
+									"objectClass": "Avatar",
+									"sid": 491416131049475,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"direction": "right"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Avatar",
+									"sid": 398004998893537,
+									"parameters": {
+										"animation": "\"Walk Right\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 311407228158969
+						},
 						{
-							"id": "set-animation",
-							"objectClass": "Avatar",
-							"sid": 281840056169213,
-							"parameters": {
-								"animation": "\"Walk Up\"",
-								"from": "beginning"
-							}
-						}
-					],
-					"sid": 144090213294368
-				},
-				{
-					"eventType": "block",
-					"conditions": [
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving-direction",
+									"objectClass": "Avatar",
+									"sid": 665619985243084,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"direction": "up"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Avatar",
+									"sid": 340799882505880,
+									"parameters": {
+										"animation": "\"Walk Up\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 494773904131758
+						},
 						{
-							"id": "is-moving-direction",
-							"objectClass": "Avatar",
-							"sid": 996537329490294,
-							"behaviorType": "TileMovement",
-							"parameters": {
-								"direction": "down"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving-direction",
+									"objectClass": "Avatar",
+									"sid": 663766331116580,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"direction": "down"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Avatar",
+									"sid": 465045715607910,
+									"parameters": {
+										"animation": "\"Walk Down\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 122402553713682
 						}
-					],
-					"actions": [
-						{
-							"id": "set-animation",
-							"objectClass": "Avatar",
-							"sid": 607826033172095,
-							"parameters": {
-								"animation": "\"Walk Down\"",
-								"from": "beginning"
-							}
-						}
-					],
-					"sid": 611485898727842
+					]
 				}
-			]
+			],
+			"sid": 469828455263790
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Perspective",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "ElevationFactor",
+					"type": "number",
+					"initialValue": "15",
+					"comment": "> viewport's height / 100",
+					"isStatic": false,
+					"isConstant": true,
+					"sid": 826244886635391
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 229240399859362
+						}
+					],
+					"actions": [
+						{
+							"id": "set-z-elevation",
+							"objectClass": "ZObject",
+							"sid": 769655337978632,
+							"parameters": {
+								"z": "(ZObject.ImagePointY(\"Location\") - scrolly) / ElevationFactor"
+							}
+						}
+					],
+					"sid": 900043320932879
+				}
+			],
+			"sid": 191308571373332
 		}
 	],
 	"sid": 894073622390891

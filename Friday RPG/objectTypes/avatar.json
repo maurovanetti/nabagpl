@@ -9,6 +9,11 @@
 			"behaviorId": "TileMovement",
 			"name": "TileMovement",
 			"sid": 234466516928408
+		},
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 180779722316751
 		}
 	],
 	"effectTypes": [],
@@ -46,6 +51,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Location",
+								"x": 0.5,
+								"y": 0.890625
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -89,6 +101,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Location",
+								"x": 0.5,
+								"y": 0.890625
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -121,6 +140,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Location",
+								"x": 0.5,
+								"y": 0.890625
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -153,6 +179,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Location",
+								"x": 0.5,
+								"y": 0.890625
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -196,6 +229,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Location",
+								"x": 0.5,
+								"y": 0.890625
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -228,6 +268,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Location",
+								"x": 0.5,
+								"y": 0.890625
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -260,6 +307,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Location",
+								"x": 0.5,
+								"y": 0.890625
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -303,6 +357,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Location",
+								"x": 0.5,
+								"y": 0.890625
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -335,6 +396,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Location",
+								"x": 0.5,
+								"y": 0.890625
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -378,6 +446,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Location",
+								"x": 0.5,
+								"y": 0.890625
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -410,6 +485,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Location",
+								"x": 0.5,
+								"y": 0.890625
+							}
+						],
 						"duration": 1
 					}
 				],
