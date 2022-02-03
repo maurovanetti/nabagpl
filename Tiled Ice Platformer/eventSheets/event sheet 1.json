@@ -2,26 +2,504 @@
 	"name": "Event sheet 1",
 	"events": [
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "variable",
+			"name": "GemRotationSpeed",
+			"type": "number",
+			"initialValue": "180",
+			"comment": "degrees per second",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 650769779224418
+		},
+		{
+			"eventType": "variable",
+			"name": "MovingPlatformSpeed",
+			"type": "number",
+			"initialValue": "100",
+			"comment": "pixels per second",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 306028467189128
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Always",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 445632813209120
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 961744764967664
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Gem",
+							"sid": 721879224585645,
+							"parameters": {
+								"x": "Platforms.SnapX(Gem.X)",
+								"y": "Platforms.SnapY(Gem.Y)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TimeButton",
+							"sid": 429347807170250,
+							"parameters": {
+								"text": "\"Time is going forward\""
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Gem",
+							"sid": 584751032511015,
+							"behaviorType": "Rotate",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 645552151781674
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "TimeButton",
+							"sid": 259989925163290
+						}
+					],
+					"actions": [],
+					"sid": 373182306363973,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-text",
+									"objectClass": "TimeButton",
+									"sid": 852194008063697,
+									"parameters": {
+										"text-to-compare": "\"Time is going backward\"",
+										"case-sensitivity": "ignore-case"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "TimeButton",
+									"sid": 683095855840857,
+									"parameters": {
+										"text": "\"Time is going forward\""
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 723984574005462,
+									"parameters": {
+										"group-name": "\"Time Goes Forward\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 776299212311171,
+									"parameters": {
+										"group-name": "\"Time Goes Backward\"",
+										"state": "deactivated"
+									}
+								}
+							],
+							"sid": 923482051556624
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 199122635626113
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "TimeButton",
+									"sid": 934606103266749,
+									"parameters": {
+										"text": "\"Time is going backward\""
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 700489355963071,
+									"parameters": {
+										"group-name": "\"Time Goes Backward\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 184002218243989,
+									"parameters": {
+										"group-name": "\"Time Goes Forward\"",
+										"state": "deactivated"
+									}
+								}
+							],
+							"sid": 611196315374048
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 183553924258434
+						}
+					],
+					"actions": [
+						{
+							"id": "set-speed",
+							"objectClass": "Gem",
+							"sid": 762610605936415,
+							"behaviorType": "Rotate",
+							"parameters": {
+								"speed": "GemRotationSpeed"
+							}
+						}
+					],
+					"sid": 511033522999158,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MovingPlatform",
+									"sid": 388770044955270,
+									"parameters": {
+										"instance-variable": "Direction",
+										"comparison": 0,
+										"value": "\"right\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-x",
+									"objectClass": "MovingPlatform",
+									"sid": 838653257918413,
+									"parameters": {
+										"x": "MovingPlatform.X + (dt * MovingPlatformSpeed)"
+									}
+								}
+							],
+							"sid": 377806251291263
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MovingPlatform",
+									"sid": 928047373970676,
+									"parameters": {
+										"instance-variable": "Direction",
+										"comparison": 0,
+										"value": "\"left\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-x",
+									"objectClass": "MovingPlatform",
+									"sid": 855148394003953,
+									"parameters": {
+										"x": "MovingPlatform.X - (dt * MovingPlatformSpeed)"
+									}
+								}
+							],
+							"sid": 378010025223218
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"callFunction": "SwapDirection",
+									"sid": 711939378871226
+								}
+							],
+							"sid": 313356354381887
+						}
+					]
 				}
 			],
-			"actions": [
+			"sid": 674497083030119
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Time Goes Forward",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "set-position",
-					"objectClass": "Gem",
-					"sid": 302645141336732,
-					"parameters": {
-						"x": "Platforms.SnapX(Gem.X)",
-						"y": "Platforms.SnapY(Gem.Y)"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 338340090101113
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 295649606295307,
+							"parameters": {
+								"variable": "GemRotationSpeed",
+								"value": "180"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 317330897463528,
+							"parameters": {
+								"variable": "MovingPlatformSpeed",
+								"value": "100"
+							}
+						}
+					],
+					"sid": 182048059947454
 				}
 			],
-			"sid": 658331695839857
+			"sid": 572465732086104
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Time Goes Backward",
+			"description": "",
+			"isActiveOnStart": false,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 633045375437388
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 913104423838170,
+							"parameters": {
+								"variable": "GemRotationSpeed",
+								"value": "-180"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 523613046855261,
+							"parameters": {
+								"variable": "MovingPlatformSpeed",
+								"value": "-100"
+							}
+						}
+					],
+					"sid": 966181014307659
+				}
+			],
+			"sid": 561342121053168
+		},
+		{
+			"functionName": "SwapDirection",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 252987287688406,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "MovingPlatform",
+							"sid": 994205803549541,
+							"parameters": {
+								"comparison": 5,
+								"x-co-ordinate": "MovingPlatform.RightBoundary"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "MovingPlatform",
+							"sid": 286431483013386,
+							"parameters": {
+								"x": "MovingPlatform.RightBoundary"
+							}
+						},
+						{
+							"callFunction": "SetOppositeDirection",
+							"sid": 623545871770601,
+							"parameters": [
+								"MovingPlatform.UID"
+							]
+						}
+					],
+					"sid": 793614708005044
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "MovingPlatform",
+							"sid": 963247509344600,
+							"parameters": {
+								"comparison": 3,
+								"x-co-ordinate": "MovingPlatform.LeftBoundary"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "MovingPlatform",
+							"sid": 702664685301497,
+							"parameters": {
+								"x": "MovingPlatform.LeftBoundary"
+							}
+						},
+						{
+							"callFunction": "SetOppositeDirection",
+							"sid": 585311256050409,
+							"parameters": [
+								"MovingPlatform.UID"
+							]
+						}
+					],
+					"sid": 965842087463419
+				}
+			]
+		},
+		{
+			"functionName": "SetOppositeDirection",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "MovingPlatformUID",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 366361043042759
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 117502223005640,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "MovingPlatform",
+							"sid": 914642446875855,
+							"parameters": {
+								"unique-id": "MovingPlatformUID"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 436887845800269,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MovingPlatform",
+									"sid": 498440071715987,
+									"parameters": {
+										"instance-variable": "Direction",
+										"comparison": 0,
+										"value": "\"right\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "MovingPlatform",
+									"sid": 566214377514623,
+									"parameters": {
+										"instance-variable": "Direction",
+										"value": "\"left\""
+									}
+								}
+							],
+							"sid": 658693513011145
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 231321838205548
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "MovingPlatform",
+									"sid": 862473979107643,
+									"parameters": {
+										"instance-variable": "Direction",
+										"value": "\"right\""
+									}
+								}
+							],
+							"sid": 970777753116593
+						}
+					]
+				}
+			]
 		}
 	],
 	"sid": 623021758298218
