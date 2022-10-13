@@ -36,6 +36,35 @@
 					}
 				},
 				{
+					"type": "Planet",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 12,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 504,
+						"y": 239,
+						"width": 82,
+						"height": 76,
+						"originX": 1.4268292682926829,
+						"originY": 1.4342105263157894,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "Cloud",
 					"properties": {
 						"initially-visible": true,
@@ -77,7 +106,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 504,
+						"x": 486,
 						"y": 226,
 						"width": 250,
 						"height": 250,
@@ -90,35 +119,6 @@
 							1
 						],
 						"angle": 0.03294896516567247,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Cloud",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 5,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 674,
-						"y": 187,
-						"width": 174.24121211699602,
-						"height": 174.24121211699602,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
 						"zElevation": 0
 					}
 				},
@@ -284,6 +284,35 @@
 						"y": -31,
 						"width": 250,
 						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Cloud",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 5,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 674,
+						"y": 187,
+						"width": 174.24121211699602,
+						"height": 174.24121211699602,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
