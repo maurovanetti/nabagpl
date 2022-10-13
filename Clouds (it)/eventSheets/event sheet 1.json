@@ -1,5 +1,37 @@
 {
 	"name": "Event sheet 1",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 523737980650678
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Planet",
+					"sid": 521573126395643,
+					"parameters": {
+						"x": "Planet.X + 5",
+						"y": "Planet.Y - 1"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Cloud",
+					"sid": 866447842153891,
+					"parameters": {
+						"x": "Cloud.X - 0.2",
+						"y": "Cloud.Y"
+					}
+				}
+			],
+			"sid": 457027874510114
+		}
+	],
 	"sid": 661842085212134
 }
