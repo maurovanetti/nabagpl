@@ -23,14 +23,66 @@
 				{
 					"id": "set-position",
 					"objectClass": "Cloud",
-					"sid": 866447842153891,
+					"sid": 537372249154177,
 					"parameters": {
-						"x": "Cloud.X - 0.2",
+						"x": "Cloud.X - 2",
 						"y": "Cloud.Y"
 					}
 				}
 			],
 			"sid": 457027874510114
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "Planet",
+					"sid": 181775696440720,
+					"parameters": {
+						"comparison": 4,
+						"x-co-ordinate": "1200"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Planet",
+					"sid": 977824344276249,
+					"parameters": {
+						"x": "-230",
+						"y": "350"
+					}
+				}
+			],
+			"sid": 514226377614401
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "Cloud",
+					"sid": 641633631640750,
+					"parameters": {
+						"comparison": 2,
+						"x-co-ordinate": "-200"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Cloud",
+					"sid": 426803447557284,
+					"parameters": {
+						"x": "1000",
+						"y": "Cloud.Y"
+					}
+				}
+			],
+			"sid": 879013579555761
 		}
 	],
 	"sid": 661842085212134

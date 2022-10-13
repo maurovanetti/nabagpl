@@ -48,12 +48,12 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 572,
-						"y": 457,
+						"x": -230,
+						"y": 350,
 						"width": 250,
 						"height": 249,
-						"originX": 1.4268292682926829,
-						"originY": 1.4342105263157894,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -135,8 +135,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 295,
-						"y": 304,
+						"x": 301,
+						"y": 353,
 						"width": 250,
 						"height": 250,
 						"originX": 0.5,
@@ -322,6 +322,35 @@
 							1
 						],
 						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Cloud",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 14,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 976,
+						"y": 119,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.07898891681829223,
 						"zElevation": 0
 					}
 				}
