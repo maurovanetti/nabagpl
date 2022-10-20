@@ -1,0 +1,121 @@
+{
+	"name": "Saucer",
+	"plugin-id": "Sprite",
+	"sid": 861597196029804,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 66,
+						"height": 36,
+						"originX": 0.48484848484848486,
+						"originY": 0.3055555555555556,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 975331,
+						"useCollisionPoly": true,
+						"duration": 3
+					},
+					{
+						"width": 66,
+						"height": 36,
+						"originX": 0.48484848484848486,
+						"originY": 0.3055555555555556,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2147711,
+						"useCollisionPoly": true,
+						"duration": 3
+					},
+					{
+						"width": 66,
+						"height": 36,
+						"originX": 0.48484848484848486,
+						"originY": 0.3055555555555556,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3234253,
+						"useCollisionPoly": true,
+						"duration": 3
+					},
+					{
+						"width": 66,
+						"height": 36,
+						"originX": 0.48484848484848486,
+						"originY": 0.3055555555555556,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5247145,
+						"useCollisionPoly": true,
+						"duration": 3
+					},
+					{
+						"width": 66,
+						"height": 36,
+						"originX": 0.48484848484848486,
+						"originY": 0.3055555555555556,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4410280,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 66,
+						"height": 36,
+						"originX": 0.48484848484848486,
+						"originY": 0.3055555555555556,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8541748,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 66,
+						"height": 36,
+						"originX": 0.48484848484848486,
+						"originY": 0.3055555555555556,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 152494,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 66,
+						"height": 36,
+						"originX": 0.48484848484848486,
+						"originY": 0.3055555555555556,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7258006,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 241306030225311,
+				"name": "Animation 1",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 4,
+				"speed": 10
+			}
+		],
+		"subfolders": []
+	}
+}

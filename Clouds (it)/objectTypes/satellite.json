@@ -1,0 +1,56 @@
+{
+	"name": "Satellite",
+	"plugin-id": "Sprite",
+	"sid": 681305400843665,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Speed",
+			"type": "number",
+			"desc": "",
+			"sid": 160661389036909
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 23,
+						"height": 14,
+						"originX": 0.782608695652174,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3662253,
+						"collisionPoly": {
+							"points": [
+								0,
+								1,
+								0,
+								0,
+								1,
+								0,
+								1,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 418148154278468,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -19,8 +19,12 @@
 	"objectTypes": {
 		"items": [
 			"Sky",
+			"Planet",
+			"Saucer",
+			"Dune",
 			"Cloud",
-			"Planet"
+			"Cannon",
+			"Satellite"
 		],
 		"subfolders": []
 	},

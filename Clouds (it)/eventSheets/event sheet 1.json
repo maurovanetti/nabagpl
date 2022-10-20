@@ -14,23 +14,170 @@
 				{
 					"id": "set-position",
 					"objectClass": "Planet",
-					"sid": 521573126395643,
+					"sid": 756079658206368,
 					"parameters": {
-						"x": "Planet.X + 5",
-						"y": "Planet.Y - 1"
+						"x": "Planet.X + 0.5",
+						"y": "Planet.Y - 0.1"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Saucer",
+					"sid": 129391805253000,
+					"parameters": {
+						"x": "Saucer.X + random(-1, 2)",
+						"y": "Saucer.Y + random(-1, 1)"
 					}
 				},
 				{
 					"id": "set-position",
 					"objectClass": "Cloud",
-					"sid": 537372249154177,
+					"sid": 788293375376817,
 					"parameters": {
-						"x": "Cloud.X - 2",
+						"x": "Cloud.X - 1",
 						"y": "Cloud.Y"
+					}
+				},
+				{
+					"id": "move-forward",
+					"objectClass": "Satellite",
+					"sid": 957063969961669,
+					"parameters": {
+						"distance": "Satellite.Speed"
 					}
 				}
 			],
 			"sid": 457027874510114
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 706328729811488,
+					"parameters": {
+						"interval-seconds": "0.8"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Cannon",
+					"sid": 782430713229232,
+					"parameters": {
+						"object": "Satellite",
+						"layer": "\"Foreground\"",
+						"image-point": "\"Mouth\"",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "move-to-bottom",
+					"objectClass": "Satellite",
+					"sid": 987220228096454
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "Satellite",
+					"sid": 575558153456970,
+					"parameters": {
+						"angle": "Cannon.Angle"
+					}
+				},
+				{
+					"id": "set-scale",
+					"objectClass": "Satellite",
+					"sid": 976779979555710,
+					"parameters": {
+						"scale": "Cannon.Width / Cannon.ImageWidth"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Satellite",
+					"sid": 972233824617823,
+					"parameters": {
+						"instance-variable": "Speed",
+						"value": "20 * (Cannon.Width / Cannon.ImageWidth)"
+					}
+				}
+			],
+			"sid": 118988220327626
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 388549553589071,
+					"parameters": {
+						"interval-seconds": "3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "toggle-boolean-instvar",
+					"objectClass": "Cannon",
+					"sid": 354797123727861,
+					"parameters": {
+						"instance-variable": "Clockwise"
+					}
+				}
+			],
+			"sid": 314445320204315
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Cannon",
+					"sid": 797170376874254,
+					"parameters": {
+						"instance-variable": "Clockwise"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "rotate-clockwise",
+					"objectClass": "Cannon",
+					"sid": 305823670218003,
+					"parameters": {
+						"degrees": "0.3"
+					}
+				}
+			],
+			"sid": 490838851235467
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Cannon",
+					"sid": 612972693561993,
+					"parameters": {
+						"instance-variable": "Clockwise"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "rotate-counter-clockwise",
+					"objectClass": "Cannon",
+					"sid": 652159752286034,
+					"parameters": {
+						"degrees": "0.3"
+					}
+				}
+			],
+			"sid": 771036236034439
 		},
 		{
 			"eventType": "block",
@@ -64,7 +211,7 @@
 				{
 					"id": "compare-x",
 					"objectClass": "Cloud",
-					"sid": 641633631640750,
+					"sid": 411670027716730,
 					"parameters": {
 						"comparison": 2,
 						"x-co-ordinate": "-200"
@@ -75,14 +222,59 @@
 				{
 					"id": "set-position",
 					"objectClass": "Cloud",
-					"sid": 426803447557284,
+					"sid": 572606319107181,
 					"parameters": {
-						"x": "1000",
-						"y": "Cloud.Y"
+						"x": "1200",
+						"y": "Cloud.Y + random(-100,100)"
 					}
 				}
 			],
-			"sid": 879013579555761
+			"sid": 958003801991955
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "Saucer",
+					"sid": 592479250972708,
+					"parameters": {
+						"comparison": 4,
+						"x-co-ordinate": "1200"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Saucer",
+					"sid": 889639066722522,
+					"parameters": {
+						"x": "-230",
+						"y": "Saucer.Y"
+					}
+				}
+			],
+			"sid": 844837205789081
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "Satellite",
+					"sid": 371620677758061,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Satellite",
+					"sid": 127164908220700
+				}
+			],
+			"sid": 412127791782210
 		}
 	],
 	"sid": 661842085212134
