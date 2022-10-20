@@ -266,7 +266,7 @@
 							1,
 							1,
 							1,
-							1
+							0.9
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -295,7 +295,7 @@
 							1,
 							1,
 							1,
-							1
+							0.9
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -324,7 +324,7 @@
 							1,
 							1,
 							1,
-							1
+							0.9
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -353,7 +353,7 @@
 							1,
 							1,
 							1,
-							1
+							0.9
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -382,7 +382,7 @@
 							1,
 							1,
 							1,
-							1
+							0.9
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -407,6 +407,122 @@
 						"height": 87.68368069770177,
 						"originX": 0.5373134328358209,
 						"originY": 0.4339622641509434,
+						"color": [
+							1,
+							1,
+							1,
+							0.9
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Bird",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 26,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 390.9665673226135,
+						"y": 398.55014901607973,
+						"width": 27.22979137748834,
+						"height": 16.856537519397545,
+						"originX": 0.47619047619047616,
+						"originY": -0.15384615384615385,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Bird",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 27,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 520,
+						"y": 189,
+						"width": 21,
+						"height": 13,
+						"originX": 0.47619047619047616,
+						"originY": -0.15384615384615385,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Bird",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 28,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 540,
+						"y": 188,
+						"width": 21,
+						"height": 13,
+						"originX": 0.47619047619047616,
+						"originY": -0.15384615384615385,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Bird",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 29,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 512,
+						"y": 163,
+						"width": 21,
+						"height": 13,
+						"originX": 0.47619047619047616,
+						"originY": -0.15384615384615385,
 						"color": [
 							1,
 							1,
@@ -440,7 +556,7 @@
 							1,
 							1,
 							1,
-							1
+							0.9
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -469,7 +585,7 @@
 							1,
 							1,
 							1,
-							1
+							0.9
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -498,7 +614,7 @@
 							1,
 							1,
 							1,
-							1
+							0.9
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -527,7 +643,7 @@
 							1,
 							1,
 							1,
-							1
+							0.9
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -556,7 +672,7 @@
 							1,
 							1,
 							1,
-							1
+							0.9
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -585,7 +701,7 @@
 							1,
 							1,
 							1,
-							1
+							0.9
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -614,7 +730,7 @@
 							1,
 							1,
 							1,
-							1
+							0.9
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -643,7 +759,7 @@
 							1,
 							1,
 							1,
-							1
+							0.9
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -672,7 +788,7 @@
 							1,
 							1,
 							1,
-							1
+							0.9
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -701,7 +817,7 @@
 							1,
 							1,
 							1,
-							1
+							0.9
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -742,6 +858,35 @@
 			"subLayers": [],
 			"instances": [
 				{
+					"type": "Grass",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 30,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 427,
+						"y": 171,
+						"width": 879.8977648976505,
+						"height": 627.6604056269908,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "Scarecrow",
 					"properties": {
 						"initially-visible": true,
@@ -760,6 +905,35 @@
 						"height": 80,
 						"originX": 0.4625,
 						"originY": 0.9875,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Flag",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 31,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 202,
+						"y": 474,
+						"width": 80,
+						"height": 100,
+						"originX": 0.475,
+						"originY": 0.99,
 						"color": [
 							1,
 							1,

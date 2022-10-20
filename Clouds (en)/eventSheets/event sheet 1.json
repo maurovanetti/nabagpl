@@ -32,7 +32,7 @@
 				{
 					"id": "set-position",
 					"objectClass": "Bird",
-					"sid": 871782656614485,
+					"sid": 748844313094053,
 					"parameters": {
 						"x": "Bird.X + random(1, 2)",
 						"y": "Bird.Y + random(-0.3, 0.3)"
@@ -58,10 +58,10 @@
 				{
 					"id": "set-position",
 					"objectClass": "Cloud",
-					"sid": 477406649567939,
+					"sid": 844733045635985,
 					"parameters": {
 						"x": "1200",
-						"y": "Cloud.Y"
+						"y": "Cloud.Y + random(-100,100)"
 					}
 				}
 			],
