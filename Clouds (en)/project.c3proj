@@ -19,7 +19,9 @@
 	"objectTypes": {
 		"items": [
 			"Sky",
-			"Cloud"
+			"Cloud",
+			"Sun",
+			"Bird"
 		],
 		"subfolders": []
 	},

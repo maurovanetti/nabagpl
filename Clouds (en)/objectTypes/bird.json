@@ -1,0 +1,37 @@
+{
+	"name": "Bird",
+	"plugin-id": "Sprite",
+	"sid": 175224373102590,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 21,
+						"height": 13,
+						"originX": 0.47619047619047616,
+						"originY": -0.15384615384615385,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 707983,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 290201040005635,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
