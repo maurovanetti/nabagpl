@@ -631,7 +631,36 @@
 					},
 					"uid": 41,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"SineAngle": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 1,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 2,
+								"magnitude-random": 1,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"SineX": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 5,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 0,
+								"magnitude-random": 10,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 622,
 						"y": 264,
@@ -660,7 +689,36 @@
 					},
 					"uid": 49,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"SineAngle": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 1,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 2,
+								"magnitude-random": 1,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"SineX": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 5,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 0,
+								"magnitude-random": 10,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 434,
 						"y": 274,
@@ -689,7 +747,36 @@
 					},
 					"uid": 50,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"SineAngle": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 1,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 2,
+								"magnitude-random": 1,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"SineX": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 5,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 0,
+								"magnitude-random": 10,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 170,
 						"y": 237,
@@ -718,7 +805,36 @@
 					},
 					"uid": 53,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"SineAngle": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 1,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 2,
+								"magnitude-random": 1,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"SineX": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 5,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 0,
+								"magnitude-random": 10,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 445,
 						"y": 181,
@@ -747,7 +863,36 @@
 					},
 					"uid": 54,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"SineAngle": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 1,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 2,
+								"magnitude-random": 1,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"SineX": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 5,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 0,
+								"magnitude-random": 10,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 52,
 						"y": 311,
@@ -776,7 +921,36 @@
 					},
 					"uid": 55,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"SineAngle": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 1,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 2,
+								"magnitude-random": 1,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"SineX": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 5,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 0,
+								"magnitude-random": 10,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 277,
 						"y": 285,
@@ -805,7 +979,36 @@
 					},
 					"uid": 62,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"SineAngle": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 1,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 2,
+								"magnitude-random": 1,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"SineX": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 5,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 0,
+								"magnitude-random": 10,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 203,
 						"y": 189,
@@ -834,7 +1037,36 @@
 					},
 					"uid": 63,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"SineAngle": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 1,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 2,
+								"magnitude-random": 1,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"SineX": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 5,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 0,
+								"magnitude-random": 10,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 742,
 						"y": 301,
@@ -863,7 +1095,36 @@
 					},
 					"uid": 64,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"SineAngle": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 1,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 2,
+								"magnitude-random": 1,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"SineX": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 5,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 0,
+								"magnitude-random": 10,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 569,
 						"y": 224,
@@ -892,7 +1153,36 @@
 					},
 					"uid": 65,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"SineAngle": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 1,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 2,
+								"magnitude-random": 1,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"SineX": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 5,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 0,
+								"magnitude-random": 10,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 749,
 						"y": 191,
@@ -921,7 +1211,36 @@
 					},
 					"uid": 66,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"SineAngle": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 1,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 2,
+								"magnitude-random": 1,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"SineX": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 5,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 0,
+								"magnitude-random": 10,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 306,
 						"y": 156,
@@ -950,7 +1269,36 @@
 					},
 					"uid": 67,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"SineAngle": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 1,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 2,
+								"magnitude-random": 1,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"SineX": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 5,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 0,
+								"magnitude-random": 10,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 66,
 						"y": 145,
@@ -979,7 +1327,36 @@
 					},
 					"uid": 68,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"SineAngle": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 1,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 2,
+								"magnitude-random": 1,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"SineX": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 5,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 0,
+								"magnitude-random": 10,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 569,
 						"y": 121,
@@ -1008,7 +1385,36 @@
 					},
 					"uid": 69,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"SineAngle": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 1,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 2,
+								"magnitude-random": 1,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"SineX": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 5,
+								"period-random": 1,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 0,
+								"magnitude-random": 10,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 763,
 						"y": 115,

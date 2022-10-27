@@ -31,15 +31,6 @@
 				},
 				{
 					"id": "set-position",
-					"objectClass": "RainCloud",
-					"sid": 370003759574398,
-					"parameters": {
-						"x": "RainCloud.X - 1",
-						"y": "RainCloud.Y"
-					}
-				},
-				{
-					"id": "set-position",
 					"objectClass": "Bird",
 					"sid": 748844313094053,
 					"parameters": {
@@ -54,6 +45,26 @@
 					"parameters": {
 						"x": "Raindrop.X",
 						"y": "Raindrop.Y + 4"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "RainCloud",
+					"sid": 859637986649465,
+					"disabled": true,
+					"parameters": {
+						"x": "RainCloud.X - 1",
+						"y": "RainCloud.Y"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "RainCloud",
+					"sid": 691279737881224,
+					"disabled": true,
+					"parameters": {
+						"x": "RainCloud.X + random(-0.5,0.5)",
+						"y": "RainCloud.Y + random(-0.5,0.5)"
 					}
 				}
 			],

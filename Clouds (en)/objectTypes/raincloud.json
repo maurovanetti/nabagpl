@@ -4,7 +4,18 @@
 	"sid": 336554452484308,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "SineAngle",
+			"sid": 143712925122489
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "SineX",
+			"sid": 102054891883742
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
