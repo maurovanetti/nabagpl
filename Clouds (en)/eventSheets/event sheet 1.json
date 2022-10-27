@@ -31,11 +31,29 @@
 				},
 				{
 					"id": "set-position",
+					"objectClass": "RainCloud",
+					"sid": 370003759574398,
+					"parameters": {
+						"x": "RainCloud.X - 1",
+						"y": "RainCloud.Y"
+					}
+				},
+				{
+					"id": "set-position",
 					"objectClass": "Bird",
 					"sid": 748844313094053,
 					"parameters": {
 						"x": "Bird.X + random(1, 2)",
 						"y": "Bird.Y + random(-0.3, 0.3)"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Raindrop",
+					"sid": 521930540443637,
+					"parameters": {
+						"x": "Raindrop.X",
+						"y": "Raindrop.Y + 4"
 					}
 				}
 			],
@@ -66,6 +84,32 @@
 				}
 			],
 			"sid": 912429319856151
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "RainCloud",
+					"sid": 491821422891840,
+					"parameters": {
+						"comparison": 2,
+						"x-co-ordinate": "-200"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "RainCloud",
+					"sid": 166367922813050,
+					"parameters": {
+						"x": "1200",
+						"y": "RainCloud.Y + random(-100,100)"
+					}
+				}
+			],
+			"sid": 535911284505068
 		},
 		{
 			"eventType": "block",
@@ -118,6 +162,72 @@
 				}
 			],
 			"sid": 630466538286770
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 863186834854663,
+					"parameters": {
+						"interval-seconds": "0.1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "RainCloud",
+					"sid": 973652038957045,
+					"parameters": {
+						"object": "Raindrop",
+						"layer": "\"In the Sky\"",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "Raindrop",
+					"sid": 986965894486246,
+					"parameters": {
+						"x": "Raindrop.X + random(-50,50)"
+					}
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "Raindrop",
+					"sid": 113207089899963,
+					"parameters": {
+						"where": "behind",
+						"object": "RainCloud"
+					}
+				}
+			],
+			"sid": 160479843343745
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-y",
+					"objectClass": "Raindrop",
+					"sid": 968419324157397,
+					"parameters": {
+						"comparison": 4,
+						"y-co-ordinate": "1000"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Raindrop",
+					"sid": 632210971989733
+				}
+			],
+			"sid": 107541170211492
 		}
 	],
 	"sid": 715048575978697

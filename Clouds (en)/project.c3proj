@@ -24,7 +24,9 @@
 			"Bird",
 			"Scarecrow",
 			"Grass",
-			"Flag"
+			"Flag",
+			"Raindrop",
+			"RainCloud"
 		],
 		"subfolders": []
 	},
@@ -36,7 +38,8 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Sunny Day",
+			"Rainy Day"
 		],
 		"subfolders": []
 	},
