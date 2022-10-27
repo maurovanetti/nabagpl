@@ -1,0 +1,290 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "rightward",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 136327961798740
+		},
+		{
+			"eventType": "variable",
+			"name": "dx",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 371946960684811
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 725349967963974,
+					"parameters": {
+						"variable": "rightward"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 178038779986040,
+					"parameters": {
+						"variable": "dx",
+						"value": "dt * 65.5"
+					}
+				}
+			],
+			"sid": 534718099795282
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 535007733501836,
+					"parameters": {
+						"variable": "rightward"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 832497583922807,
+					"parameters": {
+						"variable": "dx",
+						"value": "-dt * 65.5"
+					}
+				}
+			],
+			"sid": 170140289026747
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 756465254616710
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "Weight",
+					"sid": 226512400822887,
+					"parameters": {
+						"x": "Weight.X + dx"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "DeltaTimeLabel",
+					"sid": 850286261925388,
+					"parameters": {
+						"text": "\"dt = \" & dt"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "WeightSpeedLabel",
+					"sid": 815835017201697,
+					"parameters": {
+						"object": "Weight",
+						"image-point-optional": "\"Label\""
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "WeightSpeedLabel",
+					"sid": 669056206243481,
+					"parameters": {
+						"text": "dx / dt"
+					}
+				}
+			],
+			"sid": 642433941515422
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 388882019441488,
+					"parameters": {
+						"interval-seconds": "10"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "toggle-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 986540355897431,
+					"parameters": {
+						"variable": "rightward"
+					}
+				}
+			],
+			"sid": 518252467788820
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 821132085786910,
+					"parameters": {
+						"interval-seconds": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 338148971892972,
+					"parameters": {
+						"object-to-create": "Waypoint",
+						"layer": "0",
+						"x": "random(100,800)",
+						"y": "Ball.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "move-to-position",
+					"objectClass": "Ball",
+					"sid": 373188768492778,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"x": "Waypoint.X",
+						"y": "Waypoint.Y",
+						"mode": "add-waypoint"
+					}
+				}
+			],
+			"sid": 582609320235135
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 753952107416116
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "BallSpeedLabel",
+					"sid": 819498133860322,
+					"parameters": {
+						"object": "Ball",
+						"image-point-optional": "\"Label\""
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "BallSpeedLabel",
+					"sid": 607336861708031,
+					"parameters": {
+						"text": "Ball.MoveTo.Speed"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Waypoint",
+					"sid": 219146333430884,
+					"parameters": {
+						"opacity": "Waypoint.Opacity - 0.5"
+					}
+				}
+			],
+			"sid": 557801205340279
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 180535733509907,
+					"parameters": {
+						"first-value": "Ball.MoveTo.TargetX",
+						"comparison": 4,
+						"second-value": "Ball.X"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-speed",
+					"objectClass": "Ball",
+					"sid": 321180916877261,
+					"behaviorType": "Rotate",
+					"parameters": {
+						"speed": "Ball.MoveTo.Speed"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Ball",
+					"sid": 471098927325773,
+					"parameters": {
+						"opacity": "50"
+					}
+				}
+			],
+			"sid": 466389126378844
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 152603511028598
+				}
+			],
+			"actions": [
+				{
+					"id": "set-speed",
+					"objectClass": "Ball",
+					"sid": 524898064962069,
+					"behaviorType": "Rotate",
+					"parameters": {
+						"speed": "-Ball.MoveTo.Speed"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Ball",
+					"sid": 850722597943207,
+					"parameters": {
+						"opacity": "100"
+					}
+				}
+			],
+			"sid": 715260482558003
+		}
+	],
+	"sid": 213852492196467
+}

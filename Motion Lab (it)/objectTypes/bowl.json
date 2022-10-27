@@ -1,0 +1,43 @@
+{
+	"name": "Bowl",
+	"plugin-id": "Sprite",
+	"sid": 881302816506731,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Orbit",
+			"name": "Orbit",
+			"sid": 550643927181236
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 68,
+						"height": 68,
+						"originX": 0.6029411764705882,
+						"originY": 0.5441176470588235,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9041560,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 271988433415782,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
