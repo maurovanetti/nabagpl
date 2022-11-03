@@ -1,0 +1,48 @@
+{
+	"name": "Ball",
+	"plugin-id": "Sprite",
+	"sid": 944206278369113,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 951547820296435
+		},
+		{
+			"behaviorId": "Rotate",
+			"name": "Rotate",
+			"sid": 733192326188062
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 44,
+						"height": 44,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7370965,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 251877420088300,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

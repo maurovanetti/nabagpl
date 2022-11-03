@@ -1,0 +1,307 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "PixelsPerSecond",
+			"type": "number",
+			"initialValue": "120",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 380990752439451
+		},
+		{
+			"eventType": "variable",
+			"name": "PixelsPerFrame",
+			"type": "number",
+			"initialValue": "2",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 788019281644617
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 840926267102421
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-position",
+					"objectClass": "Ball",
+					"sid": 356469052613138,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"x": "random(70, 770)",
+						"y": "Ball.Y",
+						"mode": "add-waypoint"
+					}
+				}
+			],
+			"sid": 808796211388406
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-arrived",
+					"objectClass": "Ball",
+					"sid": 562292514377770,
+					"behaviorType": "MoveTo"
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-position",
+					"objectClass": "Ball",
+					"sid": 131417370086041,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"x": "random(70, 770)",
+						"y": "Ball.Y",
+						"mode": "add-waypoint"
+					}
+				}
+			],
+			"sid": 591798742640258
+		},
+		{
+			"eventType": "comment",
+			"text": "Switch the directions of the square things"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 577562712941790,
+					"parameters": {
+						"interval-seconds": "5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 101106514927885,
+					"parameters": {
+						"variable": "PixelsPerFrame",
+						"value": "-PixelsPerFrame"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 313474622691096,
+					"parameters": {
+						"variable": "PixelsPerSecond",
+						"value": "-PixelsPerSecond"
+					}
+				}
+			],
+			"sid": 780530005599181
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 526314699383659
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "FpsLabel",
+					"sid": 824788755810648,
+					"parameters": {
+						"text": "\"FPS = \" & fps"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "DtLabel",
+					"sid": 754490883351861,
+					"parameters": {
+						"text": "\"Δt = \" & dt"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "WrongSpeedLabel",
+					"sid": 335346870921213,
+					"parameters": {
+						"object": "WrongThing",
+						"image-point-optional": "0"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "WrongThing",
+					"sid": 413587527985052,
+					"parameters": {
+						"x": "WrongThing.X + PixelsPerFrame"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "WrongSpeedLabel",
+					"sid": 790480036942381,
+					"parameters": {
+						"text": "PixelsPerFrame / dt & \" px/s\""
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "RightSpeedLabel",
+					"sid": 858241970568395,
+					"parameters": {
+						"object": "RightThing",
+						"image-point-optional": "0"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "RightThing",
+					"sid": 593336456733227,
+					"parameters": {
+						"x": "RightThing.X + dt * PixelsPerSecond"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "RightSpeedLabel",
+					"sid": 986185864388572,
+					"parameters": {
+						"text": "(dt * PixelsPerSecond) / dt & \" px/s\""
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "BallText",
+					"sid": 489994089033619,
+					"parameters": {
+						"object": "Ball",
+						"image-point-optional": "0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "BallText",
+					"sid": 800094054638751,
+					"parameters": {
+						"text": "Ball.MoveTo.Speed & \" px/s\""
+					}
+				},
+				{
+					"id": "set-target",
+					"objectClass": "OrbitingBall",
+					"sid": 514766603017431,
+					"behaviorType": "Orbit",
+					"parameters": {
+						"x": "Ball.X",
+						"y": "Ball.Y"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "OrbitingBall",
+					"sid": 473585105058408,
+					"parameters": {
+						"object": "Trace",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 956973930920466
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 667195911651626
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "Trace",
+					"sid": 967643339236671,
+					"parameters": {
+						"opacity": "Trace.Opacity - 0.25"
+					}
+				}
+			],
+			"sid": 628244204487271
+		},
+		{
+			"eventType": "comment",
+			"text": "If the ball's target is right of the current position of the ball, then the ball should rotate clockwise"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "Ball",
+					"sid": 447009814125102,
+					"parameters": {
+						"comparison": 2,
+						"x-co-ordinate": "Ball.MoveTo.TargetX"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-speed",
+					"objectClass": "Ball",
+					"sid": 826190777606068,
+					"behaviorType": "Rotate",
+					"parameters": {
+						"speed": "Ball.MoveTo.Speed * 0.75"
+					}
+				}
+			],
+			"sid": 105491403647287
+		},
+		{
+			"eventType": "comment",
+			"text": "Otherwise, the ball should rotate counterclockwise"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 229783665367323
+				}
+			],
+			"actions": [
+				{
+					"id": "set-speed",
+					"objectClass": "Ball",
+					"sid": 993632437417195,
+					"behaviorType": "Rotate",
+					"parameters": {
+						"speed": "-Ball.MoveTo.Speed * 0.75"
+					}
+				}
+			],
+			"sid": 670193382785445
+		}
+	],
+	"sid": 535677878614107
+}
