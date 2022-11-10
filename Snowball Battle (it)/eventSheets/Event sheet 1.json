@@ -391,6 +391,131 @@
 				}
 			],
 			"sid": 793060417257566
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Bounce Snowball",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 561655854996565
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Mushroom",
+							"sid": 614518171611489,
+							"parameters": {
+								"object": "MushroomCap",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "MushroomCap",
+							"sid": 771058149495414,
+							"parameters": {
+								"animation": "Mushroom.AnimationName",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MushroomCap",
+							"sid": 831831610387311,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Rock",
+							"sid": 508084988287611,
+							"parameters": {
+								"object": "RockTop",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "RockTop",
+							"sid": 213165980303243,
+							"parameters": {
+								"animation": "Rock.AnimationName",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "RockTop",
+							"sid": 134147342637755,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 462078738592160
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Snowball",
+							"sid": 516727173627959,
+							"parameters": {
+								"object": "MushroomCap"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "bounce-off-object",
+							"objectClass": "Snowball",
+							"sid": 690891316004775,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"object": "MushroomCap"
+							}
+						}
+					],
+					"sid": 586214186937220
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Snowball",
+							"sid": 558696842119478,
+							"parameters": {
+								"object": "RockTop"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Snowball",
+							"sid": 574982962756976
+						}
+					],
+					"sid": 674449281160599
+				}
+			],
+			"sid": 621637986783018
 		}
 	],
 	"sid": 821165317375456

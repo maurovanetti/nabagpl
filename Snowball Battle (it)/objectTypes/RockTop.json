@@ -1,0 +1,98 @@
+{
+	"name": "RockTop",
+	"plugin-id": "Sprite",
+	"sid": 907743876894224,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 70,
+						"height": 70,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9930457,
+						"collisionPoly": {
+							"points": [
+								0.5061224489795922,
+								0.5102040816326533,
+								0.6755102040816331,
+								0.5142857142857145,
+								0.8551020408163265,
+								0.7448979591836733,
+								1,
+								0.8571428571428578,
+								0.9306122448979592,
+								1,
+								0.11224489795918373,
+								1,
+								0,
+								0.7836734693877552,
+								0.33877551020408186,
+								0.4224489795918365
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 177206321653990,
+				"name": "Flat",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 70,
+						"height": 70,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4180883,
+						"collisionPoly": {
+							"points": [
+								0.4714285714285714,
+								0.4714285714285714,
+								0.5326530612244899,
+								0.36734693877550995,
+								0.7816326530612248,
+								0.37142857142857155,
+								0.9346938775510208,
+								1,
+								0.13469387755102036,
+								1,
+								0.15714285714285714,
+								0.8285714285714286,
+								0.3959183673469387,
+								0.6897959183673468
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 679437375229106,
+				"name": "Pointy",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
