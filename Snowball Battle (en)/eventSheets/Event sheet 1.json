@@ -1,0 +1,148 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Fake Perspective",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 760624472182373
+						}
+					],
+					"actions": [
+						{
+							"id": "set-z-elevation",
+							"objectClass": "Bush",
+							"sid": 228737270766052,
+							"parameters": {
+								"z": "Bush.Y / 1000"
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "Avatar",
+							"sid": 977295972578684,
+							"parameters": {
+								"z": "Avatar.Y / 1000"
+							}
+						}
+					],
+					"sid": 992405288841044
+				}
+			],
+			"sid": 268024159775492
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Avatar Animations",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 373450975731266,
+							"parameters": {
+								"key": 37
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Avatar",
+							"sid": 798000709103285,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 260055873181773
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 769731504590801,
+							"parameters": {
+								"key": 39
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Avatar",
+							"sid": 906625112018170,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 410584641400188
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "Avatar",
+							"sid": 847779840308688,
+							"behaviorType": "8Direction"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Avatar",
+							"sid": 340373410905921,
+							"parameters": {
+								"animation": "\"Walk\"",
+								"from": "current-frame"
+							}
+						}
+					],
+					"sid": 260675755402839
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 164746478121759
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Avatar",
+							"sid": 269966417068597,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 289244969897949
+				}
+			],
+			"sid": 241292613057280
+		}
+	],
+	"sid": 912798796963498
+}
