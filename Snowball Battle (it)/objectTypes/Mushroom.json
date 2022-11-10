@@ -1,0 +1,90 @@
+{
+	"name": "Mushroom",
+	"plugin-id": "Sprite",
+	"sid": 562837244376527,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 766719028838423
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 70,
+						"height": 70,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2863485,
+						"collisionPoly": {
+							"points": [
+								0.4690476190476194,
+								0.9047619047619048,
+								0.611904761904762,
+								0.9464285714285716,
+								0.47380952380952435,
+								1,
+								0.34166666666666684,
+								0.9428571428571431
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 234212149227433,
+				"name": "Red",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 70,
+						"height": 70,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9636831,
+						"collisionPoly": {
+							"points": [
+								0.4690476190476194,
+								0.9047619047619048,
+								0.611904761904762,
+								0.9464285714285716,
+								0.47380952380952435,
+								1,
+								0.34166666666666684,
+								0.9428571428571431
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 954074403582156,
+				"name": "Brown",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

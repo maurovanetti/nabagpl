@@ -1,0 +1,397 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Fix Perspective",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Set once the Z of static objects"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 400930562083083
+						}
+					],
+					"actions": [
+						{
+							"id": "set-z-elevation",
+							"objectClass": "Mushroom",
+							"sid": 602811729644352,
+							"parameters": {
+								"z": "Mushroom.Y / 1000"
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "Rock",
+							"sid": 129507535616394,
+							"parameters": {
+								"z": "Rock.Y / 1000"
+							}
+						}
+					],
+					"sid": 736599904774809
+				},
+				{
+					"eventType": "comment",
+					"text": "Adjust the Z of dynamic objects"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 558156368195717
+						}
+					],
+					"actions": [
+						{
+							"id": "set-z-elevation",
+							"objectClass": "Avatar",
+							"sid": 622300972599618,
+							"parameters": {
+								"z": "Avatar.Y / 1000"
+							}
+						}
+					],
+					"sid": 546059636185061
+				}
+			],
+			"sid": 838715417640539
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Animate Avatar",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "Avatar",
+							"sid": 560628809783200,
+							"behaviorType": "8Direction"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Avatar",
+							"sid": 283688886612885,
+							"parameters": {
+								"animation": "\"Walk\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 155993695810235
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 179012829390645
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Avatar",
+							"sid": 900282542749036,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 117425225856599
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 355140037809818,
+							"parameters": {
+								"key": 39
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 920881106594807,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Avatar",
+							"sid": 425528465435923,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "right"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Avatar",
+							"sid": 907034044424491,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 791581106205159,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 870009880794648,
+							"parameters": {
+								"key": 37
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 740291945060543,
+							"parameters": {
+								"key": 65
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Avatar",
+							"sid": 313939296805761,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "left"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Avatar",
+							"sid": 549881757571745,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 536716420962659,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 949511212841173,
+							"parameters": {
+								"key": 38
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 957640310052973,
+							"parameters": {
+								"key": 87
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Avatar",
+							"sid": 831179185795408,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "up"
+							}
+						}
+					],
+					"sid": 113185038784975,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 478885587170901,
+							"parameters": {
+								"key": 40
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 894274921874429,
+							"parameters": {
+								"key": 83
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Avatar",
+							"sid": 642820462509762,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "down"
+							}
+						}
+					],
+					"sid": 910383184668870,
+					"isOrBlock": true
+				}
+			],
+			"sid": 952812507050325
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Launch Snowball",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 169935195638149,
+							"parameters": {
+								"key": 32
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Avatar",
+							"sid": 929330553514569,
+							"parameters": {
+								"object": "Snowball",
+								"layer": "0",
+								"image-point": "\"Hand\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "Snowball",
+							"sid": 318364064798781,
+							"parameters": {
+								"z": "50"
+							}
+						}
+					],
+					"sid": 673883340635807,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "Avatar",
+									"sid": 663551570417911,
+									"behaviorType": "8Direction"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle",
+									"objectClass": "Snowball",
+									"sid": 849961583600592,
+									"parameters": {
+										"angle": "Avatar.8Direction.MovingAngle"
+									}
+								}
+							],
+							"sid": 714669532204974
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 310022409157957
+								},
+								{
+									"id": "is-mirrored",
+									"objectClass": "Avatar",
+									"sid": 178156877991443
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle",
+									"objectClass": "Snowball",
+									"sid": 983581971350040,
+									"parameters": {
+										"angle": "180"
+									}
+								}
+							],
+							"sid": 609557744416208
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 901133565147707
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle",
+									"objectClass": "Snowball",
+									"sid": 341790000139814,
+									"parameters": {
+										"angle": "0"
+									}
+								}
+							],
+							"sid": 275014964355219
+						}
+					]
+				}
+			],
+			"sid": 793060417257566
+		}
+	],
+	"sid": 821165317375456
+}

@@ -1,0 +1,63 @@
+{
+	"name": "Snowball",
+	"plugin-id": "Sprite",
+	"sid": 627440089311886,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 115264008613917
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 70,
+						"height": 70,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3780811,
+						"collisionPoly": {
+							"points": [
+								0.37142857142857144,
+								0.37142857142857144,
+								0.5,
+								0.3,
+								0.6142857142857143,
+								0.37142857142857144,
+								0.7,
+								0.5,
+								0.6428571428571429,
+								0.6428571428571429,
+								0.5,
+								0.7142857142857143,
+								0.35714285714285715,
+								0.6285714285714286,
+								0.3,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 810966634037379,
+				"name": "Fly",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

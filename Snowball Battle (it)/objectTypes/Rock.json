@@ -1,0 +1,90 @@
+{
+	"name": "Rock",
+	"plugin-id": "Sprite",
+	"sid": 509520119417059,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 248133446657719
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 70,
+						"height": 70,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9446059,
+						"collisionPoly": {
+							"points": [
+								0.17380952380952389,
+								0.8734693877551021,
+								0.8642857142857148,
+								0.8738095238095241,
+								0.923809523809524,
+								1,
+								0.11428571428571423,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 465173057841000,
+				"name": "Flat",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 70,
+						"height": 70,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1370977,
+						"collisionPoly": {
+							"points": [
+								0.1761904761904761,
+								0.8928571428571432,
+								0.8571428571428577,
+								0.8880952380952376,
+								0.8976190476190476,
+								1,
+								0.12380952380952383,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 810084841789409,
+				"name": "Pointy",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
