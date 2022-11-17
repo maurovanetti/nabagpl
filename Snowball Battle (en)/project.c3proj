@@ -85,6 +85,14 @@
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "3gjnqrmtieu",

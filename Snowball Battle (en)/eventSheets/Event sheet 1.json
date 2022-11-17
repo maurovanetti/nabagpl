@@ -33,6 +33,21 @@
 							"parameters": {
 								"z": "Mushroom.Y / 1000"
 							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "AvatarBox",
+							"sid": 387019957467834,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "Avatar",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
 						}
 					],
 					"sid": 336676529726571
@@ -94,15 +109,6 @@
 							"sid": 382008048519117,
 							"parameters": {
 								"z": "Avatar.Y / 1000"
-							}
-						},
-						{
-							"id": "set-position-to-another-object",
-							"objectClass": "AvatarBox",
-							"sid": 571048457705231,
-							"parameters": {
-								"object": "Avatar",
-								"image-point-optional": "0"
 							}
 						}
 					],
