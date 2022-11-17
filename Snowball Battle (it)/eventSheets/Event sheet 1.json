@@ -64,7 +64,44 @@
 							}
 						}
 					],
-					"sid": 546059636185061
+					"sid": 546059636185061,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-children",
+									"objectClass": "Avatar",
+									"sid": 581316155060307,
+									"parameters": {
+										"child": "Snowball",
+										"which": "own"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "Snowball",
+									"sid": 185472802043065,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "Snowball",
+									"sid": 865048934660097,
+									"parameters": {
+										"object": "Avatar",
+										"image-point-optional": "\"Hand\""
+									}
+								}
+							],
+							"sid": 970341282396784
+						}
+					]
 				}
 			],
 			"sid": 838715417640539

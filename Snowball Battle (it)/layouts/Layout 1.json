@@ -683,6 +683,46 @@
 							}
 						}
 					},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 22,
+						"children": [
+							{
+								"uid": 2,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"previewSceneGraph": false
+						}
+					},
 					"world": {
 						"x": 755,
 						"y": 541,
@@ -2236,9 +2276,34 @@
 							}
 						}
 					},
+					"sceneGraphData": {
+						"parent-uid": 22,
+						"uid": 2,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"previewSceneGraph": false
+						}
+					},
 					"world": {
-						"x": -14,
-						"y": -133,
+						"x": 615.4652004644506,
+						"y": 557.1167953008692,
 						"width": 70,
 						"height": 70,
 						"originX": 0.5,
