@@ -80,6 +80,96 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 505567833182664,
+							"parameters": {
+								"interval-seconds": "0.2"
+							}
+						},
+						{
+							"id": "is-moving",
+							"objectClass": "Avatar",
+							"sid": 155929524673410,
+							"behaviorType": "8Direction"
+						}
+					],
+					"actions": [],
+					"sid": 958813890979600,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Avatar",
+									"sid": 690681893150010,
+									"parameters": {
+										"instance-variable": "RightFootForward"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Avatar",
+									"sid": 540538880802078,
+									"parameters": {
+										"object": "Footprint",
+										"layer": "0",
+										"image-point": "\"Right Foot\"",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "Footprint",
+									"sid": 521040868349148,
+									"parameters": {
+										"opacity": "50"
+									}
+								}
+							],
+							"sid": 917226620973214
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 565205871772835
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Avatar",
+									"sid": 622308644696857,
+									"parameters": {
+										"object": "Footprint",
+										"layer": "0",
+										"image-point": "\"Left Foot\"",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "Footprint",
+									"sid": 106321320177101,
+									"parameters": {
+										"opacity": "50"
+									}
+								}
+							],
+							"sid": 883705370666619
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "is-moving",
 							"objectClass": "Avatar",
 							"sid": 560628809783200,
@@ -272,6 +362,107 @@
 					],
 					"sid": 910383184668870,
 					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 402856468448152
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "Footprint",
+							"sid": 994337086378664,
+							"parameters": {
+								"opacity": "Footprint.Opacity - 0.2"
+							}
+						}
+					],
+					"sid": 305552725916555
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-opacity",
+							"objectClass": "Footprint",
+							"sid": 199247956270999,
+							"parameters": {
+								"comparison": 0,
+								"opacity": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Footprint",
+							"sid": 200360601051530
+						}
+					],
+					"sid": 732696420323383
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "Avatar",
+							"sid": 135368169615867,
+							"behaviorType": "8Direction",
+							"isInverted": true
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 216751506546816
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Avatar",
+							"sid": 160978898314848,
+							"parameters": {
+								"object": "Footprint",
+								"layer": "0",
+								"image-point": "\"Left Foot\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "Footprint",
+							"sid": 490702434444255,
+							"parameters": {
+								"opacity": "70"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Avatar",
+							"sid": 946076046799719,
+							"parameters": {
+								"object": "Footprint",
+								"layer": "0",
+								"image-point": "\"Right Foot\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "Footprint",
+							"sid": 948572780800932,
+							"parameters": {
+								"opacity": "70"
+							}
+						}
+					],
+					"sid": 898217804512107
 				}
 			],
 			"sid": 952812507050325

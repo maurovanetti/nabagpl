@@ -661,7 +661,9 @@
 						"live-preview": false
 					},
 					"uid": 22,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"RightFootForward": true
+					},
 					"behaviors": {
 						"8Direction": {
 							"properties": {

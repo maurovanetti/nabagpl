@@ -3,7 +3,15 @@
 	"plugin-id": "Sprite",
 	"sid": 361437434436895,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "RightFootForward",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 424324532025066
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "EightDir",
@@ -48,6 +56,16 @@
 								"name": "Hand",
 								"x": 0.06060606060606061,
 								"y": 0.7608695652173914
+							},
+							{
+								"name": "Right Foot",
+								"x": 0.2878787878787879,
+								"y": 1
+							},
+							{
+								"name": "Left Foot",
+								"x": 0.7121212121212122,
+								"y": 1
 							}
 						],
 						"duration": 3
@@ -79,6 +97,16 @@
 								"name": "Hand",
 								"x": 0.06060606060606061,
 								"y": 0.7934782608695652
+							},
+							{
+								"name": "Right Foot",
+								"x": 0.2878787878787879,
+								"y": 1
+							},
+							{
+								"name": "Left Foot",
+								"x": 0.7121212121212122,
+								"y": 1
 							}
 						],
 						"duration": 1
@@ -121,6 +149,16 @@
 								"name": "Hand",
 								"x": 0.04411764705882353,
 								"y": 0.7096774193548387
+							},
+							{
+								"name": "Right Foot",
+								"x": 0.25,
+								"y": 1
+							},
+							{
+								"name": "Left Foot",
+								"x": 0.8235294117647058,
+								"y": 0.978494623655914
 							}
 						],
 						"duration": 1
@@ -152,6 +190,16 @@
 								"name": "Hand",
 								"x": 0.04285714285714286,
 								"y": 0.6666666666666666
+							},
+							{
+								"name": "Right Foot",
+								"x": 0.4142857142857143,
+								"y": 1
+							},
+							{
+								"name": "Left Foot",
+								"x": 0.5571428571428572,
+								"y": 1
 							}
 						],
 						"duration": 1

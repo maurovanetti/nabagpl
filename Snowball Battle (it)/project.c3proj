@@ -73,7 +73,8 @@
 			"Terrain",
 			"Snowball",
 			"MushroomCap",
-			"RockTop"
+			"RockTop",
+			"Footprint"
 		],
 		"subfolders": []
 	},
