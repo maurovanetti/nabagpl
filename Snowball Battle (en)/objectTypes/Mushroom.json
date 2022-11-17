@@ -38,6 +38,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Cap",
+								"x": 0.4857142857142857,
+								"y": 0.7857142857142857
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -73,6 +80,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Cap",
+								"x": 0.4857142857142857,
+								"y": 0.7857142857142857
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -108,6 +122,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Cap",
+								"x": 0.4857142857142857,
+								"y": 0.7857142857142857
+							}
+						],
 						"duration": 1
 					}
 				],

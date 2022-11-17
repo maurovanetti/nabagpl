@@ -14,6 +14,35 @@
 						{
 							"id": "on-start-of-layout",
 							"objectClass": "System",
+							"sid": 721777781453013
+						}
+					],
+					"actions": [
+						{
+							"id": "set-z-elevation",
+							"objectClass": "Bush",
+							"sid": 832414515355996,
+							"parameters": {
+								"z": "Bush.Y / 1000"
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "Mushroom",
+							"sid": 942697493091358,
+							"parameters": {
+								"z": "Mushroom.Y / 1000"
+							}
+						}
+					],
+					"sid": 336676529726571
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
 							"sid": 138119855579828
 						}
 					],
@@ -21,11 +50,11 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "Mushroom",
-							"sid": 672393642557260,
+							"sid": 360469548004043,
 							"parameters": {
 								"object": "MushroomCap",
 								"layer": "0",
-								"image-point": "0",
+								"image-point": "\"Cap\"",
 								"create-hierarchy": false
 							}
 						},
@@ -36,6 +65,14 @@
 							"parameters": {
 								"animation": "Mushroom.AnimationName",
 								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "MushroomCap",
+							"sid": 137171374462328,
+							"parameters": {
+								"z": "Mushroom.ZElevation"
 							}
 						}
 					],
@@ -57,30 +94,6 @@
 							"sid": 382008048519117,
 							"parameters": {
 								"z": "Avatar.Y / 1000"
-							}
-						},
-						{
-							"id": "set-z-elevation",
-							"objectClass": "Bush",
-							"sid": 228737270766052,
-							"parameters": {
-								"z": "Bush.Y / 1000"
-							}
-						},
-						{
-							"id": "set-z-elevation",
-							"objectClass": "Mushroom",
-							"sid": 752242579368704,
-							"parameters": {
-								"z": "Mushroom.Y / 1000"
-							}
-						},
-						{
-							"id": "set-z-elevation",
-							"objectClass": "MushroomCap",
-							"sid": 818452155224998,
-							"parameters": {
-								"z": "MushroomCap.Y / 1000"
 							}
 						}
 					],
@@ -356,6 +369,30 @@
 							"behaviorType": "Bullet",
 							"parameters": {
 								"object": "MushroomCap"
+							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "MushroomCap",
+							"sid": 844634554379610,
+							"parameters": {
+								"scale": "1.3"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 918228366086318,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "MushroomCap",
+							"sid": 573639642960821,
+							"parameters": {
+								"scale": "1"
 							}
 						}
 					],
