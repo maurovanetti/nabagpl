@@ -741,6 +741,93 @@
 				}
 			],
 			"sid": 621637986783018
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Snowing",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "repeat",
+							"objectClass": "System",
+							"sid": 507837076306237,
+							"parameters": {
+								"count": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 328539989290926,
+							"parameters": {
+								"object-to-create": "Snowflake",
+								"layer": "\"Snow\"",
+								"x": "random(-300, LayoutWidth + 300)",
+								"y": "-10",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "Snowflake",
+							"sid": 704668272630645,
+							"behaviorType": "Rotate",
+							"parameters": {
+								"speed": "random(-90, 90)"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Snowflake",
+							"sid": 746018896145102,
+							"parameters": {
+								"animation": "\"Animation \" & floor(random(1,6))",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "Snowflake",
+							"sid": 151502264062807,
+							"parameters": {
+								"scale": "random(0.3,1)"
+							}
+						}
+					],
+					"sid": 702535461820361
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-y",
+							"objectClass": "Snowflake",
+							"sid": 392556540335855,
+							"parameters": {
+								"comparison": 4,
+								"y-co-ordinate": "LayoutHeight"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Snowflake",
+							"sid": 995249025055065
+						}
+					],
+					"sid": 778765727088955
+				}
+			],
+			"sid": 244094908619422
 		}
 	],
 	"sid": 821165317375456

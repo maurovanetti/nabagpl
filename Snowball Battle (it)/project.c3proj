@@ -61,6 +61,22 @@
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Rotate",
+			"name": "Rotate",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "jysmv1423j6",
@@ -74,7 +90,8 @@
 			"Snowball",
 			"MushroomCap",
 			"RockTop",
-			"Footprint"
+			"Footprint",
+			"Snowflake"
 		],
 		"subfolders": []
 	},
