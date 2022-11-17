@@ -19,6 +19,11 @@
 			"behaviorId": "wrap",
 			"name": "Wrap",
 			"sid": 291471535518379
+		},
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 434240280286813
 		}
 	],
 	"effectTypes": [],

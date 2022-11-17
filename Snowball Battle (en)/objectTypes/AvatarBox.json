@@ -1,0 +1,55 @@
+{
+	"name": "AvatarBox",
+	"plugin-id": "Sprite",
+	"sid": 657318584269159,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 66,
+						"height": 92,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 164488,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.18260869565217389,
+								0.5272727272727274,
+								0,
+								1,
+								0.20869565217391312,
+								1,
+								0.791304347826087,
+								0.7393939393939395,
+								1,
+								0.21212121212121224,
+								0.9978260869565218,
+								0,
+								0.7923913043478262
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 10
+					}
+				],
+				"sid": 184178684360441,
+				"name": "Idle",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

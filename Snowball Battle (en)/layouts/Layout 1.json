@@ -2240,11 +2240,43 @@
 							"properties": {
 								"wrap-to": "layout"
 							}
+						},
+						"Flash": {
+							"properties": {}
 						}
 					},
 					"world": {
 						"x": 441,
 						"y": 298,
+						"width": 66,
+						"height": 92,
+						"originX": 0.5,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 50
+					}
+				},
+				{
+					"type": "AvatarBox",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Idle",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 65,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 442,
+						"y": 297,
 						"width": 66,
 						"height": 92,
 						"originX": 0.5,

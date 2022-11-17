@@ -95,6 +95,15 @@
 							"parameters": {
 								"z": "Avatar.Y / 1000"
 							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "AvatarBox",
+							"sid": 571048457705231,
+							"parameters": {
+								"object": "Avatar",
+								"image-point-optional": "0"
+							}
 						}
 					],
 					"sid": 992405288841044
@@ -397,6 +406,33 @@
 						}
 					],
 					"sid": 664992191569799
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Snowball",
+							"sid": 344795627012896,
+							"parameters": {
+								"object": "Avatar"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "flash",
+							"objectClass": "Avatar",
+							"sid": 263934840227351,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "1.0"
+							}
+						}
+					],
+					"sid": 127122939401919
 				}
 			],
 			"sid": 115916898494681
