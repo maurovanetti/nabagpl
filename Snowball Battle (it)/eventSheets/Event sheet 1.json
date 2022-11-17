@@ -289,9 +289,9 @@
 						{
 							"id": "on-key-pressed",
 							"objectClass": "Keyboard",
-							"sid": 169935195638149,
+							"sid": 859396781974689,
 							"parameters": {
-								"key": 32
+								"key": 17
 							}
 						}
 					],
@@ -507,12 +507,46 @@
 					],
 					"actions": [
 						{
-							"id": "destroy",
+							"id": "set-animation",
 							"objectClass": "Snowball",
-							"sid": 574982962756976
+							"sid": 163265515233563,
+							"parameters": {
+								"animation": "\"Break\"",
+								"from": "current-frame"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "Snowball",
+							"sid": 698995726016777,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "50"
+							}
 						}
 					],
 					"sid": 674449281160599
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "Snowball",
+							"sid": 878601753833349,
+							"parameters": {
+								"animation": "\"Break\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Snowball",
+							"sid": 276725037184721
+						}
+					],
+					"sid": 907658153084946
 				}
 			],
 			"sid": 621637986783018

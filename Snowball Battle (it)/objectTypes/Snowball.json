@@ -56,6 +56,113 @@
 				"repeatCount": 1,
 				"repeatTo": 0,
 				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 70,
+						"height": 70,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1304895,
+						"collisionPoly": {
+							"points": [
+								0.37142857142857144,
+								0.37142857142857144,
+								0.5,
+								0.3,
+								0.6142857142857143,
+								0.37142857142857144,
+								0.7,
+								0.5,
+								0.6428571428571429,
+								0.6428571428571429,
+								0.5,
+								0.7142857142857143,
+								0.35714285714285715,
+								0.6285714285714286,
+								0.3,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 70,
+						"height": 70,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2779526,
+						"collisionPoly": {
+							"points": [
+								0.37142857142857144,
+								0.37142857142857144,
+								0.5,
+								0.3,
+								0.6142857142857143,
+								0.37142857142857144,
+								0.7,
+								0.5,
+								0.6428571428571429,
+								0.6428571428571429,
+								0.5,
+								0.7142857142857143,
+								0.35714285714285715,
+								0.6285714285714286,
+								0.3,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 70,
+						"height": 70,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4543768,
+						"collisionPoly": {
+							"points": [
+								0.37142857142857144,
+								0.37142857142857144,
+								0.5,
+								0.3,
+								0.6142857142857143,
+								0.37142857142857144,
+								0.7,
+								0.5,
+								0.6428571428571429,
+								0.6428571428571429,
+								0.5,
+								0.7142857142857143,
+								0.35714285714285715,
+								0.6285714285714286,
+								0.3,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 223166853379519,
+				"name": "Break",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 20
 			}
 		],
 		"subfolders": []

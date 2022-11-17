@@ -33,21 +33,6 @@
 							"parameters": {
 								"z": "Mushroom.Y / 1000"
 							}
-						},
-						{
-							"id": "pin-to-object-properties",
-							"objectClass": "AvatarBox",
-							"sid": 387019957467834,
-							"behaviorType": "Pin",
-							"parameters": {
-								"pin-to": "Avatar",
-								"x": true,
-								"y": true,
-								"angle": true,
-								"width-type": "no",
-								"height-type": "no",
-								"z": false
-							}
 						}
 					],
 					"sid": 336676529726571
@@ -421,7 +406,26 @@
 							"objectClass": "Snowball",
 							"sid": 344795627012896,
 							"parameters": {
-								"object": "Avatar"
+								"object": "AvatarBox"
+							}
+						},
+						{
+							"id": "compare-distance-travelled",
+							"objectClass": "Snowball",
+							"sid": 515895345391562,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"comparison": 4,
+								"distance": "50"
+							}
+						},
+						{
+							"id": "pick-parent",
+							"objectClass": "AvatarBox",
+							"sid": 630458105718146,
+							"parameters": {
+								"parent": "Avatar",
+								"which": "own"
 							}
 						}
 					],

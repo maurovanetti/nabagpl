@@ -2208,6 +2208,330 @@
 					}
 				},
 				{
+					"type": "Mushroom",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Brown",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 66,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 344.0921323059156,
+						"y": 434.79218835817676,
+						"width": 70,
+						"height": 70,
+						"originX": 0.4857142857142857,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Mushroom",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Brown",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 67,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 368.9289852282818,
+						"y": 435.3566622882305,
+						"width": 70,
+						"height": 70,
+						"originX": 0.4857142857142857,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Mushroom",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Brown",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 68,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 393.765838150648,
+						"y": 434.79218835817676,
+						"width": 70,
+						"height": 70,
+						"originX": 0.4857142857142857,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Mushroom",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Brown",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 69,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 420.29611286317555,
+						"y": 435.3566622882305,
+						"width": 70,
+						"height": 70,
+						"originX": 0.4857142857142857,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Mushroom",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Brown",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 70,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 441.1816482751653,
+						"y": 434.79218835817676,
+						"width": 70,
+						"height": 70,
+						"originX": 0.4857142857142857,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Mushroom",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Brown",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 71,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 462.6316576172089,
+						"y": 434.22771442812297,
+						"width": 70,
+						"height": 70,
+						"originX": 0.4857142857142857,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Mushroom",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Brown",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 72,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 486.9040366095213,
+						"y": 434.22771442812297,
+						"width": 70,
+						"height": 70,
+						"originX": 0.4857142857142857,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Mushroom",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Brown",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 73,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 506.6606241614035,
+						"y": 434.22771442812297,
+						"width": 70,
+						"height": 70,
+						"originX": 0.4857142857142857,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Mushroom",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Brown",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 74,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 530.3685292236621,
+						"y": 435.3566622882305,
+						"width": 70,
+						"height": 70,
+						"originX": 0.4857142857142857,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "Avatar",
 					"properties": {
 						"initially-visible": true,
@@ -2245,8 +2569,48 @@
 							"properties": {}
 						}
 					},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 2,
+						"children": [
+							{
+								"uid": 65,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": false,
+									"w": true,
+									"h": true,
+									"a": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"previewSceneGraph": false
+						}
+					},
 					"world": {
-						"x": 441,
+						"x": 434,
 						"y": 298,
 						"width": 66,
 						"height": 92,
@@ -2265,7 +2629,7 @@
 				{
 					"type": "AvatarBox",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -2280,9 +2644,34 @@
 							}
 						}
 					},
+					"sceneGraphData": {
+						"parent-uid": 2,
+						"uid": 65,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": false,
+							"w": true,
+							"h": true,
+							"a": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"previewSceneGraph": false
+						}
+					},
 					"world": {
-						"x": 442,
-						"y": 297,
+						"x": 434,
+						"y": 298,
 						"width": 66,
 						"height": 92,
 						"originX": 0.5,
