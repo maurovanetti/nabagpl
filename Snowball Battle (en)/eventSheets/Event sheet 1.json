@@ -12,12 +12,53 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 138119855579828
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Mushroom",
+							"sid": 672393642557260,
+							"parameters": {
+								"object": "MushroomCap",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "MushroomCap",
+							"sid": 725333015445553,
+							"parameters": {
+								"animation": "Mushroom.AnimationName",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 143915663653228
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "every-tick",
 							"objectClass": "System",
 							"sid": 760624472182373
 						}
 					],
 					"actions": [
+						{
+							"id": "set-z-elevation",
+							"objectClass": "Avatar",
+							"sid": 382008048519117,
+							"parameters": {
+								"z": "Avatar.Y / 1000"
+							}
+						},
 						{
 							"id": "set-z-elevation",
 							"objectClass": "Bush",
@@ -28,10 +69,18 @@
 						},
 						{
 							"id": "set-z-elevation",
-							"objectClass": "Avatar",
-							"sid": 977295972578684,
+							"objectClass": "Mushroom",
+							"sid": 752242579368704,
 							"parameters": {
-								"z": "Avatar.Y / 1000"
+								"z": "Mushroom.Y / 1000"
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "MushroomCap",
+							"sid": 818452155224998,
+							"parameters": {
+								"z": "MushroomCap.Y / 1000"
 							}
 						}
 					],
@@ -142,6 +191,178 @@
 				}
 			],
 			"sid": 241292613057280
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Throwing Snowballs",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 831113761702657,
+							"parameters": {
+								"key": 17
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Avatar",
+							"sid": 163787397626573,
+							"parameters": {
+								"object": "Snowball",
+								"layer": "0",
+								"image-point": "\"Hand\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "Snowball",
+							"sid": 364762019398926,
+							"parameters": {
+								"z": "Avatar.ZElevation + 1"
+							}
+						}
+					],
+					"sid": 577214102533018,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "Avatar",
+									"sid": 621017354484064,
+									"behaviorType": "8Direction"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle",
+									"objectClass": "Snowball",
+									"sid": 284080818777125,
+									"parameters": {
+										"angle": "Avatar.8Direction.MovingAngle"
+									}
+								}
+							],
+							"sid": 726468709682121
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 594135028445025
+								},
+								{
+									"id": "is-mirrored",
+									"objectClass": "Avatar",
+									"sid": 749414835797032
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle",
+									"objectClass": "Snowball",
+									"sid": 977111122728594,
+									"parameters": {
+										"angle": "180"
+									}
+								}
+							],
+							"sid": 888949863638124
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 593038926998938
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle",
+									"objectClass": "Snowball",
+									"sid": 635887664547325,
+									"parameters": {
+										"angle": "0"
+									}
+								}
+							],
+							"sid": 219003603135370
+						}
+					]
+				}
+			],
+			"sid": 786302981158195
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Snowball Collisions",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Snowball",
+							"sid": 153621411469472,
+							"parameters": {
+								"object": "Bush"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Snowball",
+							"sid": 388837285405221
+						}
+					],
+					"sid": 929519536962068
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Snowball",
+							"sid": 172445613834096,
+							"parameters": {
+								"object": "MushroomCap"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "bounce-off-object",
+							"objectClass": "Snowball",
+							"sid": 307299676081402,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"object": "MushroomCap"
+							}
+						}
+					],
+					"sid": 664992191569799
+				}
+			],
+			"sid": 115916898494681
 		}
 	],
 	"sid": 912798796963498

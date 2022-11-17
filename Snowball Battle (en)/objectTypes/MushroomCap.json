@@ -1,0 +1,137 @@
+{
+	"name": "MushroomCap",
+	"plugin-id": "Sprite",
+	"sid": 115157976133189,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 70,
+						"height": 70,
+						"originX": 0.4857142857142857,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 269455,
+						"collisionPoly": {
+							"points": [
+								0.47142857142857103,
+								0.5663265306122452,
+								0.6795918367346941,
+								0.6285714285714283,
+								0.7653061224489799,
+								0.7673469387755097,
+								0.6265306122448983,
+								0.8234693877551018,
+								0.3346938775510207,
+								0.8250000000000005,
+								0.185714285714286,
+								0.7859693877551026,
+								0.2775510204081637,
+								0.6224489795918368
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 429291292293448,
+				"name": "Red",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 70,
+						"height": 70,
+						"originX": 0.4857142857142857,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2949549,
+						"collisionPoly": {
+							"points": [
+								0.47142857142857103,
+								0.5663265306122452,
+								0.6795918367346941,
+								0.6285714285714283,
+								0.7653061224489799,
+								0.7673469387755097,
+								0.6265306122448983,
+								0.8234693877551018,
+								0.3346938775510207,
+								0.8250000000000005,
+								0.185714285714286,
+								0.7859693877551026,
+								0.2775510204081637,
+								0.6224489795918368
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 858681835351879,
+				"name": "Brown",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 70,
+						"height": 70,
+						"originX": 0.4857142857142857,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5013874,
+						"collisionPoly": {
+							"points": [
+								0.47142857142857103,
+								0.5663265306122452,
+								0.6795918367346941,
+								0.6285714285714283,
+								0.7653061224489799,
+								0.7673469387755097,
+								0.6265306122448983,
+								0.8234693877551018,
+								0.3346938775510207,
+								0.8250000000000005,
+								0.185714285714286,
+								0.7859693877551026,
+								0.2775510204081637,
+								0.6224489795918368
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 348816013894487,
+				"name": "Tan",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

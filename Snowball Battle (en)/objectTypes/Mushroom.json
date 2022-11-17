@@ -1,0 +1,125 @@
+{
+	"name": "Mushroom",
+	"plugin-id": "Sprite",
+	"sid": 861777392910878,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 569475973238928
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 70,
+						"height": 70,
+						"originX": 0.4857142857142857,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8726033,
+						"collisionPoly": {
+							"points": [
+								0.5755102040816328,
+								0.8887755102040823,
+								0.6000000000000003,
+								1,
+								0.35714285714285743,
+								1,
+								0.38571428571428595,
+								0.8877551020408165
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 161080196922500,
+				"name": "Red",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 70,
+						"height": 70,
+						"originX": 0.4857142857142857,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1902545,
+						"collisionPoly": {
+							"points": [
+								0.5755102040816328,
+								0.8887755102040823,
+								0.6000000000000003,
+								1,
+								0.35714285714285743,
+								1,
+								0.38571428571428595,
+								0.8877551020408165
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 538782034122928,
+				"name": "Brown",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 70,
+						"height": 70,
+						"originX": 0.4857142857142857,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5181627,
+						"collisionPoly": {
+							"points": [
+								0.5755102040816328,
+								0.8887755102040823,
+								0.6000000000000003,
+								1,
+								0.35714285714285743,
+								1,
+								0.38571428571428595,
+								0.8877551020408165
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 840057900225173,
+				"name": "Tan",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

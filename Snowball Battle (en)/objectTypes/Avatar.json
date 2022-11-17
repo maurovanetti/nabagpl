@@ -9,6 +9,16 @@
 			"behaviorId": "EightDir",
 			"name": "8Direction",
 			"sid": 542338838077504
+		},
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 390005881957908
+		},
+		{
+			"behaviorId": "wrap",
+			"name": "Wrap",
+			"sid": 291471535518379
 		}
 	],
 	"effectTypes": [],
@@ -38,6 +48,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Hand",
+								"x": 0.06060606060606061,
+								"y": 0.7608695652173914
+							}
+						],
 						"duration": 10
 					},
 					{
@@ -62,6 +79,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Hand",
+								"x": 0.06060606060606061,
+								"y": 0.7717391304347826
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -97,6 +121,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Hand",
+								"x": 0.04411764705882353,
+								"y": 0.7204301075268817
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -121,6 +152,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Hand",
+								"x": 0.04285714285714286,
+								"y": 0.6666666666666666
+							}
+						],
 						"duration": 1
 					}
 				],

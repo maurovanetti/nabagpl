@@ -1,0 +1,20 @@
+{
+	"name": "Terrain",
+	"plugin-id": "TiledBg",
+	"sid": 378340018985853,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 50,
+		"height": 50,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 8375426,
+		"useCollisionPoly": true
+	}
+}
