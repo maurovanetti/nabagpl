@@ -1,7 +1,7 @@
 {
-	"name": "Avatar",
+	"name": "NPC",
 	"plugin-id": "Sprite",
-	"sid": 361437434436895,
+	"sid": 716917320981898,
 	"isGlobal": false,
 	"instanceVariables": [
 		{
@@ -9,24 +9,31 @@
 			"type": "boolean",
 			"desc": "",
 			"show": true,
-			"sid": 424324532025066
+			"sid": 790953464477740
+		},
+		{
+			"name": "Direction",
+			"type": "number",
+			"desc": "0, 1, 2, 3 or 4",
+			"show": true,
+			"sid": 643350256842283
 		}
 	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "EightDir",
 			"name": "8Direction",
-			"sid": 598013007861021
+			"sid": 204479351498277
 		},
 		{
 			"behaviorId": "scrollto",
 			"name": "ScrollTo",
-			"sid": 226525036840538
+			"sid": 107185992457693
 		},
 		{
 			"behaviorId": "bound",
 			"name": "BoundToLayout",
-			"sid": 634598996175718
+			"sid": 249405430343029
 		}
 	],
 	"effectTypes": [],
@@ -42,7 +49,7 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5751711,
+						"imageSpriteId": 5455781,
 						"collisionPoly": {
 							"points": [
 								0.18181818181818182,
@@ -83,7 +90,7 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2331980,
+						"imageSpriteId": 2079036,
 						"collisionPoly": {
 							"points": [
 								0.18181818181818182,
@@ -117,7 +124,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 623023102275250,
+				"sid": 565873775996234,
 				"name": "Idle",
 				"isLooping": true,
 				"isPingPong": false,
@@ -135,7 +142,7 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7068778,
+						"imageSpriteId": 4216555,
 						"collisionPoly": {
 							"points": [
 								0.18181818181818182,
@@ -176,7 +183,7 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 1138530,
+						"imageSpriteId": 1714106,
 						"collisionPoly": {
 							"points": [
 								0.18181818181818182,
@@ -210,7 +217,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 174935581429486,
+				"sid": 600544906606071,
 				"name": "Walk",
 				"isLooping": true,
 				"isPingPong": false,

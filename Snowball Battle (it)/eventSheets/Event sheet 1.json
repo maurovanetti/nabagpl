@@ -90,6 +90,14 @@
 							"parameters": {
 								"z": "Avatar.Y / 1000"
 							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "NPC",
+							"sid": 127954624133997,
+							"parameters": {
+								"z": "NPC.Y / 1000"
+							}
 						}
 					],
 					"sid": 546059636185061,
@@ -601,6 +609,248 @@
 		{
 			"eventType": "group",
 			"disabled": false,
+			"title": "Animate NPC",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "NPC",
+							"sid": 203099013355639,
+							"behaviorType": "8Direction"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "NPC",
+							"sid": 944445712814729,
+							"parameters": {
+								"animation": "\"Walk\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "NPC",
+							"sid": 119054782635427,
+							"parameters": {
+								"opacity": "100"
+							}
+						}
+					],
+					"sid": 870776911810746
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 557678226919908
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "NPC",
+							"sid": 815252434255845,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "NPC",
+							"sid": 727312280299717,
+							"parameters": {
+								"opacity": "50"
+							}
+						}
+					],
+					"sid": 789796405770327
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 779237869120805,
+							"parameters": {
+								"interval-seconds": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "NPC",
+							"sid": 790527429564547,
+							"parameters": {
+								"instance-variable": "Direction",
+								"value": "int(random(0,5))"
+							}
+						}
+					],
+					"sid": 164864497212339
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "NPC",
+							"sid": 368319197096423,
+							"parameters": {
+								"instance-variable": "Direction",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "NPC",
+							"sid": 770343301952398,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "right"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "NPC",
+							"sid": 483534680589761,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 807747283242130,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "NPC",
+							"sid": 330773959367954,
+							"parameters": {
+								"instance-variable": "Direction",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "NPC",
+							"sid": 456327173994960,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "left"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "NPC",
+							"sid": 613055357890663,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 492421591974985,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "NPC",
+							"sid": 715125897629737,
+							"parameters": {
+								"instance-variable": "Direction",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "NPC",
+							"sid": 317548571128953,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "up"
+							}
+						}
+					],
+					"sid": 585534418354378,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "NPC",
+							"sid": 153887417756387,
+							"parameters": {
+								"instance-variable": "Direction",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "NPC",
+							"sid": 818805024691361,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "down"
+							}
+						}
+					],
+					"sid": 932839843191371,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "NPC",
+							"sid": 130858165072800,
+							"parameters": {
+								"instance-variable": "Direction",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 539953316997892,
+					"isOrBlock": true
+				}
+			],
+			"sid": 984059555486309
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
 			"title": "Launch Snowball",
 			"description": "",
 			"isActiveOnStart": true,
@@ -931,6 +1181,14 @@
 							"parameters": {
 								"speed": "50"
 							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "SnowDump",
+							"sid": 154689227113069,
+							"parameters": {
+								"frame-number": "4"
+							}
 						}
 					],
 					"sid": 513061741012079
@@ -1202,47 +1460,6 @@
 						}
 					],
 					"sid": 942589299435370
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-animation-frame",
-							"objectClass": "SnowDump",
-							"sid": 817923401829122,
-							"parameters": {
-								"comparison": 0,
-								"number": "4"
-							}
-						},
-						{
-							"id": "trigger-once-while-true",
-							"objectClass": "System",
-							"sid": 180203254207994
-						}
-					],
-					"actions": [
-						{
-							"id": "set-opacity",
-							"objectClass": "SnowDump",
-							"sid": 299320034608902,
-							"parameters": {
-								"opacity": "100"
-							}
-						},
-						{
-							"id": "flash",
-							"objectClass": "SnowDump",
-							"sid": 806777950020397,
-							"behaviorType": "Flash",
-							"parameters": {
-								"on-time": "0.1",
-								"off-time": "0.1",
-								"duration": "1.0"
-							}
-						}
-					],
-					"sid": 364364230001546
 				},
 				{
 					"eventType": "block",
