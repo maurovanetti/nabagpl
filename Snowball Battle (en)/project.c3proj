@@ -115,7 +115,8 @@
 			"MushroomCap",
 			"AvatarBox",
 			"Counter",
-			"HitIcon"
+			"HitIcon",
+			"SnowballIcon"
 		],
 		"subfolders": []
 	},

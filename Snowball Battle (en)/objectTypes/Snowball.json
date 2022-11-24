@@ -55,7 +55,30 @@
 					}
 				],
 				"sid": 840988954312864,
-				"name": "Animation 1",
+				"name": "Fly",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 31,
+						"height": 19,
+						"originX": 0.45161290322580644,
+						"originY": 0.8947368421052632,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1611401,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 231154633382214,
+				"name": "Idle",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

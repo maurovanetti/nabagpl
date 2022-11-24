@@ -13,6 +13,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "SnowballCount",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 480280423877526
+		},
+		{
+			"eventType": "variable",
 			"name": "GoodHits",
 			"type": "number",
 			"initialValue": "0",
@@ -52,6 +62,14 @@
 							"sid": 942697493091358,
 							"parameters": {
 								"z": "Mushroom.Y / 1000"
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "Snowball",
+							"sid": 452918172234496,
+							"parameters": {
+								"z": "Snowball.Y / 1000"
 							}
 						}
 					],
@@ -242,9 +260,36 @@
 							"parameters": {
 								"key": 17
 							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 132632063278781,
+							"parameters": {
+								"variable": "SnowballCount",
+								"comparison": 4,
+								"value": "0"
+							}
 						}
 					],
 					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 910722938239963,
+							"parameters": {
+								"variable": "SnowballCount",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "SnowballIcon",
+							"sid": 550725646550874,
+							"parameters": {
+								"frame-number": "SnowballCount"
+							}
+						},
 						{
 							"id": "spawn-another-object",
 							"objectClass": "Avatar",
@@ -536,6 +581,72 @@
 				}
 			],
 			"sid": 771582605285759
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Collect Snowballs",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Avatar",
+							"sid": 342568661772930,
+							"parameters": {
+								"object": "Snowball"
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Snowball",
+							"sid": 291795835911498,
+							"parameters": {
+								"animation": "\"Idle\""
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 785478142800552,
+							"parameters": {
+								"variable": "SnowballCount",
+								"comparison": 2,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Snowball",
+							"sid": 449517433841809
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 290790889423626,
+							"parameters": {
+								"variable": "SnowballCount",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "SnowballIcon",
+							"sid": 630018740328066,
+							"parameters": {
+								"frame-number": "SnowballCount"
+							}
+						}
+					],
+					"sid": 669512061746053
+				}
+			],
+			"sid": 302895828536515
 		}
 	],
 	"sid": 912798796963498
