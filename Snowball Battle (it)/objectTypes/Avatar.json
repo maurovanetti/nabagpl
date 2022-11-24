@@ -123,47 +123,6 @@
 			{
 				"frames": [
 					{
-						"width": 68,
-						"height": 93,
-						"originX": 0.5,
-						"originY": 1,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"imageSpriteId": 1138530,
-						"collisionPoly": {
-							"points": [
-								0.18181818181818182,
-								0.9266304347826091,
-								0.7992424242424244,
-								0.9239130434782608,
-								0.7992424242424244,
-								1,
-								0.17803030303030304,
-								1
-							]
-						},
-						"useCollisionPoly": true,
-						"imagePoints": [
-							{
-								"name": "Hand",
-								"x": 0.04411764705882353,
-								"y": 0.7096774193548387
-							},
-							{
-								"name": "Right Foot",
-								"x": 0.25,
-								"y": 1
-							},
-							{
-								"name": "Left Foot",
-								"x": 0.8235294117647058,
-								"y": 0.978494623655914
-							}
-						],
-						"duration": 1
-					},
-					{
 						"width": 70,
 						"height": 96,
 						"originX": 0.5,
@@ -193,13 +152,54 @@
 							},
 							{
 								"name": "Right Foot",
-								"x": 0.4142857142857143,
+								"x": 0.42857142857142855,
 								"y": 1
 							},
 							{
 								"name": "Left Foot",
 								"x": 0.5571428571428572,
+								"y": 0.9895833333333334
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 68,
+						"height": 93,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1138530,
+						"collisionPoly": {
+							"points": [
+								0.18181818181818182,
+								0.9266304347826091,
+								0.7992424242424244,
+								0.9239130434782608,
+								0.7992424242424244,
+								1,
+								0.17803030303030304,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Hand",
+								"x": 0.04411764705882353,
+								"y": 0.7096774193548387
+							},
+							{
+								"name": "Right Foot",
+								"x": 0.4264705882352941,
 								"y": 1
+							},
+							{
+								"name": "Left Foot",
+								"x": 0.5882352941176471,
+								"y": 0.989247311827957
 							}
 						],
 						"duration": 1

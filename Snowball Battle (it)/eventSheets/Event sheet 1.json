@@ -97,6 +97,14 @@
 										"object": "Avatar",
 										"image-point-optional": "\"Hand\""
 									}
+								},
+								{
+									"id": "set-collisions-enabled",
+									"objectClass": "Snowball",
+									"sid": 167628213468570,
+									"parameters": {
+										"collisions": "disabled"
+									}
 								}
 							],
 							"sid": 970341282396784
@@ -119,7 +127,7 @@
 						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 505567833182664,
+							"sid": 367736148835749,
 							"parameters": {
 								"interval-seconds": "0.2"
 							}
@@ -131,7 +139,16 @@
 							"behaviorType": "8Direction"
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "toggle-boolean-instvar",
+							"objectClass": "Avatar",
+							"sid": 194639812906427,
+							"parameters": {
+								"instance-variable": "RightFootForward"
+							}
+						}
+					],
 					"sid": 958813890979600,
 					"children": [
 						{
