@@ -2,6 +2,16 @@
 	"name": "Event sheet 1",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "Bounces",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "How many times have the snowball bounced on mushrooms",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 761561172842089
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Fix Perspective",
@@ -734,6 +744,15 @@
 							"parameters": {
 								"object": "MushroomCap"
 							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 334729590932495,
+							"parameters": {
+								"variable": "Bounces",
+								"value": "1"
+							}
 						}
 					],
 					"sid": 586214186937220
@@ -882,6 +901,37 @@
 				}
 			],
 			"sid": 244094908619422
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "HUD",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 835906287232430
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "BounceCounter",
+							"sid": 193573351382006,
+							"parameters": {
+								"text": "Bounces"
+							}
+						}
+					],
+					"sid": 418151009927928
+				}
+			],
+			"sid": 757802109266082
 		}
 	],
 	"sid": 821165317375456

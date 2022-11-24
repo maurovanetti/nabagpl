@@ -31,6 +31,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "EightDir",
 			"name": "8 Direction",
@@ -91,7 +99,8 @@
 			"MushroomCap",
 			"RockTop",
 			"Footprint",
-			"Snowflake"
+			"Snowflake",
+			"BounceCounter"
 		],
 		"subfolders": []
 	},
