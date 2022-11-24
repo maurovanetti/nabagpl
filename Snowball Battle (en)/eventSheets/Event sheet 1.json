@@ -2,6 +2,26 @@
 	"name": "Event sheet 1",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "BadHits",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 509780218890299
+		},
+		{
+			"eventType": "variable",
+			"name": "GoodHits",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 818957535653901
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Fake Perspective",
@@ -50,10 +70,10 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "Mushroom",
-							"sid": 360469548004043,
+							"sid": 662349530025048,
 							"parameters": {
 								"object": "MushroomCap",
-								"layer": "0",
+								"layer": "\"Main Layer\"",
 								"image-point": "\"Cap\"",
 								"create-hierarchy": false
 							}
@@ -228,10 +248,10 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "Avatar",
-							"sid": 163787397626573,
+							"sid": 646966055629760,
 							"parameters": {
 								"object": "Snowball",
-								"layer": "0",
+								"layer": "\"Main Layer\"",
 								"image-point": "\"Hand\"",
 								"create-hierarchy": false
 							}
@@ -363,6 +383,15 @@
 					],
 					"actions": [
 						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 996126171812714,
+							"parameters": {
+								"variable": "GoodHits",
+								"value": "1"
+							}
+						},
+						{
 							"id": "bounce-off-object",
 							"objectClass": "Snowball",
 							"sid": 307299676081402,
@@ -431,6 +460,15 @@
 					],
 					"actions": [
 						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 140883369275683,
+							"parameters": {
+								"variable": "BadHits",
+								"value": "1"
+							}
+						},
+						{
 							"id": "flash",
 							"objectClass": "Avatar",
 							"sid": 263934840227351,
@@ -440,12 +478,64 @@
 								"off-time": "0.1",
 								"duration": "1.0"
 							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 589908012433586,
+							"parameters": {
+								"object-to-create": "HitIcon",
+								"layer": "\"GUI\"",
+								"x": "ViewportRight(\"GUI\") - (50 * BadHits)",
+								"y": "ViewportBottom(\"GUI\") - 50",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "rotate-clockwise",
+							"objectClass": "HitIcon",
+							"sid": 497564603960796,
+							"parameters": {
+								"degrees": "random(-10, 10)"
+							}
 						}
 					],
 					"sid": 127122939401919
 				}
 			],
 			"sid": 115916898494681
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "GUI",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 559083840077093
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Counter",
+							"sid": 114564392975904,
+							"parameters": {
+								"text": "\"Hits: \" & GoodHits"
+							}
+						}
+					],
+					"sid": 683464001671196
+				}
+			],
+			"sid": 771582605285759
 		}
 	],
 	"sid": 912798796963498

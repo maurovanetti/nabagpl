@@ -2,7 +2,7 @@
 	"name": "Layout 1",
 	"layers": [
 		{
-			"name": "Layer 0",
+			"name": "Terrain",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
@@ -23,9 +23,9 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": -24,
+						"x": -16,
 						"y": -25,
-						"width": 1767,
+						"width": 1759,
 						"height": 1020,
 						"originX": 0,
 						"originY": 0,
@@ -36,9 +36,43 @@
 							1
 						],
 						"angle": 0,
-						"zElevation": -10
+						"zElevation": 0
 					}
-				},
+				}
+			],
+			"sid": 614749853996905,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Main Layer",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
 				{
 					"type": "Bush",
 					"properties": {
@@ -239,8 +273,8 @@
 						}
 					},
 					"world": {
-						"x": 90.76792214133536,
-						"y": 84.1628293124113,
+						"x": 378,
+						"y": 95,
 						"width": 108,
 						"height": 36,
 						"originX": 0.5,
@@ -2703,9 +2737,85 @@
 				1,
 				1
 			],
-			"isTransparent": false,
+			"isTransparent": true,
 			"parallaxX": 1,
 			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "GUI",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "Counter",
+					"properties": {
+						"text": "hits",
+						"enable-bbcode": true,
+						"font": "SansSerif BoldOblique",
+						"size": 46,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.24313725490196078,
+							0.23921568627450981,
+							0.23921568627450981,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 75,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 30,
+						"y": 27,
+						"width": 807,
+						"height": 100,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 125567032457923,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 0,
+			"parallaxY": 0,
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
