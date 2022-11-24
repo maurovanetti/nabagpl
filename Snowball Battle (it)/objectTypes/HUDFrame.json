@@ -1,0 +1,20 @@
+{
+	"name": "HUDFrame",
+	"plugin-id": "NinePatch",
+	"sid": 164807913852771,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 47,
+		"height": 45,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 3421179,
+		"useCollisionPoly": true
+	}
+}

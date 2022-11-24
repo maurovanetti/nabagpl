@@ -3,6 +3,16 @@
 	"events": [
 		{
 			"eventType": "variable",
+			"name": "Snowballs",
+			"type": "number",
+			"initialValue": "10",
+			"comment": "How many snowballs are left",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 994816662058040
+		},
+		{
+			"eventType": "variable",
 			"name": "Bounces",
 			"type": "number",
 			"initialValue": "0",
@@ -46,6 +56,14 @@
 							"sid": 129507535616394,
 							"parameters": {
 								"z": "Rock.Y / 1000"
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "SnowDump",
+							"sid": 416581627495725,
+							"parameters": {
+								"z": "SnowDump.Y / 1000"
 							}
 						}
 					],
@@ -117,7 +135,56 @@
 									}
 								}
 							],
-							"sid": 970341282396784
+							"sid": 970341282396784,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 992970515451330,
+											"parameters": {
+												"variable": "Snowballs",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Snowball",
+											"sid": 656371893321838,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 898931505752206
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 891169443350303
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Snowball",
+											"sid": 249236627249269,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 806727817633920
+								}
+							]
 						}
 					]
 				}
@@ -548,6 +615,16 @@
 							"parameters": {
 								"key": 17
 							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 803842219000921,
+							"parameters": {
+								"variable": "Snowballs",
+								"comparison": 4,
+								"value": "0"
+							}
 						}
 					],
 					"actions": [
@@ -568,6 +645,15 @@
 							"sid": 318364064798781,
 							"parameters": {
 								"z": "50"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 573431430614346,
+							"parameters": {
+								"variable": "Snowballs",
+								"value": "1"
 							}
 						}
 					],
@@ -667,11 +753,11 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "Mushroom",
-							"sid": 614518171611489,
+							"sid": 600333432875771,
 							"parameters": {
 								"object": "MushroomCap",
 								"layer": "0",
-								"image-point": "0",
+								"image-point": "\"Cap\"",
 								"create-hierarchy": false
 							}
 						},
@@ -685,11 +771,11 @@
 							}
 						},
 						{
-							"id": "set-visible",
+							"id": "set-z-elevation",
 							"objectClass": "MushroomCap",
-							"sid": 831831610387311,
+							"sid": 211056820994372,
 							"parameters": {
-								"visibility": "invisible"
+								"z": "Mushroom.ZElevation + 0.001"
 							}
 						},
 						{
@@ -753,6 +839,30 @@
 								"variable": "Bounces",
 								"value": "1"
 							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "MushroomCap",
+							"sid": 179547224585394,
+							"parameters": {
+								"scale": "1.3"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 412188715007787,
+							"parameters": {
+								"seconds": "0.2"
+							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "MushroomCap",
+							"sid": 324775937487711,
+							"parameters": {
+								"scale": "1"
+							}
 						}
 					],
 					"sid": 586214186937220
@@ -790,6 +900,40 @@
 						}
 					],
 					"sid": 674449281160599
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Snowball",
+							"sid": 545643429534902,
+							"parameters": {
+								"object": "SnowDump"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Snowball",
+							"sid": 385535436452777,
+							"parameters": {
+								"animation": "\"Break\"",
+								"from": "current-frame"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "Snowball",
+							"sid": 165891842298536,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "50"
+							}
+						}
+					],
+					"sid": 513061741012079
 				},
 				{
 					"eventType": "block",
@@ -922,16 +1066,211 @@
 						{
 							"id": "set-text",
 							"objectClass": "BounceCounter",
-							"sid": 193573351382006,
+							"sid": 309716232048281,
 							"parameters": {
-								"text": "Bounces"
+								"text": "(Bounces * 50)"
 							}
 						}
 					],
 					"sid": 418151009927928
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "SnowballIcon",
+							"sid": 780680556234603,
+							"parameters": {
+								"instance-variable": "N",
+								"comparison": 3,
+								"value": "Snowballs"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "SnowballIcon",
+							"sid": 801833253045900,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 494164792701485
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "SnowballIcon",
+							"sid": 474036414550351,
+							"parameters": {
+								"instance-variable": "N",
+								"comparison": 4,
+								"value": "Snowballs"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "SnowballIcon",
+							"sid": 976439716678513,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 191321082754601
 				}
 			],
 			"sid": 757802109266082
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Collect Snowballs",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Avatar",
+							"sid": 786143619267840,
+							"parameters": {
+								"object": "SnowDump"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "SnowDump",
+							"sid": 317360765099951,
+							"parameters": {
+								"comparison": 0,
+								"number": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 169849448601441,
+							"parameters": {
+								"variable": "Snowballs",
+								"value": "1"
+							}
+						},
+						{
+							"id": "start-animation",
+							"objectClass": "SnowDump",
+							"sid": 524621304371266,
+							"parameters": {
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 171860628897162
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "SnowDump",
+							"sid": 241871983003554,
+							"parameters": {
+								"comparison": 2,
+								"number": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "SnowDump",
+							"sid": 858095904641348,
+							"parameters": {
+								"opacity": "50"
+							}
+						}
+					],
+					"sid": 942589299435370
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "SnowDump",
+							"sid": 817923401829122,
+							"parameters": {
+								"comparison": 0,
+								"number": "4"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 180203254207994
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "SnowDump",
+							"sid": 299320034608902,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "flash",
+							"objectClass": "SnowDump",
+							"sid": 806777950020397,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "1.0"
+							}
+						}
+					],
+					"sid": 364364230001546
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "SnowDump",
+							"sid": 925781430687414,
+							"parameters": {
+								"comparison": 0,
+								"number": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "SnowDump",
+							"sid": 939130296099924,
+							"parameters": {
+								"opacity": "100"
+							}
+						}
+					],
+					"sid": 328232010286267
+				}
+			],
+			"sid": 611847801799264
 		}
 	],
 	"sid": 821165317375456

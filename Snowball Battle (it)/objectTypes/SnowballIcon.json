@@ -1,0 +1,172 @@
+{
+	"name": "SnowballIcon",
+	"plugin-id": "Sprite",
+	"sid": 119788626258698,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "N",
+			"type": "number",
+			"desc": "Unique number starting from 1",
+			"show": true,
+			"sid": 586437394864360
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 70,
+						"height": 70,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9553525,
+						"collisionPoly": {
+							"points": [
+								0.37142857142857144,
+								0.37142857142857144,
+								0.5,
+								0.3,
+								0.6142857142857143,
+								0.37142857142857144,
+								0.7,
+								0.5,
+								0.6428571428571429,
+								0.6428571428571429,
+								0.5,
+								0.7142857142857143,
+								0.35714285714285715,
+								0.6285714285714286,
+								0.3,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 737769219015416,
+				"name": "Fly",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 70,
+						"height": 70,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5577593,
+						"collisionPoly": {
+							"points": [
+								0.37142857142857144,
+								0.37142857142857144,
+								0.5,
+								0.3,
+								0.6142857142857143,
+								0.37142857142857144,
+								0.7,
+								0.5,
+								0.6428571428571429,
+								0.6428571428571429,
+								0.5,
+								0.7142857142857143,
+								0.35714285714285715,
+								0.6285714285714286,
+								0.3,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 70,
+						"height": 70,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2470225,
+						"collisionPoly": {
+							"points": [
+								0.37142857142857144,
+								0.37142857142857144,
+								0.5,
+								0.3,
+								0.6142857142857143,
+								0.37142857142857144,
+								0.7,
+								0.5,
+								0.6428571428571429,
+								0.6428571428571429,
+								0.5,
+								0.7142857142857143,
+								0.35714285714285715,
+								0.6285714285714286,
+								0.3,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 70,
+						"height": 70,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5998095,
+						"collisionPoly": {
+							"points": [
+								0.37142857142857144,
+								0.37142857142857144,
+								0.5,
+								0.3,
+								0.6142857142857143,
+								0.37142857142857144,
+								0.7,
+								0.5,
+								0.6428571428571429,
+								0.6428571428571429,
+								0.5,
+								0.7142857142857143,
+								0.35714285714285715,
+								0.6285714285714286,
+								0.3,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 588012590240464,
+				"name": "Break",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 20
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -38,6 +38,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Cap",
+								"x": 0.5,
+								"y": 0.7142857142857143
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -73,6 +80,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Cap",
+								"x": 0.5,
+								"y": 0.7142857142857143
+							}
+						],
 						"duration": 1
 					}
 				],
