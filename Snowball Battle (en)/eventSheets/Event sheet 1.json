@@ -133,6 +133,14 @@
 							"parameters": {
 								"z": "Avatar.Y / 1000"
 							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "NPC",
+							"sid": 291225699426715,
+							"parameters": {
+								"z": "NPC.Y / 1000"
+							}
 						}
 					],
 					"sid": 992405288841044
@@ -242,6 +250,218 @@
 				}
 			],
 			"sid": 241292613057280
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "NPC Animations",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 614938205840881,
+							"parameters": {
+								"interval-seconds": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "NPC",
+							"sid": 392266299052442,
+							"parameters": {
+								"instance-variable": "Direction",
+								"value": "floor(random(0, 5))"
+							}
+						}
+					],
+					"sid": 489416924045102
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "NPC",
+							"sid": 837833644228570,
+							"parameters": {
+								"instance-variable": "Direction",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "stop",
+							"objectClass": "NPC",
+							"sid": 873913340385480,
+							"behaviorType": "8Direction"
+						}
+					],
+					"sid": 681911851008344
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "NPC",
+							"sid": 126712736511153,
+							"parameters": {
+								"instance-variable": "Direction",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "NPC",
+							"sid": 876479438134305,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 515117793401873
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "NPC",
+							"sid": 892784718462619,
+							"parameters": {
+								"instance-variable": "Direction",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "NPC",
+							"sid": 455132932306915,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "up"
+							}
+						}
+					],
+					"sid": 801563470099333
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "NPC",
+							"sid": 663196459161105,
+							"parameters": {
+								"instance-variable": "Direction",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "NPC",
+							"sid": 475930436841589,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "left"
+							}
+						}
+					],
+					"sid": 184518367706560
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "NPC",
+							"sid": 392336654969307,
+							"parameters": {
+								"instance-variable": "Direction",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "NPC",
+							"sid": 877769536840482,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "down"
+							}
+						}
+					],
+					"sid": 188334877518593
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "NPC",
+							"sid": 786271529732212,
+							"behaviorType": "8Direction"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "NPC",
+							"sid": 180118097885721,
+							"parameters": {
+								"animation": "\"Walk\"",
+								"from": "current-frame"
+							}
+						}
+					],
+					"sid": 787153522066095
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 595837370668408
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "NPC",
+							"sid": 929522685420007,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 811399670687020
+				}
+			],
+			"sid": 122216576502612
 		},
 		{
 			"eventType": "group",

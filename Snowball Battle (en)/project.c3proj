@@ -116,7 +116,8 @@
 			"AvatarBox",
 			"Counter",
 			"HitIcon",
-			"SnowballIcon"
+			"SnowballIcon",
+			"NPC"
 		],
 		"subfolders": []
 	},

@@ -2580,7 +2580,7 @@
 						},
 						"ScrollTo": {
 							"properties": {
-								"enabled": true
+								"enabled": false
 							}
 						},
 						"BoundToLayout": {
@@ -2660,7 +2660,7 @@
 						},
 						"ScrollTo": {
 							"properties": {
-								"enabled": true
+								"enabled": false
 							}
 						},
 						"BoundToLayout": {
@@ -2740,7 +2740,7 @@
 						},
 						"ScrollTo": {
 							"properties": {
-								"enabled": true
+								"enabled": false
 							}
 						},
 						"BoundToLayout": {

@@ -1,0 +1,189 @@
+{
+	"name": "NPC",
+	"plugin-id": "Sprite",
+	"sid": 694055235014209,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Direction",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 227793992492282
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 865244475614125
+		},
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 690009216261724
+		},
+		{
+			"behaviorId": "wrap",
+			"name": "Wrap",
+			"sid": 811422150295760
+		},
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 674025054656141
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 66,
+						"height": 92,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8140253,
+						"collisionPoly": {
+							"points": [
+								0.19117647058823534,
+								0.8629032258064515,
+								0.8419117647058824,
+								0.8602150537634405,
+								0.8419117647058828,
+								1,
+								0.1875,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Hand",
+								"x": 0.06060606060606061,
+								"y": 0.7608695652173914
+							}
+						],
+						"duration": 10
+					},
+					{
+						"width": 66,
+						"height": 92,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4162666,
+						"collisionPoly": {
+							"points": [
+								0.19117647058823534,
+								0.8629032258064515,
+								0.8419117647058824,
+								0.8602150537634405,
+								0.8419117647058828,
+								1,
+								0.1875,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Hand",
+								"x": 0.06060606060606061,
+								"y": 0.7717391304347826
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 160736801794663,
+				"name": "Idle",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 68,
+						"height": 93,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9736272,
+						"collisionPoly": {
+							"points": [
+								0.19117647058823534,
+								0.8629032258064515,
+								0.8419117647058824,
+								0.8602150537634405,
+								0.8419117647058828,
+								1,
+								0.1875,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Hand",
+								"x": 0.04411764705882353,
+								"y": 0.7204301075268817
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 70,
+						"height": 96,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 372681,
+						"collisionPoly": {
+							"points": [
+								0.19117647058823534,
+								0.8629032258064515,
+								0.8419117647058824,
+								0.8602150537634405,
+								0.8419117647058828,
+								1,
+								0.1875,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Hand",
+								"x": 0.04285714285714286,
+								"y": 0.6666666666666666
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 120225066855990,
+				"name": "Walk",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
