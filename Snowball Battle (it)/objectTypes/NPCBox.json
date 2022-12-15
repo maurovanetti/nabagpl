@@ -1,0 +1,65 @@
+{
+	"name": "NPCBox",
+	"plugin-id": "Sprite",
+	"sid": 256495580267345,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "RightFootForward",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 179852460081531
+		},
+		{
+			"name": "HorizontalDirection",
+			"type": "number",
+			"desc": "0, 1 or 2",
+			"show": true,
+			"sid": 929614314990051
+		},
+		{
+			"name": "VerticalDirection",
+			"type": "number",
+			"desc": "0, 1, 2",
+			"show": true,
+			"sid": 423320845278369
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 708150687670294
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 66,
+						"height": 92,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 344307,
+						"useCollisionPoly": true,
+						"duration": 3
+					}
+				],
+				"sid": 144675825417591,
+				"name": "Idle",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 2
+			}
+		],
+		"subfolders": []
+	}
+}

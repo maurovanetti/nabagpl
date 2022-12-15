@@ -109,6 +109,22 @@
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pathfinding",
+			"name": "Pathfinding",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "jysmv1423j6",
@@ -128,7 +144,12 @@
 			"HUDFrame",
 			"SnowballIcon",
 			"SnowDump",
-			"NPC"
+			"Wanderer",
+			"AvatarBox",
+			"NPCBox",
+			"Wall",
+			"Stalker",
+			"NodeLabel"
 		],
 		"subfolders": []
 	},

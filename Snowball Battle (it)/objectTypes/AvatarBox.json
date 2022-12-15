@@ -1,0 +1,80 @@
+{
+	"name": "AvatarBox",
+	"plugin-id": "Sprite",
+	"sid": 138846161090686,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "RightFootForward",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 223154646954027
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 300218982922678
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 66,
+						"height": 92,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 878503,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								1,
+								0,
+								1,
+								1,
+								0,
+								0.9956521739130435
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Hand",
+								"x": 0.06060606060606061,
+								"y": 0.7608695652173914
+							},
+							{
+								"name": "Right Foot",
+								"x": 0.2878787878787879,
+								"y": 1
+							},
+							{
+								"name": "Left Foot",
+								"x": 0.7121212121212122,
+								"y": 1
+							}
+						],
+						"duration": 3
+					}
+				],
+				"sid": 426668620939958,
+				"name": "Idle",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 2
+			}
+		],
+		"subfolders": []
+	}
+}

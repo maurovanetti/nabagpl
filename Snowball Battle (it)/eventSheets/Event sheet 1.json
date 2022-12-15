@@ -93,10 +93,10 @@
 						},
 						{
 							"id": "set-z-elevation",
-							"objectClass": "NPC",
+							"objectClass": "Wanderer",
 							"sid": 127954624133997,
 							"parameters": {
-								"z": "NPC.Y / 1000"
+								"z": "Wanderer.Y / 1000"
 							}
 						}
 					],
@@ -195,6 +195,108 @@
 							]
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 654982881113929
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Avatar",
+							"sid": 947741229864367,
+							"parameters": {
+								"object": "AvatarBox",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "Avatar",
+							"sid": 343081331747143,
+							"parameters": {
+								"child": "AvatarBox",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-a": false,
+								"transform-z-elevation": false,
+								"destroy-with-parent": true
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "AvatarBox",
+							"sid": 947057738351942,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 100487545324265
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 319733404335108
+						},
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 643677796166843,
+							"parameters": {
+								"object": "Wanderer"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Wanderer",
+							"sid": 898849962021171,
+							"parameters": {
+								"object": "NPCBox",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "Wanderer",
+							"sid": 312989285908870,
+							"parameters": {
+								"child": "NPCBox",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-a": false,
+								"transform-z-elevation": false,
+								"destroy-with-parent": true
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "NPCBox",
+							"sid": 593867837990003,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 336229244486116
 				}
 			],
 			"sid": 838715417640539
@@ -609,7 +711,7 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Animate NPC",
+			"title": "Animate Wanderers",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -618,61 +720,133 @@
 					"conditions": [
 						{
 							"id": "is-moving",
-							"objectClass": "NPC",
+							"objectClass": "Wanderer",
 							"sid": 203099013355639,
 							"behaviorType": "8Direction"
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 870776911810746,
+					"children": [
 						{
-							"id": "set-animation",
-							"objectClass": "NPC",
-							"sid": 944445712814729,
-							"parameters": {
-								"animation": "\"Walk\"",
-								"from": "beginning"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Wanderer",
+									"sid": 989460133208882,
+									"parameters": {
+										"instance-variable": "WasHit"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Wanderer",
+									"sid": 803513174466331,
+									"parameters": {
+										"animation": "\"WalkHit\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 676732147691121
 						},
 						{
-							"id": "set-opacity",
-							"objectClass": "NPC",
-							"sid": 119054782635427,
-							"parameters": {
-								"opacity": "100"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Wanderer",
+									"sid": 109566469991009,
+									"parameters": {
+										"instance-variable": "WasHit"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Wanderer",
+									"sid": 350388911509708,
+									"parameters": {
+										"animation": "\"Walk\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 141587942388368
 						}
-					],
-					"sid": 870776911810746
+					]
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 557678226919908
+							"id": "is-moving",
+							"objectClass": "Wanderer",
+							"sid": 693068571935356,
+							"behaviorType": "8Direction",
+							"isInverted": true
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 789796405770327,
+					"children": [
 						{
-							"id": "set-animation",
-							"objectClass": "NPC",
-							"sid": 815252434255845,
-							"parameters": {
-								"animation": "\"Idle\"",
-								"from": "beginning"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Wanderer",
+									"sid": 597535486166376,
+									"parameters": {
+										"instance-variable": "WasHit"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Wanderer",
+									"sid": 324545331531662,
+									"parameters": {
+										"animation": "\"IdleHit\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 879673028234067
 						},
 						{
-							"id": "set-opacity",
-							"objectClass": "NPC",
-							"sid": 727312280299717,
-							"parameters": {
-								"opacity": "50"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Wanderer",
+									"sid": 653258683586859,
+									"parameters": {
+										"instance-variable": "WasHit"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Wanderer",
+									"sid": 836095006584941,
+									"parameters": {
+										"animation": "\"Idle\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 353903502632814
 						}
-					],
-					"sid": 789796405770327
+					]
 				},
 				{
 					"eventType": "block",
@@ -689,11 +863,20 @@
 					"actions": [
 						{
 							"id": "set-instvar-value",
-							"objectClass": "NPC",
-							"sid": 790527429564547,
+							"objectClass": "Wanderer",
+							"sid": 783379815059858,
 							"parameters": {
-								"instance-variable": "Direction",
-								"value": "int(random(0,5))"
+								"instance-variable": "HorizontalDirection",
+								"value": "int(random(0,3))"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Wanderer",
+							"sid": 415045858769018,
+							"parameters": {
+								"instance-variable": "VerticalDirection",
+								"value": "int(random(0,3))"
 							}
 						}
 					],
@@ -704,10 +887,44 @@
 					"conditions": [
 						{
 							"id": "compare-instance-variable",
-							"objectClass": "NPC",
+							"objectClass": "Wanderer",
+							"sid": 725282230814311,
+							"parameters": {
+								"instance-variable": "HorizontalDirection",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Wanderer",
+							"sid": 724283007832123,
+							"parameters": {
+								"instance-variable": "VerticalDirection",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "stop",
+							"objectClass": "Wanderer",
+							"sid": 782867555428760,
+							"behaviorType": "8Direction"
+						}
+					],
+					"sid": 987783211584715
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Wanderer",
 							"sid": 368319197096423,
 							"parameters": {
-								"instance-variable": "Direction",
+								"instance-variable": "HorizontalDirection",
 								"comparison": 0,
 								"value": "1"
 							}
@@ -716,7 +933,7 @@
 					"actions": [
 						{
 							"id": "simulate-control",
-							"objectClass": "NPC",
+							"objectClass": "Wanderer",
 							"sid": 770343301952398,
 							"behaviorType": "8Direction",
 							"parameters": {
@@ -725,7 +942,7 @@
 						},
 						{
 							"id": "set-mirrored",
-							"objectClass": "NPC",
+							"objectClass": "Wanderer",
 							"sid": 483534680589761,
 							"parameters": {
 								"state": "not-mirrored"
@@ -740,10 +957,10 @@
 					"conditions": [
 						{
 							"id": "compare-instance-variable",
-							"objectClass": "NPC",
+							"objectClass": "Wanderer",
 							"sid": 330773959367954,
 							"parameters": {
-								"instance-variable": "Direction",
+								"instance-variable": "HorizontalDirection",
 								"comparison": 0,
 								"value": "2"
 							}
@@ -752,7 +969,7 @@
 					"actions": [
 						{
 							"id": "simulate-control",
-							"objectClass": "NPC",
+							"objectClass": "Wanderer",
 							"sid": 456327173994960,
 							"behaviorType": "8Direction",
 							"parameters": {
@@ -761,7 +978,7 @@
 						},
 						{
 							"id": "set-mirrored",
-							"objectClass": "NPC",
+							"objectClass": "Wanderer",
 							"sid": 613055357890663,
 							"parameters": {
 								"state": "mirrored"
@@ -776,19 +993,19 @@
 					"conditions": [
 						{
 							"id": "compare-instance-variable",
-							"objectClass": "NPC",
-							"sid": 715125897629737,
+							"objectClass": "Wanderer",
+							"sid": 924900778671636,
 							"parameters": {
-								"instance-variable": "Direction",
+								"instance-variable": "VerticalDirection",
 								"comparison": 0,
-								"value": "3"
+								"value": "1"
 							}
 						}
 					],
 					"actions": [
 						{
 							"id": "simulate-control",
-							"objectClass": "NPC",
+							"objectClass": "Wanderer",
 							"sid": 317548571128953,
 							"behaviorType": "8Direction",
 							"parameters": {
@@ -804,19 +1021,19 @@
 					"conditions": [
 						{
 							"id": "compare-instance-variable",
-							"objectClass": "NPC",
-							"sid": 153887417756387,
+							"objectClass": "Wanderer",
+							"sid": 690339315929499,
 							"parameters": {
-								"instance-variable": "Direction",
+								"instance-variable": "VerticalDirection",
 								"comparison": 0,
-								"value": "4"
+								"value": "2"
 							}
 						}
 					],
 					"actions": [
 						{
 							"id": "simulate-control",
-							"objectClass": "NPC",
+							"objectClass": "Wanderer",
 							"sid": 818805024691361,
 							"behaviorType": "8Direction",
 							"parameters": {
@@ -825,24 +1042,6 @@
 						}
 					],
 					"sid": 932839843191371,
-					"isOrBlock": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "NPC",
-							"sid": 130858165072800,
-							"parameters": {
-								"instance-variable": "Direction",
-								"comparison": 0,
-								"value": "0"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 539953316997892,
 					"isOrBlock": true
 				}
 			],
@@ -986,7 +1185,7 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Bounce Snowball",
+			"title": "Snowball Hits",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -1150,6 +1349,145 @@
 						}
 					],
 					"sid": 674449281160599
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Snowball",
+							"sid": 352192058603301,
+							"parameters": {
+								"object": "Wall"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Snowball",
+							"sid": 567382868559884,
+							"parameters": {
+								"animation": "\"Break\"",
+								"from": "current-frame"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "Snowball",
+							"sid": 202366410052379,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "50"
+							}
+						}
+					],
+					"sid": 576503913654963
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Snowball",
+							"sid": 273630666349385,
+							"parameters": {
+								"object": "AvatarBox"
+							}
+						},
+						{
+							"id": "compare-distance-travelled",
+							"objectClass": "Snowball",
+							"sid": 925022299697498,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"comparison": 4,
+								"distance": "100"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Snowball",
+							"sid": 198530520697175,
+							"parameters": {
+								"animation": "\"Break\"",
+								"from": "current-frame"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "Snowball",
+							"sid": 601815411094481,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "50"
+							}
+						}
+					],
+					"sid": 917671875311852
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Snowball",
+							"sid": 551567713958844,
+							"parameters": {
+								"object": "NPCBox"
+							}
+						},
+						{
+							"id": "pick-parent",
+							"objectClass": "NPCBox",
+							"sid": 135803117748383,
+							"parameters": {
+								"parent": "Wanderer",
+								"which": "own"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Snowball",
+							"sid": 840999866473436,
+							"parameters": {
+								"animation": "\"Break\"",
+								"from": "current-frame"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "Snowball",
+							"sid": 859779061995988,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "50"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Wanderer",
+							"sid": 412052603989369,
+							"parameters": {
+								"instance-variable": "WasHit",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-max-speed",
+							"objectClass": "Wanderer",
+							"sid": 807395693841745,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"max-speed": "Wanderer.8Direction.MaxSpeed / 2"
+							}
+						}
+					],
+					"sid": 884483144692050
 				},
 				{
 					"eventType": "block",
@@ -1488,6 +1826,238 @@
 				}
 			],
 			"sid": 611847801799264
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Animate Stalkers",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 679594245247834
+						}
+					],
+					"actions": [
+						{
+							"id": "find-path",
+							"objectClass": "Stalker",
+							"sid": 469974156042751,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"x": "Avatar.X",
+								"y": "Avatar.Y"
+							}
+						}
+					],
+					"sid": 150251297434976
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 598613129415759,
+							"parameters": {
+								"interval-seconds": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "find-path",
+							"objectClass": "Stalker",
+							"sid": 732206851842525,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"x": "Avatar.X",
+								"y": "Avatar.Y"
+							}
+						}
+					],
+					"sid": 662732384403854
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-path-found",
+							"objectClass": "Stalker",
+							"sid": 717315524440131,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"actions": [
+						{
+							"id": "move-along-path",
+							"objectClass": "Stalker",
+							"sid": 571173819085919,
+							"behaviorType": "Pathfinding"
+						},
+						{
+							"id": "destroy",
+							"objectClass": "NodeLabel",
+							"sid": 830044084356454
+						}
+					],
+					"sid": 580676239926234,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 996698158274153,
+									"parameters": {
+										"name": "\"\"",
+										"start-index": "0",
+										"end-index": "Stalker.Pathfinding.NodeCount"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 916382052711655,
+									"parameters": {
+										"object-to-create": "NodeLabel",
+										"layer": "\"Snow\"",
+										"x": "Stalker.Pathfinding.NodeXAt(loopindex)",
+										"y": "Stalker.Pathfinding.NodeYAt(loopindex)",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "NodeLabel",
+									"sid": 473396108524998,
+									"parameters": {
+										"text": "loopindex"
+									}
+								}
+							],
+							"sid": 261941707037271
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving-along-path",
+							"objectClass": "Stalker",
+							"sid": 443976120442536,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Stalker",
+							"sid": 329557819054408,
+							"parameters": {
+								"animation": "\"Walk\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 625724812447645,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 844077292923170,
+									"parameters": {
+										"first-value": "Stalker.Pathfinding.MovingAngle",
+										"comparison": 2,
+										"second-value": "90"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 840856763636024,
+									"parameters": {
+										"first-value": "Stalker.Pathfinding.MovingAngle",
+										"comparison": 4,
+										"second-value": "270"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "Stalker",
+									"sid": 403434582522763,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								}
+							],
+							"sid": 121102181378467,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 704851825760258
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "Stalker",
+									"sid": 476594644988560,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 823083674566011
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving-along-path",
+							"objectClass": "Stalker",
+							"sid": 839874823171905,
+							"behaviorType": "Pathfinding",
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Stalker",
+							"sid": 552887325916490,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 180153080544593
+				}
+			],
+			"sid": 345608197061550
 		}
 	],
 	"sid": 821165317375456
