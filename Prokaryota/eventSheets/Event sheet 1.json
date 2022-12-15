@@ -1,0 +1,266 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "GrowthPerSecond",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 842935073057373
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 181679180332926,
+					"parameters": {
+						"interval-seconds": "1.0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Enemy",
+					"sid": 241833231402288,
+					"parameters": {
+						"instance-variable": "HorizontalDirection",
+						"value": "int(random(0,3))"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Enemy",
+					"sid": 654558765117823,
+					"parameters": {
+						"instance-variable": "VerticalDirection",
+						"value": "int(random(0,3))"
+					}
+				}
+			],
+			"sid": 655824526436971
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Enemy",
+					"sid": 407192975190549,
+					"parameters": {
+						"instance-variable": "HorizontalDirection",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Enemy",
+					"sid": 506797972645989,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "left"
+					}
+				}
+			],
+			"sid": 127739136467429
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Enemy",
+					"sid": 969828675554177,
+					"parameters": {
+						"instance-variable": "HorizontalDirection",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Enemy",
+					"sid": 307795581603812,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "right"
+					}
+				}
+			],
+			"sid": 963668983177462
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Enemy",
+					"sid": 627156525153269,
+					"parameters": {
+						"instance-variable": "VerticalDirection",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Enemy",
+					"sid": 870618051152834,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "up"
+					}
+				}
+			],
+			"sid": 999643317379753
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Enemy",
+					"sid": 684090025770104,
+					"parameters": {
+						"instance-variable": "VerticalDirection",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Enemy",
+					"sid": 325997755032626,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "down"
+					}
+				}
+			],
+			"sid": 868116085852795
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Enemy",
+					"sid": 239288653149741,
+					"parameters": {
+						"object": "Avatar"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Enemy",
+					"sid": 307632067290104,
+					"parameters": {
+						"object": "Spawner",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "flash",
+					"objectClass": "Spawner",
+					"sid": 408848927338541,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "0.1",
+						"off-time": "0.1",
+						"duration": "1.0"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "Enemy",
+					"sid": 261115768539572,
+					"parameters": {
+						"width": "Self.Width / 2",
+						"height": "Self.Height / 2"
+					}
+				}
+			],
+			"sid": 624684523045714
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-flash-ended",
+					"objectClass": "Spawner",
+					"sid": 288327800061188,
+					"behaviorType": "Flash"
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Spawner",
+					"sid": 410210067226728,
+					"parameters": {
+						"object": "Enemy",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "Enemy",
+					"sid": 380726849573569,
+					"parameters": {
+						"width": "10",
+						"height": "10"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Spawner",
+					"sid": 725266607662377
+				}
+			],
+			"sid": 767126389534271
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 793230787654396
+				}
+			],
+			"actions": [
+				{
+					"id": "set-size",
+					"objectClass": "Enemy",
+					"sid": 407311685907230,
+					"parameters": {
+						"width": "Self.Width + (dt * GrowthPerSecond)",
+						"height": "Self.Height + (dt * GrowthPerSecond)"
+					}
+				}
+			],
+			"sid": 821085257929226
+		}
+	],
+	"sid": 133050694890435
+}

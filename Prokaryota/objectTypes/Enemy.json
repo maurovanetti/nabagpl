@@ -1,0 +1,73 @@
+{
+	"name": "Enemy",
+	"plugin-id": "Sprite",
+	"sid": 770984568065523,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "HorizontalDirection",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 848243665739884
+		},
+		{
+			"name": "VerticalDirection",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 181392116556533
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 642794792055903
+		},
+		{
+			"behaviorId": "wrap",
+			"name": "Wrap",
+			"sid": 289476498663188
+		},
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 510257265905670
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 764422651024148
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 50,
+						"height": 50,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7875928,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 982925497274916,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
