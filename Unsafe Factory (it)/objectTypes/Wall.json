@@ -1,0 +1,26 @@
+{
+	"name": "Wall",
+	"plugin-id": "NinePatch",
+	"sid": 519356021246106,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 766061516054819
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 70,
+		"height": 70,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 8290112,
+		"useCollisionPoly": true
+	}
+}

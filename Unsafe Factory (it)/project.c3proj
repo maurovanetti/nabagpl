@@ -1,7 +1,7 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 31702,
-	"name": "Snowball Battle (en)",
+	"name": "Unsafe Factory",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
@@ -16,6 +16,14 @@
 		},
 		{
 			"type": "plugin",
+			"id": "NinePatch",
+			"name": "9-patch",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
@@ -23,25 +31,9 @@
 			"bundled": false
 		},
 		{
-			"type": "plugin",
-			"id": "TiledBg",
-			"name": "Tiled Background",
-			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
-			"id": "Text",
-			"name": "Text",
-			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
 			"type": "behavior",
-			"id": "EightDir",
-			"name": "8 Direction",
+			"id": "Platform",
+			"name": "Platform",
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
@@ -56,16 +48,16 @@
 		},
 		{
 			"type": "behavior",
-			"id": "wrap",
-			"name": "Wrap",
+			"id": "Flash",
+			"name": "Flash",
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
-			"id": "Flash",
-			"name": "Flash",
+			"id": "jumpthru",
+			"name": "Jump-thru",
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
@@ -77,63 +69,30 @@
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Bullet",
-			"name": "Bullet",
-			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "destroy",
-			"name": "Destroy outside layout",
-			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Pin",
-			"name": "Pin",
-			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Pathfinding",
-			"name": "Pathfinding",
-			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
 		}
 	],
-	"uniqueId": "3gjnqrmtieu",
+	"uniqueId": "pe08rxktwqb",
 	"objectTypes": {
 		"items": [
 			"Avatar",
+			"Platform",
 			"Keyboard",
-			"Bush",
-			"Terrain",
-			"Snowball",
-			"Mushroom",
-			"MushroomCap",
-			"AvatarBox",
-			"Counter",
-			"HitIcon",
-			"SnowballIcon",
-			"NPC",
-			"Wall"
+			"Wall",
+			"Abyss",
+			"Hazard",
+			"Alarm",
+			"Computer",
+			"Prize",
+			"Spikes"
 		],
 		"subfolders": []
 	},
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"Danger"
+		],
 		"subfolders": []
 	},
 	"layouts": {
@@ -172,41 +131,9 @@
 		"icon": {
 			"items": [
 				{
-					"name": "icon-64.png",
-					"type": "image/png",
-					"sid": 994884416057677,
-					"icon-info": {
-						"purpose": "app-icon"
-					}
-				},
-				{
-					"name": "icon-128.png",
-					"type": "image/png",
-					"sid": 525368109979451,
-					"icon-info": {
-						"purpose": "app-icon"
-					}
-				},
-				{
-					"name": "loading-logo.png",
-					"type": "image/png",
-					"sid": 170835312548992,
-					"icon-info": {
-						"purpose": "loading-logo"
-					}
-				},
-				{
-					"name": "icon-256.png",
-					"type": "image/png",
-					"sid": 839609399144107,
-					"icon-info": {
-						"purpose": "app-icon"
-					}
-				},
-				{
 					"name": "icon-16.png",
 					"type": "image/png",
-					"sid": 734690537283629,
+					"sid": 442725529314679,
 					"icon-info": {
 						"purpose": "app-icon"
 					}
@@ -214,7 +141,31 @@
 				{
 					"name": "icon-32.png",
 					"type": "image/png",
-					"sid": 900329340177510,
+					"sid": 465719789069296,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 139061922384977,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 650943185084186,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 583378859368436,
 					"icon-info": {
 						"purpose": "app-icon"
 					}
@@ -222,9 +173,17 @@
 				{
 					"name": "icon-512.png",
 					"type": "image/png",
-					"sid": 748649249565517,
+					"sid": 869476923068717,
 					"icon-info": {
 						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 826183282711821,
+					"icon-info": {
+						"purpose": "loading-logo"
 					}
 				}
 			],
@@ -297,7 +256,7 @@
 		"autoReloadScriptsOnPreview": false,
 		"exportFileStructure": "folders"
 	},
-	"viewportWidth": 854,
-	"viewportHeight": 480,
+	"viewportWidth": 1280,
+	"viewportHeight": 720,
 	"firstLayout": null
 }

@@ -2892,7 +2892,7 @@
 					"behaviors": {
 						"Pathfinding": {
 							"properties": {
-								"cell-size": 100,
+								"cell-size": 30,
 								"cell-border": 0,
 								"obstacles": "solids",
 								"max-speed": 200,
@@ -3003,8 +3003,8 @@
 						}
 					},
 					"world": {
-						"x": 446,
-						"y": 556,
+						"x": 416,
+						"y": 613,
 						"width": 528.3907960581372,
 						"height": 46,
 						"originX": 0.5,

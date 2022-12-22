@@ -1,0 +1,57 @@
+{
+	"name": "Hazard",
+	"plugin-id": "Sprite",
+	"sid": 502990171806297,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 70,
+						"height": 70,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5910067,
+						"collisionPoly": {
+							"points": [
+								0.14285714285714285,
+								0.14285714285714285,
+								0.5,
+								0,
+								0.8428571428571429,
+								0.14285714285714285,
+								0.8428571428571429,
+								0.5,
+								0.8428571428571429,
+								0.8428571428571429,
+								0.5,
+								0.9857142857142858,
+								0.14285714285714285,
+								0.8428571428571429,
+								0.14285714285714285,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 471174660919282,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

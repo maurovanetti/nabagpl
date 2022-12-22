@@ -1,0 +1,26 @@
+{
+	"name": "Platform",
+	"plugin-id": "NinePatch",
+	"sid": 545992199188234,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "jumpthru",
+			"name": "Jumpthru",
+			"sid": 833285236939441
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 70,
+		"height": 70,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 1165563,
+		"useCollisionPoly": true
+	}
+}

@@ -14,16 +14,6 @@
 	],
 	"behaviorTypes": [
 		{
-			"behaviorId": "EightDir",
-			"name": "8Direction",
-			"sid": 865244475614125
-		},
-		{
-			"behaviorId": "scrollto",
-			"name": "ScrollTo",
-			"sid": 690009216261724
-		},
-		{
 			"behaviorId": "wrap",
 			"name": "Wrap",
 			"sid": 811422150295760
@@ -32,6 +22,11 @@
 			"behaviorId": "Flash",
 			"name": "Flash",
 			"sid": 674025054656141
+		},
+		{
+			"behaviorId": "Pathfinding",
+			"name": "Pathfinding",
+			"sid": 973427049720441
 		}
 	],
 	"effectTypes": [],

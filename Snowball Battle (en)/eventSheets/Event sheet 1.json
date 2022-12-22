@@ -254,7 +254,7 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "NPC Animations",
+			"title": "NPC AI",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -262,203 +262,175 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "every-x-seconds",
+							"id": "on-start-of-layout",
 							"objectClass": "System",
-							"sid": 614938205840881,
-							"parameters": {
-								"interval-seconds": "1"
-							}
+							"sid": 502777630002367
 						}
 					],
 					"actions": [
 						{
-							"id": "set-instvar-value",
+							"id": "find-path",
 							"objectClass": "NPC",
-							"sid": 392266299052442,
+							"sid": 332268359644491,
+							"behaviorType": "Pathfinding",
 							"parameters": {
-								"instance-variable": "Direction",
-								"value": "floor(random(0, 5))"
+								"x": "Avatar.X",
+								"y": "Avatar.Y"
 							}
 						}
 					],
-					"sid": 489416924045102
+					"sid": 567441921086280
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-instance-variable",
+							"id": "on-arrived",
 							"objectClass": "NPC",
-							"sid": 837833644228570,
-							"parameters": {
-								"instance-variable": "Direction",
-								"comparison": 0,
-								"value": "0"
-							}
+							"sid": 873589940517943,
+							"behaviorType": "Pathfinding"
 						}
 					],
 					"actions": [
 						{
-							"id": "stop",
+							"id": "find-path",
 							"objectClass": "NPC",
-							"sid": 873913340385480,
-							"behaviorType": "8Direction"
+							"sid": 832790007948226,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"x": "Avatar.X",
+								"y": "Avatar.Y"
+							}
 						}
 					],
-					"sid": 681911851008344
+					"sid": 367744728631163
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-instance-variable",
+							"id": "on-path-found",
 							"objectClass": "NPC",
-							"sid": 126712736511153,
-							"parameters": {
-								"instance-variable": "Direction",
-								"comparison": 0,
-								"value": "1"
-							}
+							"sid": 583997773481098,
+							"behaviorType": "Pathfinding"
 						}
 					],
 					"actions": [
 						{
-							"id": "simulate-control",
+							"id": "move-along-path",
 							"objectClass": "NPC",
-							"sid": 876479438134305,
-							"behaviorType": "8Direction",
-							"parameters": {
-								"control": "right"
-							}
+							"sid": 315989755373335,
+							"behaviorType": "Pathfinding"
 						}
 					],
-					"sid": 515117793401873
+					"sid": 934132199739161
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-instance-variable",
+							"id": "is-moving-along-path",
 							"objectClass": "NPC",
-							"sid": 892784718462619,
-							"parameters": {
-								"instance-variable": "Direction",
-								"comparison": 0,
-								"value": "2"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "simulate-control",
-							"objectClass": "NPC",
-							"sid": 455132932306915,
-							"behaviorType": "8Direction",
-							"parameters": {
-								"control": "up"
-							}
-						}
-					],
-					"sid": 801563470099333
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "NPC",
-							"sid": 663196459161105,
-							"parameters": {
-								"instance-variable": "Direction",
-								"comparison": 0,
-								"value": "3"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "simulate-control",
-							"objectClass": "NPC",
-							"sid": 475930436841589,
-							"behaviorType": "8Direction",
-							"parameters": {
-								"control": "left"
-							}
-						}
-					],
-					"sid": 184518367706560
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "NPC",
-							"sid": 392336654969307,
-							"parameters": {
-								"instance-variable": "Direction",
-								"comparison": 0,
-								"value": "4"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "simulate-control",
-							"objectClass": "NPC",
-							"sid": 877769536840482,
-							"behaviorType": "8Direction",
-							"parameters": {
-								"control": "down"
-							}
-						}
-					],
-					"sid": 188334877518593
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-moving",
-							"objectClass": "NPC",
-							"sid": 786271529732212,
-							"behaviorType": "8Direction"
+							"sid": 305325109937084,
+							"behaviorType": "Pathfinding"
 						}
 					],
 					"actions": [
 						{
 							"id": "set-animation",
 							"objectClass": "NPC",
-							"sid": 180118097885721,
+							"sid": 241519772532098,
 							"parameters": {
 								"animation": "\"Walk\"",
-								"from": "current-frame"
+								"from": "beginning"
 							}
 						}
 					],
-					"sid": 787153522066095
+					"sid": 256970550485622,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 543622238917137,
+									"parameters": {
+										"first-value": "NPC.Pathfinding.MovingAngle",
+										"comparison": 2,
+										"second-value": "90"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 780590649834656,
+									"parameters": {
+										"first-value": "NPC.Pathfinding.MovingAngle",
+										"comparison": 4,
+										"second-value": "270"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "NPC",
+									"sid": 859563458387267,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								}
+							],
+							"sid": 976193528285182,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 272532906809331
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "NPC",
+									"sid": 937616496638258,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 667326945739613
+						}
+					]
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 595837370668408
+							"id": "is-moving-along-path",
+							"objectClass": "NPC",
+							"sid": 644357741835717,
+							"behaviorType": "Pathfinding",
+							"isInverted": true
 						}
 					],
 					"actions": [
 						{
 							"id": "set-animation",
 							"objectClass": "NPC",
-							"sid": 929522685420007,
+							"sid": 715334012412216,
 							"parameters": {
 								"animation": "\"Idle\"",
 								"from": "beginning"
 							}
 						}
 					],
-					"sid": 811399670687020
+					"sid": 380850835156563
 				}
 			],
 			"sid": 122216576502612
