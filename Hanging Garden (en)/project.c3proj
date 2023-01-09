@@ -8,14 +8,6 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
-			"id": "NinePatch",
-			"name": "9-patch",
-			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -31,9 +23,9 @@
 			"bundled": false
 		},
 		{
-			"type": "behavior",
-			"id": "jumpthru",
-			"name": "Jump-thru",
+			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Tilemap",
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
@@ -66,11 +58,11 @@
 	"uniqueId": "mqew89akd6s",
 	"objectTypes": {
 		"items": [
-			"Platform",
 			"Avatar",
 			"Keyboard",
 			"Abyss",
-			"Spikes"
+			"Spikes",
+			"PlatformsTilemap"
 		],
 		"subfolders": []
 	},
@@ -84,7 +76,8 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Layout with Sprites",
+			"Layout with Tilemaps"
 		],
 		"subfolders": []
 	},

@@ -31,6 +31,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Tilemap",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Platform",
 			"name": "Platform",
@@ -83,7 +91,13 @@
 			"Alarm",
 			"Computer",
 			"Prize",
-			"Spikes"
+			"Spikes",
+			"JumpthruTilemap",
+			"DangersTilemap",
+			"LadderRung",
+			"PropsTilemap",
+			"TriggerArea",
+			"GearsTilemap"
 		],
 		"subfolders": []
 	},
@@ -97,7 +111,8 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Layout using Sprite",
+			"Layout using Tilemap"
 		],
 		"subfolders": []
 	},

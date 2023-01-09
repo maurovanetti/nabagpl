@@ -342,6 +342,33 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Avatar",
+							"sid": 432802864553005,
+							"parameters": {
+								"object": "DangersTilemap"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "flash",
+							"objectClass": "Avatar",
+							"sid": 932296851701172,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "1.0"
+							}
+						}
+					],
+					"sid": 669770130879485
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "on-flash-ended",
 							"objectClass": "Avatar",
 							"sid": 468164996016095,
@@ -448,9 +475,270 @@
 						}
 					],
 					"sid": 810102705734422
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Avatar",
+							"sid": 652000288386159,
+							"parameters": {
+								"object": "TriggerArea"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TriggerArea",
+							"sid": 143478377534519,
+							"parameters": {
+								"instance-variable": "Name",
+								"comparison": 0,
+								"value": "\"Computer\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-tile",
+							"objectClass": "PropsTilemap",
+							"sid": 827577856422956,
+							"parameters": {
+								"tile-x": "2",
+								"tile-y": "2",
+								"tile": "31",
+								"state": "normal"
+							}
+						},
+						{
+							"id": "erase-tile-range",
+							"objectClass": "PropsTilemap",
+							"sid": 584122982856678,
+							"parameters": {
+								"tile-x": "8",
+								"tile-y": "0",
+								"width": "3",
+								"height": "4"
+							}
+						}
+					],
+					"sid": 574705590045703
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 641558524622353,
+							"parameters": {
+								"interval-seconds": "0.8"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 218392229165422,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-tile-at",
+									"objectClass": "PropsTilemap",
+									"sid": 713250677209739,
+									"parameters": {
+										"tile-x": "11",
+										"tile-y": "3",
+										"comparison": 0,
+										"tile": "38"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-tile",
+									"objectClass": "PropsTilemap",
+									"sid": 472764135164331,
+									"parameters": {
+										"tile-x": "11",
+										"tile-y": "3",
+										"tile": "52",
+										"state": "flipped-vertical"
+									}
+								}
+							],
+							"sid": 935874184374746
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 587930252997122
+								},
+								{
+									"id": "compare-tile-at",
+									"objectClass": "PropsTilemap",
+									"sid": 783009315911384,
+									"parameters": {
+										"tile-x": "11",
+										"tile-y": "3",
+										"comparison": 0,
+										"tile": "52"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-tile",
+									"objectClass": "PropsTilemap",
+									"sid": 780070213972464,
+									"parameters": {
+										"tile-x": "11",
+										"tile-y": "3",
+										"tile": "38",
+										"state": "flipped-vertical"
+									}
+								}
+							],
+							"sid": 161414878325052
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-tile-at",
+									"objectClass": "PropsTilemap",
+									"sid": 124995717010741,
+									"parameters": {
+										"tile-x": "16",
+										"tile-y": "3",
+										"comparison": 0,
+										"tile": "38"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-tile",
+									"objectClass": "PropsTilemap",
+									"sid": 966689665638924,
+									"parameters": {
+										"tile-x": "16",
+										"tile-y": "3",
+										"tile": "52",
+										"state": "rotated-270"
+									}
+								}
+							],
+							"sid": 449776786941092
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 413830116512682
+								},
+								{
+									"id": "compare-tile-at",
+									"objectClass": "PropsTilemap",
+									"sid": 879298267933300,
+									"parameters": {
+										"tile-x": "16",
+										"tile-y": "3",
+										"comparison": 0,
+										"tile": "52"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-tile",
+									"objectClass": "PropsTilemap",
+									"sid": 707726948564543,
+									"parameters": {
+										"tile-x": "16",
+										"tile-y": "3",
+										"tile": "38",
+										"state": "rotated-270"
+									}
+								}
+							],
+							"sid": 209147388646412
+						}
+					]
 				}
 			],
 			"sid": 750497880811853
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Gears",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 356235111111128,
+							"parameters": {
+								"name": "\"row\"",
+								"start-index": "0",
+								"end-index": "GearsTilemap.MapDisplayHeight"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 517061365625019,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 499518248299767,
+									"parameters": {
+										"name": "\"column\"",
+										"start-index": "0",
+										"end-index": "GearsTilemap.MapDisplayWidth"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 970439730307167,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-tile-at",
+											"objectClass": "GearsTilemap",
+											"sid": 797112879859798,
+											"parameters": {
+												"tile-x": "loopindex(\"row\")",
+												"tile-y": "loopindex(\"column\")",
+												"comparison": 0,
+												"tile": "0"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 987873575272453
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 882289923041806
 		}
 	],
 	"sid": 200684248677800

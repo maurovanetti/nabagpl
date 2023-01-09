@@ -1,0 +1,58 @@
+{
+	"name": "JumpthruTilemap",
+	"plugin-id": "Tilemap",
+	"sid": 833933030152536,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "jumpthru",
+			"name": "Jumpthru",
+			"sid": 921596306366536
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 980,
+		"height": 560,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 697185,
+		"useCollisionPoly": true
+	},
+	"tile-collision-polys": {
+		"32": {
+			"collisionPoly": {
+				"points": [
+					0.0014285714285714286,
+					0.6421428571428567,
+					1,
+					0.6428571428571432,
+					1,
+					0.99,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": false
+		},
+		"46": {
+			"collisionPoly": {
+				"points": [
+					0,
+					0.6414285714285707,
+					1,
+					0.6385714285714295,
+					1,
+					0.9957142857142857,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": false
+		}
+	}
+}
