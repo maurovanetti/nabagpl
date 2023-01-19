@@ -1,16 +1,10 @@
 {
-	"name": "InvisibleWall",
+	"name": "BounceRight",
 	"plugin-id": "Sprite",
-	"sid": 488688223954975,
+	"sid": 632970377252261,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "solid",
-			"name": "Solid",
-			"sid": 525154144837770
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -24,24 +18,12 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 9087245,
-						"collisionPoly": {
-							"points": [
-								0,
-								0.10101010101010102,
-								1,
-								0.10606060606060609,
-								1,
-								1,
-								0,
-								1
-							]
-						},
+						"imageSpriteId": 845157,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 993535537728904,
+				"sid": 652925084519175,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

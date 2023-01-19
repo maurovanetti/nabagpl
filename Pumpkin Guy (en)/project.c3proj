@@ -64,6 +64,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Physics",
+			"name": "Physics",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
 			"author": "Scirra",
@@ -79,7 +87,13 @@
 			"Abyss",
 			"JumpthruTilemap",
 			"PassthruTilemap",
-			"InvisibleWall"
+			"InvisibleWall",
+			"Enemy",
+			"BounceRight",
+			"BounceLeft",
+			"Jump",
+			"BounceRightTwice",
+			"Ball"
 		],
 		"subfolders": []
 	},
@@ -87,7 +101,8 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"Danger"
+			"Danger",
+			"Characters"
 		],
 		"subfolders": []
 	},

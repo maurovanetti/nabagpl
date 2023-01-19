@@ -1,16 +1,10 @@
 {
-	"name": "InvisibleWall",
+	"name": "BounceLeft",
 	"plugin-id": "Sprite",
-	"sid": 488688223954975,
+	"sid": 932808187905686,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "solid",
-			"name": "Solid",
-			"sid": 525154144837770
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -24,24 +18,24 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 9087245,
+						"imageSpriteId": 6378718,
 						"collisionPoly": {
 							"points": [
-								0,
-								0.10101010101010102,
-								1,
-								0.10606060606060609,
 								1,
 								1,
 								0,
-								1
+								1,
+								0,
+								0,
+								1,
+								0
 							]
 						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 993535537728904,
+				"sid": 699297707163030,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

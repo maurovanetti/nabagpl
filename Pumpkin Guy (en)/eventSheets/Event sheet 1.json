@@ -444,6 +444,427 @@
 				}
 			],
 			"sid": 787595061712036
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enemy Movement",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-moved",
+							"objectClass": "Enemy",
+							"sid": 189693556295154,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Enemy",
+							"sid": 106397880580089,
+							"parameters": {
+								"animation": "\"Walk\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 967371961336403
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-stopped",
+							"objectClass": "Enemy",
+							"sid": 741517078198242,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Enemy",
+							"sid": 525251013088430,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 651020676114973
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-fall",
+							"objectClass": "Enemy",
+							"sid": 431629727975260,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Enemy",
+							"sid": 156186470069798,
+							"parameters": {
+								"animation": "\"Fall\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 244676621842333
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-landed",
+							"objectClass": "Enemy",
+							"sid": 488459231889098,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [],
+					"sid": 467534508235841,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "Enemy",
+									"sid": 173533818118391,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Enemy",
+									"sid": 867353368360939,
+									"parameters": {
+										"animation": "\"Walk\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 499760787743708
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "Enemy",
+									"sid": 719785906976692,
+									"behaviorType": "Platform",
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Enemy",
+									"sid": 959948883774004,
+									"parameters": {
+										"animation": "\"Idle\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 598250073140445
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-jump",
+							"objectClass": "Enemy",
+							"sid": 333673667641018,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Enemy",
+							"sid": 437936439114950,
+							"parameters": {
+								"animation": "\"Jump\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 585951961531318
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Enemy",
+							"sid": 859766509376583,
+							"parameters": {
+								"object": "BounceRight"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Enemy",
+							"sid": 773450471616661,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 730756907381226
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Enemy",
+							"sid": 766391808279899,
+							"parameters": {
+								"object": "BounceRightTwice"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 750397002164066,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "BounceRightTwice",
+									"sid": 836066335840388,
+									"parameters": {
+										"instance-variable": "N",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "BounceRightTwice",
+									"sid": 224528068006437,
+									"parameters": {
+										"instance-variable": "N",
+										"value": "3"
+									}
+								}
+							],
+							"sid": 847994503341563
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 161483095840241
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "Enemy",
+									"sid": 368154825244945,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "BounceRightTwice",
+									"sid": 267871604584679,
+									"parameters": {
+										"instance-variable": "N",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 263925334159247
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Enemy",
+							"sid": 855529068435389,
+							"parameters": {
+								"object": "BounceLeft"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Enemy",
+							"sid": 211429073872997,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 392921590395627
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Enemy",
+							"sid": 143149582546406,
+							"parameters": {
+								"object": "InvisibleWall"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 567871138530867,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-mirrored",
+									"objectClass": "Enemy",
+									"sid": 689972881441335,
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "Enemy",
+									"sid": 528678196942579,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 604819530985909
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 760138980772981
+								},
+								{
+									"id": "is-mirrored",
+									"objectClass": "Enemy",
+									"sid": 721296909018207
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "Enemy",
+									"sid": 513527533086348,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								}
+							],
+							"sid": 699079707345218
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Enemy",
+							"sid": 406014244624278,
+							"parameters": {
+								"object": "Jump"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Enemy",
+							"sid": 972446992371588,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						}
+					],
+					"sid": 792588009288998
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-mirrored",
+							"objectClass": "Enemy",
+							"sid": 592665107468453,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Enemy",
+							"sid": 159506061522828,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 330590152379402
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-mirrored",
+							"objectClass": "Enemy",
+							"sid": 566531266388213
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Enemy",
+							"sid": 667056660649530,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "left"
+							}
+						}
+					],
+					"sid": 448727291665942
+				}
+			],
+			"sid": 531064493024471
 		}
 	],
 	"sid": 181784969703726
