@@ -1,0 +1,36 @@
+{
+	"name": "Layout 2 events",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Game loop events"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 598913084586693,
+					"parameters": {
+						"first-value": "Pellet.Count",
+						"comparison": 0,
+						"second-value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 358567385551902,
+					"parameters": {
+						"layout": "Title screen"
+					}
+				}
+			],
+			"sid": 961651456147861
+		}
+	],
+	"sid": 606059789345159
+}

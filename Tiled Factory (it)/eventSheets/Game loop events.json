@@ -1,5 +1,5 @@
 {
-	"name": "Event sheet 1",
+	"name": "Game loop events",
 	"events": [
 		{
 			"eventType": "block",
@@ -211,6 +211,18 @@
 							"parameters": {
 								"animation": "\"Jump\"",
 								"from": "beginning"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 225364964620862,
+							"parameters": {
+								"audio-file": "hop",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -627,7 +639,37 @@
 							}
 						}
 					],
-					"sid": 583780242378593
+					"sid": 583780242378593,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-on-screen",
+									"objectClass": "Enemy",
+									"sid": 997465446600761
+								}
+							],
+							"actions": [
+								{
+									"id": "play-at-object",
+									"objectClass": "Audio",
+									"sid": 878920452156239,
+									"parameters": {
+										"audio-file": "enemy_hop",
+										"loop": "not-looping",
+										"volume": "5",
+										"object": "Enemy",
+										"inner-angle": "360",
+										"outer-angle": "360",
+										"outer-gain": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 696179865245291
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -734,9 +776,37 @@
 							"parameters": {
 								"object": "Danger"
 							}
+						},
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Avatar",
+							"sid": 285413724226899,
+							"parameters": {
+								"object": "PropsTilemap"
+							}
 						}
 					],
 					"actions": [
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 162775168203795,
+							"parameters": {
+								"tag": "\"soundtrack\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 309144190863377,
+							"parameters": {
+								"audio-file": "tunetank.com_1352_inspiring-piano-and-cello_by_audiothoughts",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"death\""
+							}
+						},
 						{
 							"id": "flash",
 							"objectClass": "Avatar",
@@ -749,7 +819,8 @@
 							}
 						}
 					],
-					"sid": 535351911774882
+					"sid": 535351911774882,
+					"isOrBlock": true
 				},
 				{
 					"eventType": "block",
@@ -762,6 +833,19 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Avatar",
+							"sid": 274497186711656
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 715427873751303,
+							"parameters": {
+								"seconds": "3"
+							}
+						},
 						{
 							"id": "restart-layout",
 							"objectClass": "System",
@@ -897,12 +981,143 @@
 							"id": "destroy",
 							"objectClass": "Pellet",
 							"sid": 798505531178826
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 527329077569526,
+							"parameters": {
+								"audio-file": "coin",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 581786181452462
 				}
 			],
 			"sid": 460302653681894
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Audio",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 110261357640988
+						}
+					],
+					"actions": [
+						{
+							"id": "set-listener-object",
+							"objectClass": "Audio",
+							"sid": 414690707326215,
+							"parameters": {
+								"object": "Avatar"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 951442226099335,
+							"parameters": {
+								"audio-file": "tunetank.com_1848_the-art-of-technology_by_twotriangles",
+								"loop": "looping",
+								"volume": "-15",
+								"stereo-pan": "0",
+								"tag-optional": "\"soundtrack\""
+							}
+						},
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 188116875595085,
+							"parameters": {
+								"tag": "\"death\"",
+								"db": "-100",
+								"duration": "3",
+								"ending": "stop"
+							}
+						}
+					],
+					"sid": 343634650377269
+				}
+			],
+			"sid": 608399540835923
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Moving Platform",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "MovingPlatform",
+							"sid": 274613754977139,
+							"parameters": {
+								"instance-variable": "Direction"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-position",
+							"objectClass": "MovingPlatform",
+							"sid": 630402272207459,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"x": "MovingPlatform.X + 1000",
+								"y": "MovingPlatform.Y",
+								"mode": "direct"
+							}
+						}
+					],
+					"sid": 321142309759373
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "MovingPlatform",
+							"sid": 649661369962044,
+							"parameters": {
+								"instance-variable": "Direction"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-position",
+							"objectClass": "MovingPlatform",
+							"sid": 118995247621740,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"x": "MovingPlatform.X - 1000",
+								"y": "MovingPlatform.Y",
+								"mode": "direct"
+							}
+						}
+					],
+					"sid": 725683871083864
+				}
+			],
+			"sid": 113099720330626
 		}
 	],
 	"sid": 200684248677800

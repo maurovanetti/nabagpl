@@ -1,0 +1,39 @@
+{
+	"name": "MovingPlatform",
+	"plugin-id": "NinePatch",
+	"sid": 124074961503602,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Direction",
+			"type": "boolean",
+			"desc": "true = right",
+			"show": true,
+			"sid": 304383567018663
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 212378077167179
+		},
+		{
+			"behaviorId": "jumpthru",
+			"name": "Jumpthru",
+			"sid": 777872621386991
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 54,
+		"height": 18,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 3191387,
+		"useCollisionPoly": true
+	}
+}

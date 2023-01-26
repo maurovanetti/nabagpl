@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 31702,
+	"savedWithRelease": 32700,
 	"name": "Tiled Factory",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -8,10 +8,9 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
-			"id": "Sprite",
-			"name": "Sprite",
+			"id": "Audio",
+			"name": "Audio",
 			"author": "Scirra",
-			"version": "r317.2",
 			"bundled": false
 		},
 		{
@@ -19,7 +18,27 @@
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
-			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "NinePatch",
+			"name": "9-patch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
 			"bundled": false
 		},
 		{
@@ -27,23 +46,6 @@
 			"id": "Tilemap",
 			"name": "Tilemap",
 			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Platform",
-			"name": "Platform",
-			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "scrollto",
-			"name": "Scroll To",
-			"author": "Scirra",
-			"version": "r317.2",
 			"bundled": false
 		},
 		{
@@ -51,15 +53,13 @@
 			"id": "Flash",
 			"name": "Flash",
 			"author": "Scirra",
-			"version": "r317.2",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
-			"id": "jumpthru",
-			"name": "Jump-thru",
+			"id": "MoveTo",
+			"name": "Move To",
 			"author": "Scirra",
-			"version": "r317.2",
 			"bundled": false
 		},
 		{
@@ -67,7 +67,27 @@
 			"id": "Physics",
 			"name": "Physics",
 			"author": "Scirra",
-			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Platform",
+			"name": "Platform",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "jumpthru",
+			"name": "Jump-thru",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
 			"bundled": false
 		},
 		{
@@ -75,7 +95,6 @@
 			"id": "solid",
 			"name": "Solid",
 			"author": "Scirra",
-			"version": "r317.2",
 			"bundled": false
 		},
 		{
@@ -83,7 +102,6 @@
 			"id": "brightness",
 			"name": "Brightness",
 			"author": "Scirra",
-			"version": "r317.2",
 			"bundled": false
 		},
 		{
@@ -91,7 +109,6 @@
 			"id": "vibrance",
 			"name": "Vibrance",
 			"author": "Evan Wallace",
-			"version": "r317.2",
 			"bundled": false
 		}
 	],
@@ -113,7 +130,12 @@
 			"Pellet",
 			"Ball",
 			"BackgroundTilemap1",
-			"BackgroundTilemap2"
+			"BackgroundTilemap2",
+			"Audio",
+			"Title",
+			"MovingPlatform",
+			"LeftBoundary",
+			"RightBoundary"
 		],
 		"subfolders": []
 	},
@@ -127,13 +149,26 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Layout 2",
+			"Layout 1",
+			"Title screen"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"Template Layout"
+				],
+				"subfolders": [],
+				"name": "Template"
+			}
+		]
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"Game loop events",
+			"Title screen events",
+			"Layout 1 events",
+			"Layout 2 events"
 		],
 		"subfolders": []
 	},
@@ -143,11 +178,53 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "coin.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 703195056022520,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "hop.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 880861064935646,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "enemy_hop.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 477573052796046,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "tunetank.com_1848_the-art-of-technology_by_twotriangles.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 481328876573971,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "tunetank.com_1352_inspiring-piano-and-cello_by_audiothoughts.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 814958435277179,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"video": {
@@ -236,12 +313,12 @@
 		]
 	},
 	"properties": {
-		"description": "",
+		"description": "Unsafe factory platformer.",
 		"version": "1.0.0.0",
-		"author": "",
-		"authorEmail": "",
-		"authorWebsite": "",
-		"appId": "",
+		"author": "Mauro Vanetti",
+		"authorEmail": "posta@maurovanetti.info",
+		"authorWebsite": "https://maurovanetti.itch.io/",
+		"appId": "info.maurovanetti.tiled_factory",
 		"pixelRounding": false,
 		"zAxisScale": "normalized",
 		"fov": 0.7853981633974483,
@@ -278,6 +355,8 @@
 		"downscaling": "medium",
 		"renderingMode": "auto",
 		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
 		"maxSpriteSheetSize": 2048,
 		"loaderStyle": "splash",
 		"preloadSounds": true,
@@ -288,5 +367,5 @@
 	},
 	"viewportWidth": 1280,
 	"viewportHeight": 720,
-	"firstLayout": null
+	"firstLayout": "Title screen"
 }
