@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 31702,
+	"savedWithRelease": 32700,
 	"name": "Pumpkin Guy",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -8,10 +8,9 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
-			"id": "Sprite",
-			"name": "Sprite",
+			"id": "Audio",
+			"name": "Audio",
 			"author": "Scirra",
-			"version": "r317.2",
 			"bundled": false
 		},
 		{
@@ -19,7 +18,20 @@
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
-			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
 			"bundled": false
 		},
 		{
@@ -27,23 +39,13 @@
 			"id": "Tilemap",
 			"name": "Tilemap",
 			"author": "Scirra",
-			"version": "r317.2",
 			"bundled": false
 		},
 		{
-			"type": "behavior",
-			"id": "Platform",
-			"name": "Platform",
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
 			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "scrollto",
-			"name": "Scroll To",
-			"author": "Scirra",
-			"version": "r317.2",
 			"bundled": false
 		},
 		{
@@ -51,15 +53,6 @@
 			"id": "Flash",
 			"name": "Flash",
 			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "jumpthru",
-			"name": "Jump-thru",
-			"author": "Scirra",
-			"version": "r317.2",
 			"bundled": false
 		},
 		{
@@ -67,7 +60,27 @@
 			"id": "Physics",
 			"name": "Physics",
 			"author": "Scirra",
-			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Platform",
+			"name": "Platform",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "jumpthru",
+			"name": "Jump-thru",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
 			"bundled": false
 		},
 		{
@@ -75,7 +88,6 @@
 			"id": "solid",
 			"name": "Solid",
 			"author": "Scirra",
-			"version": "r317.2",
 			"bundled": false
 		}
 	],
@@ -93,7 +105,11 @@
 			"BounceLeft",
 			"Jump",
 			"BounceRightTwice",
-			"Ball"
+			"Ball",
+			"Audio",
+			"AudioIcon",
+			"Touch",
+			"Mouse"
 		],
 		"subfolders": []
 	},
@@ -124,11 +140,45 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "jump.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 291632253904083,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "enemy.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 307416625440183,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "tunetank.com_3600_islands_by_dogisreal.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 321670536153585,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "tunetank.com_1352_inspiring-piano-and-cello_by_audiothoughts.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 679123155466581,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"video": {
@@ -259,6 +309,8 @@
 		"downscaling": "medium",
 		"renderingMode": "auto",
 		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
 		"maxSpriteSheetSize": 2048,
 		"loaderStyle": "splash",
 		"preloadSounds": true,

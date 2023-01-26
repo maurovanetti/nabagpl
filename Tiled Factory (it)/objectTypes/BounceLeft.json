@@ -1,16 +1,10 @@
 {
-	"name": "Ball",
+	"name": "BounceLeft",
 	"plugin-id": "Sprite",
-	"sid": 831795816656830,
+	"sid": 988226530154429,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Physics",
-			"name": "Physics",
-			"sid": 373310680920912
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -19,17 +13,17 @@
 					{
 						"width": 18,
 						"height": 18,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 1,
+						"originY": 0,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 3577975,
+						"imageSpriteId": 9287731,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 381288204936973,
+				"sid": 936918219961200,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

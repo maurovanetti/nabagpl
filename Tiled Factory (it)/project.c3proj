@@ -1,7 +1,7 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 31702,
-	"name": "Unsafe Factory",
+	"name": "Tiled Factory",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
@@ -16,16 +16,16 @@
 		},
 		{
 			"type": "plugin",
-			"id": "NinePatch",
-			"name": "9-patch",
+			"id": "Keyboard",
+			"name": "Keyboard",
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
-			"id": "Keyboard",
-			"name": "Keyboard",
+			"id": "Tilemap",
+			"name": "Tilemap",
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
@@ -64,9 +64,33 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Physics",
+			"name": "Physics",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
 			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "brightness",
+			"name": "Brightness",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "vibrance",
+			"name": "Vibrance",
+			"author": "Evan Wallace",
 			"version": "r317.2",
 			"bundled": false
 		}
@@ -75,16 +99,21 @@
 	"objectTypes": {
 		"items": [
 			"Avatar",
-			"Platform",
 			"Keyboard",
-			"Wall",
 			"Abyss",
-			"Hazard",
 			"Alarm",
 			"Computer",
-			"Prize",
-			"Spikes",
-			"Ladder"
+			"JumpthruTilemap",
+			"InvisibleWall",
+			"PropsTilemap",
+			"Enemy",
+			"BounceRight",
+			"BounceLeft",
+			"Jump",
+			"Pellet",
+			"Ball",
+			"BackgroundTilemap1",
+			"BackgroundTilemap2"
 		],
 		"subfolders": []
 	},

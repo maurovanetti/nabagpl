@@ -307,6 +307,18 @@
 								"animation": "\"Jump\"",
 								"from": "beginning"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 167917069758128,
+							"parameters": {
+								"audio-file": "jump",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 896958052866038
@@ -346,11 +358,31 @@
 							}
 						},
 						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 854435712856875,
+							"parameters": {
+								"tag": "\"chill\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 103306161800490,
+							"parameters": {
+								"audio-file": "tunetank.com_1352_inspiring-piano-and-cello_by_audiothoughts",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 305441301786708,
+							"sid": 775303009516354,
 							"parameters": {
-								"seconds": "1"
+								"seconds": "5"
 							}
 						},
 						{
@@ -604,7 +636,37 @@
 							}
 						}
 					],
-					"sid": 585951961531318
+					"sid": 585951961531318,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-on-screen",
+									"objectClass": "Enemy",
+									"sid": 436770436707178
+								}
+							],
+							"actions": [
+								{
+									"id": "play-at-object",
+									"objectClass": "Audio",
+									"sid": 963710139911871,
+									"parameters": {
+										"audio-file": "enemy",
+										"loop": "not-looping",
+										"volume": "0",
+										"object": "Enemy",
+										"inner-angle": "360",
+										"outer-angle": "360",
+										"outer-gain": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 960364142462771
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -865,6 +927,136 @@
 				}
 			],
 			"sid": 531064493024471
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Audio",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 134926738929982
+						}
+					],
+					"actions": [
+						{
+							"id": "set-listener-object",
+							"objectClass": "Audio",
+							"sid": 822475454264261,
+							"parameters": {
+								"object": "Avatar"
+							}
+						},
+						{
+							"id": "stop-all",
+							"objectClass": "Audio",
+							"sid": 357833311953911
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 401467749688340,
+							"parameters": {
+								"audio-file": "tunetank.com_3600_islands_by_dogisreal",
+								"loop": "looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"chill\""
+							}
+						}
+					],
+					"sid": 926817818117880
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 789395305582827,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "AudioIcon"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 178919204659360,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "AudioIcon",
+									"sid": 330222187067341,
+									"parameters": {
+										"animation": "\"On\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "AudioIcon",
+									"sid": 629633034427029,
+									"parameters": {
+										"animation": "\"Off\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-silent",
+									"objectClass": "Audio",
+									"sid": 314143283596306,
+									"parameters": {
+										"mode": "silent"
+									}
+								}
+							],
+							"sid": 943040169233039
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 375566362158303
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "AudioIcon",
+									"sid": 448934524996532,
+									"parameters": {
+										"animation": "\"On\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-silent",
+									"objectClass": "Audio",
+									"sid": 473349951056961,
+									"parameters": {
+										"mode": "not-silent"
+									}
+								}
+							],
+							"sid": 294101745713102
+						}
+					]
+				}
+			],
+			"sid": 512498680290135
 		}
 	],
 	"sid": 181784969703726

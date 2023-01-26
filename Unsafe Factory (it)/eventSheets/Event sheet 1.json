@@ -25,6 +25,67 @@
 		{
 			"eventType": "group",
 			"disabled": false,
+			"title": "Ladders",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Avatar",
+							"sid": 507781603023377,
+							"parameters": {
+								"object": "Ladder"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Avatar",
+							"sid": 388291443348911,
+							"parameters": {
+								"instance-variable": "Climbing",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 618183855249632
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Avatar",
+							"sid": 158418268096036,
+							"parameters": {
+								"object": "Ladder"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Avatar",
+							"sid": 868338943200175,
+							"parameters": {
+								"instance-variable": "Climbing",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 919498232396901
+				}
+			],
+			"sid": 865627105140319
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
 			"title": "Avatar Movement",
 			"description": "",
 			"isActiveOnStart": true,
@@ -50,6 +111,15 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "set-gravity",
+							"objectClass": "Avatar",
+							"sid": 232490065271863,
+							"behaviorType": "Platform",
+							"parameters": {
+								"gravity": "1500"
+							}
+						},
 						{
 							"id": "simulate-control",
 							"objectClass": "Avatar",
@@ -93,6 +163,15 @@
 					],
 					"actions": [
 						{
+							"id": "set-gravity",
+							"objectClass": "Avatar",
+							"sid": 450062075158690,
+							"behaviorType": "Platform",
+							"parameters": {
+								"gravity": "1500"
+							}
+						},
+						{
 							"id": "simulate-control",
 							"objectClass": "Avatar",
 							"sid": 227090305273047,
@@ -133,18 +212,110 @@
 							}
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 405371443620846,
+					"children": [
 						{
-							"id": "simulate-control",
-							"objectClass": "Avatar",
-							"sid": 666547692953168,
-							"behaviorType": "Platform",
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Avatar",
+									"sid": 563109220811376,
+									"parameters": {
+										"instance-variable": "Climbing"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Avatar",
+									"sid": 363461819995120,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "jump"
+									}
+								}
+							],
+							"sid": 471873797706916
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Avatar",
+									"sid": 471941230610152,
+									"parameters": {
+										"instance-variable": "Climbing"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-gravity",
+									"objectClass": "Avatar",
+									"sid": 345414621094575,
+									"behaviorType": "Platform",
+									"parameters": {
+										"gravity": "0"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Avatar",
+									"sid": 883198606347357,
+									"parameters": {
+										"x": "Avatar.X",
+										"y": "Avatar.Y - 10"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Avatar",
+									"sid": 494989115484550,
+									"parameters": {
+										"animation": "\"Walk\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 443582898081036
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 913884173568261,
 							"parameters": {
-								"control": "jump"
+								"key": 40
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 561447015559175,
+							"parameters": {
+								"key": 83
 							}
 						}
 					],
-					"sid": 405371443620846,
+					"actions": [
+						{
+							"id": "fall-through",
+							"objectClass": "Avatar",
+							"sid": 233550012953118,
+							"behaviorType": "Platform"
+						}
+					],
+					"sid": 281624873445750,
 					"isOrBlock": true
 				},
 				{

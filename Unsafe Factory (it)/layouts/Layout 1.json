@@ -801,6 +801,100 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "Wall",
+					"properties": {
+						"left-margin": 12,
+						"right-margin": 12,
+						"top-margin": 12,
+						"bottom-margin": 12,
+						"edges": "stretch",
+						"fill": "stretch",
+						"initially-visible": true,
+						"origin": "top-left",
+						"seams": "overlap"
+					},
+					"uid": 28,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 22,
+						"uid": 28,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"world": {
+						"x": 25,
+						"y": -5,
+						"width": 44,
+						"height": 246,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							0.8196078431372549,
+							0.8196078431372549,
+							0.8196078431372549,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Alarm",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Small",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 29,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 547,
+						"y": 155,
+						"width": 70,
+						"height": 70,
+						"originX": 0.5,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 301776281607146,
@@ -832,6 +926,73 @@
 			"global": false
 		},
 		{
+			"name": "Ladders",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "Ladder",
+					"properties": {
+						"left-margin": 10,
+						"right-margin": 10,
+						"top-margin": 10,
+						"bottom-margin": 25,
+						"edges": "tile",
+						"fill": "tile",
+						"initially-visible": true,
+						"origin": "top-left",
+						"seams": "overlap"
+					},
+					"uid": 30,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1047,
+						"y": 47,
+						"width": 100,
+						"height": 415,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 699217630238485,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
 			"name": "Characters",
 			"overriden": 0,
 			"subLayers": [],
@@ -846,7 +1007,9 @@
 						"live-preview": false
 					},
 					"uid": 2,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Climbing": false
+					},
 					"behaviors": {
 						"Platform": {
 							"properties": {
@@ -872,8 +1035,8 @@
 						}
 					},
 					"world": {
-						"x": 1012,
-						"y": 396,
+						"x": 984,
+						"y": 410,
 						"width": 66,
 						"height": 82,
 						"originX": 0.5,
@@ -998,6 +1161,19 @@
 						"children": [
 							{
 								"uid": 23,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 28,
 								"flags": {
 									"x": true,
 									"y": true,

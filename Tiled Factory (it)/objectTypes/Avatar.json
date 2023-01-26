@@ -3,15 +3,7 @@
 	"plugin-id": "Sprite",
 	"sid": 557232786641378,
 	"isGlobal": false,
-	"instanceVariables": [
-		{
-			"name": "Climbing",
-			"type": "boolean",
-			"desc": "",
-			"show": true,
-			"sid": 426278465721593
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Platform",
@@ -42,7 +34,7 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4784677,
+						"imageSpriteId": 2575866,
 						"collisionPoly": {
 							"points": [
 								0.2186147186147189,

@@ -1,32 +1,19 @@
 {
-	"name": "Avatar",
+	"name": "Enemy",
 	"plugin-id": "Sprite",
-	"sid": 557232786641378,
+	"sid": 907956942183493,
 	"isGlobal": false,
-	"instanceVariables": [
-		{
-			"name": "Climbing",
-			"type": "boolean",
-			"desc": "",
-			"show": true,
-			"sid": 426278465721593
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Platform",
 			"name": "Platform",
-			"sid": 490858559506542
-		},
-		{
-			"behaviorId": "scrollto",
-			"name": "ScrollTo",
-			"sid": 248438378467247
+			"sid": 449571557371452
 		},
 		{
 			"behaviorId": "Flash",
 			"name": "Flash",
-			"sid": 911481325098103
+			"sid": 966030142616860
 		}
 	],
 	"effectTypes": [],
@@ -42,7 +29,7 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4784677,
+						"imageSpriteId": 9437516,
 						"collisionPoly": {
 							"points": [
 								0.2186147186147189,
@@ -59,7 +46,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 102158127530315,
+				"sid": 752208664863598,
 				"name": "Idle",
 				"isLooping": false,
 				"isPingPong": false,
@@ -77,7 +64,7 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5566345,
+						"imageSpriteId": 7655717,
 						"collisionPoly": {
 							"points": [
 								0.2186147186147189,
@@ -101,7 +88,7 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5397200,
+						"imageSpriteId": 7795429,
 						"collisionPoly": {
 							"points": [
 								0.2186147186147189,
@@ -118,7 +105,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 649661658272664,
+				"sid": 774454005714151,
 				"name": "Walk",
 				"isLooping": true,
 				"isPingPong": false,
@@ -136,7 +123,7 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6416388,
+						"imageSpriteId": 2562429,
 						"collisionPoly": {
 							"points": [
 								0.2186147186147189,
@@ -153,7 +140,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 571056127822350,
+				"sid": 170927801029734,
 				"name": "Jump",
 				"isLooping": true,
 				"isPingPong": false,
@@ -171,7 +158,7 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2061452,
+						"imageSpriteId": 3848426,
 						"collisionPoly": {
 							"points": [
 								0.2186147186147189,
@@ -188,7 +175,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 349753183798685,
+				"sid": 732443137110871,
 				"name": "Fall",
 				"isLooping": true,
 				"isPingPong": false,

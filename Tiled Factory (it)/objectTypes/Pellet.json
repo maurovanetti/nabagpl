@@ -1,0 +1,57 @@
+{
+	"name": "Pellet",
+	"plugin-id": "Sprite",
+	"sid": 919564273541455,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 18,
+						"height": 18,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4809050,
+						"collisionPoly": {
+							"points": [
+								0.3333333333333333,
+								0.3333333333333333,
+								0.5989583333333334,
+								0.3211805555555556,
+								0.776041666666667,
+								0.49999999999999994,
+								0.7881944444444445,
+								0.7621527777777778,
+								0.6163194444444443,
+								0.9444444444444445,
+								0.3402777777777779,
+								0.9531250000000002,
+								0.1579861111111111,
+								0.7586805555555558,
+								0.16666666666666666,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 961225757778695,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

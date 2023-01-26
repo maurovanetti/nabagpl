@@ -1,0 +1,909 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 839224918613858,
+					"parameters": {
+						"key": 82
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 195925982238491
+				}
+			],
+			"sid": 333833954064784
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Avatar Movement",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 433414735334590,
+							"parameters": {
+								"key": 39
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 827998729186542,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Avatar",
+							"sid": 516809579504863,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "right"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Avatar",
+							"sid": 223167121763959,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 465218074015015,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 283498615273031,
+							"parameters": {
+								"key": 37
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 812196607657726,
+							"parameters": {
+								"key": 65
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Avatar",
+							"sid": 227090305273047,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "left"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Avatar",
+							"sid": 734468810432856,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 812702593963170,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 450929318263087,
+							"parameters": {
+								"key": 38
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 679375202045485,
+							"parameters": {
+								"key": 87
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Avatar",
+							"sid": 666547692953168,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						}
+					],
+					"sid": 405371443620846,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-moved",
+							"objectClass": "Avatar",
+							"sid": 710403222199364,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Avatar",
+							"sid": 248958581589519,
+							"parameters": {
+								"animation": "\"Walk\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 270055558472683
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-stopped",
+							"objectClass": "Avatar",
+							"sid": 471856915917707,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Avatar",
+							"sid": 750840986263596,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 741120611202237
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-jump",
+							"objectClass": "Avatar",
+							"sid": 292921652057983,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Avatar",
+							"sid": 147065022441127,
+							"parameters": {
+								"animation": "\"Jump\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 539907546394995
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-fall",
+							"objectClass": "Avatar",
+							"sid": 689038840539194,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Avatar",
+							"sid": 858564011646760,
+							"parameters": {
+								"animation": "\"Fall\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 312647884446093
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-landed",
+							"objectClass": "Avatar",
+							"sid": 261409254789631,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [],
+					"sid": 999518949835332,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "Avatar",
+									"sid": 773052400683687,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Avatar",
+									"sid": 325186872115631,
+									"parameters": {
+										"animation": "\"Walk\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 963770615038816
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "Avatar",
+									"sid": 557081076605377,
+									"behaviorType": "Platform",
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Avatar",
+									"sid": 148063265653366,
+									"parameters": {
+										"animation": "\"Idle\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 462859387335305
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 585892950478286,
+							"parameters": {
+								"key": 32
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Avatar",
+							"sid": 967918873997507,
+							"parameters": {
+								"object": "Ball",
+								"layer": "\"Characters\"",
+								"image-point": "\"Hand\"",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 650967625339805,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-mirrored",
+									"objectClass": "Avatar",
+									"sid": 519581127597348,
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "apply-impulse",
+									"objectClass": "Ball",
+									"sid": 830610395060234,
+									"behaviorType": "Physics",
+									"parameters": {
+										"impulse-x": "0.5",
+										"implulse-y": "-0.1",
+										"image-point": "0"
+									}
+								}
+							],
+							"sid": 316493289925592
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-mirrored",
+									"objectClass": "Avatar",
+									"sid": 470894861397126
+								}
+							],
+							"actions": [
+								{
+									"id": "apply-impulse",
+									"objectClass": "Ball",
+									"sid": 452176020882513,
+									"behaviorType": "Physics",
+									"parameters": {
+										"impulse-x": "-0.5",
+										"implulse-y": "-0.1",
+										"image-point": "0"
+									}
+								}
+							],
+							"sid": 729379534190988
+						}
+					]
+				}
+			],
+			"sid": 492941498889136
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enemy Movement",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Enemy",
+							"sid": 195436760963808,
+							"parameters": {
+								"object": "BounceRight"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Enemy",
+							"sid": 538351494734788,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 200387860595738
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Enemy",
+							"sid": 589141585952630,
+							"parameters": {
+								"object": "BounceLeft"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Enemy",
+							"sid": 739804295166866,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 953224352987687
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-by-wall",
+							"objectClass": "Enemy",
+							"sid": 651102901397419,
+							"behaviorType": "Platform",
+							"parameters": {
+								"side": "left"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Enemy",
+							"sid": 325761190624802,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 784119634592375
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-by-wall",
+							"objectClass": "Enemy",
+							"sid": 327597787085145,
+							"behaviorType": "Platform",
+							"parameters": {
+								"side": "right"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Enemy",
+							"sid": 178084156464507,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 667987917631416
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-mirrored",
+							"objectClass": "Enemy",
+							"sid": 403829166100272,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Enemy",
+							"sid": 705601787184966,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 970338359115240,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-mirrored",
+							"objectClass": "Enemy",
+							"sid": 985107968175769
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Enemy",
+							"sid": 362819096588484,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "left"
+							}
+						}
+					],
+					"sid": 101337887339477,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Enemy",
+							"sid": 931414427435158,
+							"parameters": {
+								"object": "Jump"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Enemy",
+							"sid": 621394616664192,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						}
+					],
+					"sid": 159847013718892,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-moved",
+							"objectClass": "Enemy",
+							"sid": 236954618964280,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Enemy",
+							"sid": 528470892665928,
+							"parameters": {
+								"animation": "\"Walk\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 478988314898117
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-stopped",
+							"objectClass": "Enemy",
+							"sid": 916176507959840,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Enemy",
+							"sid": 807342983511182,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 968263790515458
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-jump",
+							"objectClass": "Enemy",
+							"sid": 555127530646276,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Enemy",
+							"sid": 135952162283349,
+							"parameters": {
+								"animation": "\"Jump\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 583780242378593
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-fall",
+							"objectClass": "Enemy",
+							"sid": 290866524370269,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Enemy",
+							"sid": 922870558384454,
+							"parameters": {
+								"animation": "\"Fall\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 747695141105182
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-landed",
+							"objectClass": "Enemy",
+							"sid": 604892525810850,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [],
+					"sid": 510947932837098,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "Enemy",
+									"sid": 690402070606286,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Enemy",
+									"sid": 926284344208819,
+									"parameters": {
+										"animation": "\"Walk\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 978209310158447
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "Enemy",
+									"sid": 849428709343570,
+									"behaviorType": "Platform",
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Enemy",
+									"sid": 423459352320550,
+									"parameters": {
+										"animation": "\"Idle\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 806854944568652
+						}
+					]
+				}
+			],
+			"sid": 391030026106480
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Dangers",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Avatar",
+							"sid": 459504504598081,
+							"parameters": {
+								"object": "Danger"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "flash",
+							"objectClass": "Avatar",
+							"sid": 679245271508665,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "1.0"
+							}
+						}
+					],
+					"sid": 535351911774882
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-flash-ended",
+							"objectClass": "Avatar",
+							"sid": 468164996016095,
+							"behaviorType": "Flash"
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 294861340322906
+						}
+					],
+					"sid": 309096999448243
+				}
+			],
+			"sid": 288761929126330
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Alarms",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 677862632355754
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Computer",
+							"sid": 104817836526819,
+							"parameters": {
+								"animation": "\"On\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "start-animation",
+							"objectClass": "Alarm",
+							"sid": 131108874769578,
+							"parameters": {
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 254536938754352
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Avatar",
+							"sid": 615307671679336,
+							"parameters": {
+								"object": "Computer"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Computer",
+							"sid": 311491014643850,
+							"parameters": {
+								"animation": "\"Off\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "stop-animation",
+							"objectClass": "Alarm",
+							"sid": 770641978846595
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Alarm",
+							"sid": 166268567422608,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "erase-tile-range",
+							"objectClass": "JumpthruTilemap",
+							"sid": 973564930097261,
+							"parameters": {
+								"tile-x": "59",
+								"tile-y": "0",
+								"width": "1",
+								"height": "20"
+							}
+						},
+						{
+							"id": "erase-tile-range",
+							"objectClass": "JumpthruTilemap",
+							"sid": 344161187479639,
+							"parameters": {
+								"tile-x": "59",
+								"tile-y": "21",
+								"width": "1",
+								"height": "2"
+							}
+						}
+					],
+					"sid": 810102705734422
+				}
+			],
+			"sid": 750497880811853
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Collection",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Avatar",
+							"sid": 204131467807908,
+							"parameters": {
+								"object": "Pellet"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Pellet",
+							"sid": 798505531178826
+						}
+					],
+					"sid": 581786181452462
+				}
+			],
+			"sid": 460302653681894
+		}
+	],
+	"sid": 200684248677800
+}
