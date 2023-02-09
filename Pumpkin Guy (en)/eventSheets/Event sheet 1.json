@@ -1057,6 +1057,416 @@
 				}
 			],
 			"sid": 512498680290135
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Collectibles",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Avatar",
+							"sid": 255157220933799,
+							"parameters": {
+								"object": "Collectible"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "InventoryPanel",
+							"sid": 647583236985237,
+							"parameters": {
+								"instance-variable": "FilledSlots",
+								"comparison": 2,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Collectible",
+							"sid": 945002097480356
+						},
+						{
+							"callFunction": "PickSound",
+							"sid": 136644598140936
+						}
+					],
+					"sid": 689306798944179,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "InventorySlot",
+									"sid": 188697469213955,
+									"parameters": {
+										"instance-variable": "Index",
+										"comparison": 0,
+										"value": "InventoryPanel.FilledSlots"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 419331471325522,
+									"parameters": {
+										"object-to-create": "CollectibleIcon",
+										"layer": "\"Inventory\"",
+										"x": "InventorySlot.X",
+										"y": "InventorySlot.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "add-child",
+									"objectClass": "InventorySlot",
+									"sid": 181608605716120,
+									"parameters": {
+										"child": "CollectibleIcon",
+										"transform-x": false,
+										"transform-y": false,
+										"transform-w": false,
+										"transform-h": false,
+										"transform-a": false,
+										"transform-z-elevation": false,
+										"destroy-with-parent": false
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "InventorySlot",
+									"sid": 275888681907951,
+									"parameters": {
+										"instance-variable": "Filled",
+										"value": "true"
+									}
+								},
+								{
+									"id": "add-to-instvar",
+									"objectClass": "InventoryPanel",
+									"sid": 498568663750679,
+									"parameters": {
+										"instance-variable": "FilledSlots",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 754782833129816
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 705629472261208,
+							"parameters": {
+								"key": 88
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "InventoryPanel",
+							"sid": 351344280101848,
+							"parameters": {
+								"instance-variable": "FilledSlots",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 209969623483635,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "InventorySlot",
+									"sid": 903207762410359,
+									"parameters": {
+										"instance-variable": "Index",
+										"comparison": 0,
+										"value": "InventoryPanel.FilledSlots - 1"
+									}
+								},
+								{
+									"id": "pick-children",
+									"objectClass": "InventorySlot",
+									"sid": 509222613511138,
+									"parameters": {
+										"child": "CollectibleIcon",
+										"which": "own"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "CollectibleIcon",
+									"sid": 103182532319836
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "InventorySlot",
+									"sid": 666553784702717,
+									"parameters": {
+										"instance-variable": "Filled",
+										"value": "false"
+									}
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "InventoryPanel",
+									"sid": 103637134461440,
+									"parameters": {
+										"instance-variable": "FilledSlots",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 421430344899064
+						}
+					]
+				}
+			],
+			"sid": 117702950467619
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Weapons",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Avatar",
+							"sid": 725763647007808,
+							"parameters": {
+								"object": "Weapon"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "PickWeapon",
+							"sid": 178525216701325,
+							"parameters": [
+								"Weapon.UID"
+							]
+						}
+					],
+					"sid": 832944488737077
+				}
+			],
+			"sid": 257235276503729
+		},
+		{
+			"functionName": "PickSound",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 562677403897920,
+					"parameters": {
+						"audio-file": "plin",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 316778687771149
+		},
+		{
+			"functionName": "PickWeapon",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "WeaponUID",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 302177160029835
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [
+				{
+					"id": "pick-by-unique-id",
+					"objectClass": "Weapon",
+					"sid": 993763903248649,
+					"parameters": {
+						"unique-id": "WeaponUID"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "UniqueInventorySlot",
+					"sid": 927284925147833,
+					"parameters": {
+						"instance-variable": "Index",
+						"comparison": 0,
+						"value": "InventoryPanel.FilledUniqueSlots"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Weapon",
+					"sid": 297273785389255
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 965415801960234,
+					"parameters": {
+						"audio-file": "plin",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "UniqueInventorySlot",
+					"sid": 505263017208489,
+					"parameters": {
+						"instance-variable": "Filled",
+						"value": "true"
+					}
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "InventoryPanel",
+					"sid": 962453389158682,
+					"parameters": {
+						"instance-variable": "FilledUniqueSlots",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 283880226177401,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "GreenWeapon",
+							"sid": 462336528387973,
+							"parameters": {
+								"unique-id": "WeaponUID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 567786407562384,
+							"parameters": {
+								"object-to-create": "GreenWeaponIcon",
+								"layer": "\"Inventory\"",
+								"x": "UniqueInventorySlot.X",
+								"y": "UniqueInventorySlot.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 468393606358879
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "PinkWeapon",
+							"sid": 250962261113530,
+							"parameters": {
+								"unique-id": "WeaponUID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 589568492064821,
+							"parameters": {
+								"object-to-create": "PinkWeaponIcon",
+								"layer": "\"Inventory\"",
+								"x": "UniqueInventorySlot.X",
+								"y": "UniqueInventorySlot.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 615914218026906
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 810934134447030,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "InventoryPanel"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 968654132447932,
+					"parameters": {
+						"layer": "\"Inventory\"",
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 292135096674614
 		}
 	],
 	"sid": 181784969703726

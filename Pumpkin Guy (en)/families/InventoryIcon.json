@@ -1,0 +1,13 @@
+{
+	"name": "InventoryIcon",
+	"plugin-id": "Sprite",
+	"sid": 803992180273077,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"CollectibleIcon",
+		"PinkWeaponIcon",
+		"GreenWeaponIcon"
+	]
+}

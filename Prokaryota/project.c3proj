@@ -1,7 +1,7 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 31702,
-	"name": "Pathfinding Test",
+	"savedWithRelease": 32702,
+	"name": "Procaryota",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
@@ -11,7 +11,6 @@
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
-			"version": "r317.2",
 			"bundled": false
 		},
 		{
@@ -19,15 +18,6 @@
 			"id": "EightDir",
 			"name": "8 Direction",
 			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "wrap",
-			"name": "Wrap",
-			"author": "Scirra",
-			"version": "r317.2",
 			"bundled": false
 		},
 		{
@@ -35,7 +25,6 @@
 			"id": "Flash",
 			"name": "Flash",
 			"author": "Scirra",
-			"version": "r317.2",
 			"bundled": false
 		},
 		{
@@ -43,7 +32,13 @@
 			"id": "Tween",
 			"name": "Tween",
 			"author": "Scirra",
-			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "wrap",
+			"name": "Wrap",
+			"author": "Scirra",
 			"bundled": false
 		}
 	],
@@ -174,10 +169,10 @@
 	},
 	"properties": {
 		"description": "",
-		"version": "1.0.0.0",
-		"author": "",
-		"authorEmail": "",
-		"authorWebsite": "",
+		"version": "0.0.1",
+		"author": "Mauro Vanetti",
+		"authorEmail": "posta@maurovanetti.info",
+		"authorWebsite": "https://maurovanetti.itch.io/procaryota",
 		"appId": "",
 		"pixelRounding": false,
 		"zAxisScale": "normalized",
@@ -215,6 +210,8 @@
 		"downscaling": "medium",
 		"renderingMode": "auto",
 		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
 		"maxSpriteSheetSize": 2048,
 		"loaderStyle": "splash",
 		"preloadSounds": true,

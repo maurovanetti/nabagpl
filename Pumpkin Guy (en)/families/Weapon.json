@@ -1,0 +1,14 @@
+{
+	"name": "Weapon",
+	"plugin-id": "Sprite",
+	"sid": 261461408302222,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"GreenWeapon",
+		"PinkWeapon",
+		"PinkWeaponIcon",
+		"GreenWeaponIcon"
+	]
+}

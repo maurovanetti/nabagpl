@@ -1,0 +1,35 @@
+{
+	"name": "InventorySlot",
+	"plugin-id": "NinePatch",
+	"sid": 881426603426642,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Filled",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 762149092118334
+		},
+		{
+			"name": "Index",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 755789958440510
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 20,
+		"height": 20,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 1712465,
+		"useCollisionPoly": true
+	}
+}

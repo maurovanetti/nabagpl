@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 32700,
+	"savedWithRelease": 32702,
 	"name": "Pumpkin Guy",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -24,6 +24,13 @@
 			"type": "plugin",
 			"id": "Mouse",
 			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "NinePatch",
+			"name": "9-patch",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -109,7 +116,16 @@
 			"Audio",
 			"AudioIcon",
 			"Touch",
-			"Mouse"
+			"Mouse",
+			"InventoryPanel",
+			"InventorySlot",
+			"CollectibleIcon",
+			"Collectible",
+			"UniqueInventorySlot",
+			"PinkWeapon",
+			"GreenWeapon",
+			"PinkWeaponIcon",
+			"GreenWeaponIcon"
 		],
 		"subfolders": []
 	},
@@ -118,7 +134,9 @@
 	"families": {
 		"items": [
 			"Danger",
-			"Characters"
+			"Character",
+			"InventoryIcon",
+			"Weapon"
 		],
 		"subfolders": []
 	},
@@ -153,6 +171,14 @@
 					"name": "enemy.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 307416625440183,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "plin.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 104016348366224,
 					"file-info": {
 						"purpose": "none"
 					}
