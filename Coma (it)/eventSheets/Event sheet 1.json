@@ -1,0 +1,371 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 289199774763319
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Camera",
+					"sid": 539245531950645,
+					"parameters": {
+						"x": "Avatar.X - 250",
+						"y": "Avatar.Y"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Mine",
+					"sid": 156876324063261,
+					"parameters": {
+						"opacity": "50"
+					}
+				}
+			],
+			"sid": 532463343102754
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-speed",
+					"objectClass": "Avatar",
+					"sid": 711537102518980,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"comparison": 4,
+						"speed": "100"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-speed",
+					"objectClass": "ECG",
+					"sid": 633915907554517,
+					"parameters": {
+						"speed": "10"
+					}
+				}
+			],
+			"sid": 472532531105872
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-moving",
+					"objectClass": "Avatar",
+					"sid": 373628282275548,
+					"behaviorType": "8Direction",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-speed",
+					"objectClass": "ECG",
+					"sid": 226905205418637,
+					"parameters": {
+						"speed": "5"
+					}
+				}
+			],
+			"sid": 291536965621761
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "pick-nearestfurthest",
+					"objectClass": "Mine",
+					"sid": 152828004050562,
+					"parameters": {
+						"which": "nearest",
+						"x": "MetalDetector.X",
+						"y": "MetalDetector.Y"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "Mine",
+					"sid": 591681808854016,
+					"parameters": {
+						"opacity": "100"
+					}
+				}
+			],
+			"sid": 428514341304487,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 909509735524130,
+							"parameters": {
+								"first-value": "distance(MetalDetector.X, MetalDetector.Y, Mine.X, Mine.Y)",
+								"comparison": 2,
+								"second-value": "100"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-speed",
+							"objectClass": "MetalDetector",
+							"sid": 355979375936207,
+							"parameters": {
+								"speed": "10"
+							}
+						}
+					],
+					"sid": 527887410706230
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 452826455008562
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-speed",
+							"objectClass": "MetalDetector",
+							"sid": 701605879710067,
+							"parameters": {
+								"speed": "3"
+							}
+						}
+					],
+					"sid": 656575661784745
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-speed",
+					"objectClass": "Stone",
+					"sid": 289551087697010,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"comparison": 4,
+						"speed": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Stone",
+					"sid": 363763410770074,
+					"parameters": {
+						"object": "StoneTrace",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "StoneTrace",
+					"sid": 943668235840741,
+					"parameters": {
+						"x": "StoneTrace.X + random(-2, 2)",
+						"y": "StoneTrace.Y + random(-2, 2)"
+					}
+				}
+			],
+			"sid": 577911283343220
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 310880267484937,
+					"parameters": {
+						"interval-seconds": "0.1"
+					}
+				},
+				{
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 522154764626125,
+					"parameters": {
+						"object": "Flame"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 119050813477055,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 850183457659254,
+							"parameters": {
+								"first-value": "random(0, 100)",
+								"comparison": 2,
+								"second-value": "Flame.LikelihoodToSpread"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Flame",
+							"sid": 415013725398529,
+							"parameters": {
+								"object": "Spark",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "Spark",
+							"sid": 940085231334486,
+							"parameters": {
+								"angle": "random(0,360)"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "Spark",
+							"sid": 664844012044336,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "random(100, 300)"
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "Spark",
+							"sid": 748730667893686,
+							"parameters": {
+								"where": "behind",
+								"object": "Flame"
+							}
+						}
+					],
+					"sid": 588880434045149
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-speed",
+					"objectClass": "Spark",
+					"sid": 900534030499966,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"comparison": 2,
+						"speed": "1"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 476331252487891,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Spark",
+							"sid": 233672754707298,
+							"parameters": {
+								"object": "Flame"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Spark",
+							"sid": 644385393925875,
+							"parameters": {
+								"object": "Flammable"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Spark",
+							"sid": 170761531652111,
+							"parameters": {
+								"object": "Flame",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "Flame",
+							"sid": 846147996483000,
+							"parameters": {
+								"angle": "0"
+							}
+						}
+					],
+					"sid": 685172019126593
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Spark",
+							"sid": 906513413818753
+						}
+					],
+					"sid": 424952533359478
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-animation-finished",
+					"objectClass": "Flame",
+					"sid": 526884138026068
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Flame",
+					"sid": 910532723777052
+				}
+			],
+			"sid": 995362975790783
+		}
+	],
+	"sid": 830384825947262
+}

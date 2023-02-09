@@ -1,0 +1,11 @@
+{
+	"name": "Flammable",
+	"plugin-id": "Sprite",
+	"sid": 495633061222376,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Wood"
+	]
+}

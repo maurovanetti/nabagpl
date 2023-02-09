@@ -1,0 +1,37 @@
+{
+	"name": "Wood",
+	"plugin-id": "Sprite",
+	"sid": 977718671974442,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 176,
+						"height": 83,
+						"originX": 0.48295454545454547,
+						"originY": 0.27710843373493976,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6933075,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 748616198957943,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

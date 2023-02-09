@@ -1,0 +1,48 @@
+{
+	"name": "Avatar",
+	"plugin-id": "Sprite",
+	"sid": 864123512398435,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 702295623927344
+		},
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 437660490711362
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 36,
+						"height": 47,
+						"originX": 0.5833333333333334,
+						"originY": 0.574468085106383,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8769848,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 120675669237252,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
